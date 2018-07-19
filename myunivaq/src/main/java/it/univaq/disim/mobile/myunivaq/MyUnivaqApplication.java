@@ -156,6 +156,8 @@ public class MyUnivaqApplication {
 		};
 	}
 
+	//ciao
+
 	public static void main(String[] args) {
 		SpringApplication.run(MyUnivaqApplication.class, args);
 	}
