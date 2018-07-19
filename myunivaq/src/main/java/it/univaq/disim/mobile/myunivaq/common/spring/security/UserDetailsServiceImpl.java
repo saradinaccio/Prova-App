@@ -23,7 +23,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 			throw new UsernameNotFoundException("utente inesistente");
 		}
 		return new UserDetailsImpl(utente);
-		//mi stai sfruttando
+
 	}
 
 }
