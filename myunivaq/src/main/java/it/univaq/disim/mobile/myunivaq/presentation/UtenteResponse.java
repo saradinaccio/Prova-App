@@ -19,10 +19,10 @@ public class UtenteResponse {
 	public UtenteResponse(Utente utente) {
 		this.nome = utente.getNome();
 		this.cognome = utente.getCognome();
-		this.username = utente.getUsername();
+		//this.username = utente.getUsername();
 		this.email = utente.getEmail();
-		this.matricola = utente.getMatricola();
-		this.telefono = utente.getTelefono();
+		//this.matricola = utente.getMatricola();
+		//this.telefono = utente.getTelefono();
 		if (utente instanceof Docente) {
 			this.ruolo = "docente";
 		} else {

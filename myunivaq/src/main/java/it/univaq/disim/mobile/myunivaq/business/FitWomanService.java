@@ -10,6 +10,7 @@ public interface FitWomanService {
 
     Utente updateProfilo(Utente utente) throws BusinessException;
     List<Esercizio> findAllEsercizi() throws BusinessException;
+    List<Esercizio> findAll();
     List<Scheda> findAllSchede() throws BusinessException;
    // List<Esercizio> findEsercizioById(long idEsercizio) throws BusinessException;
     void createScheda(Scheda scheda) throws BusinessException;

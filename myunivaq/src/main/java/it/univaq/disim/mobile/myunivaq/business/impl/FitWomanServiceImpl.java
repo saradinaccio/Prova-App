@@ -18,7 +18,7 @@ import it.univaq.disim.mobile.myunivaq.business.impl.repositories.UtenteReposito
 
 @Service
 @Transactional
-public class FitWomanServiceImpl implements FitWomansService {
+public class FitWomanServiceImpl implements FitWomanService {
 
 	@Autowired
 	private UtenteRepository utenteRepository;
@@ -26,20 +26,20 @@ public class FitWomanServiceImpl implements FitWomansService {
 	@Autowired
 	private EsercizioRepository esercizioRepository;
 
-/*	@Autowired
-	private InsegnamentoRepository insegnamentoRepository;*/
+	@Autowired
+	private InsegnamentoRepository insegnamentoRepository;
 
 	@Autowired
 	private SchedaRepository schedaRepository;
 
 	@Override
-	public Utente findUtenteByUsername(String username) throws BusinessException {
+	public Utente findUtente(String username) throws BusinessException {
 		return utenteRepository.findByUsername(username);
 	}
 
 	@Override
 	public List<Esercizio> findAllEsercizi() throws BusinessException {
-		return EsercizioRepository.findAll(JpaSort.unsafe(Direction.DESC, "nome"));
+		return esercizioRepository.findAll();
 	}
 
 
@@ -65,8 +65,8 @@ public class FitWomanServiceImpl implements FitWomansService {
 		schedaRepository.save(scheda);
 	}
 
-	/*@Override
-	public Appello findAppelloById(long idAppello) throws BusinessException {
+	//@Override
+	/*public Appello findAppelloById(long idAppello) throws BusinessException {
 		return appelloRepository.findById(idAppello).get();
 	}*/
 
