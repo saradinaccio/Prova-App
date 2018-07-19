@@ -32,16 +32,21 @@ public class FitWomanServiceImpl implements FitWomanService {
 	@Autowired
 	private SchedaRepository schedaRepository;
 
-	@Override
-	public Utente findUtente(String username) throws BusinessException {
-		return utenteRepository.findByUsername(username);
-	}
+//	@Override
+//	public Utente findUtente(String username) throws BusinessException {
+//		return utenteRepository.findByUsername(username);
+//	}
 
 	@Override
 	public List<Esercizio> findAllEsercizi() throws BusinessException {
 		return esercizioRepository.findAll();
 	}
 
+
+	@Override
+	public Utente findUtente(String utente) throws BusinessException {
+		return null;
+	}
 
 	@Override
 	public Utente updateProfilo(Utente profilo) throws BusinessException {
