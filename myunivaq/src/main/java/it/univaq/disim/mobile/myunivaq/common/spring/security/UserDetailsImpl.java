@@ -24,7 +24,7 @@ public class UserDetailsImpl implements UserDetails {
 
 	@Override
 	public String getUsername() {
-		return "";
+		return utente.getUsername();
 	}
 
 	@JsonIgnore

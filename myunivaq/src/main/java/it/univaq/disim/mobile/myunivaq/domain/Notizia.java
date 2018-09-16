@@ -35,7 +35,7 @@ public class Notizia {
 
 	@ManyToOne
 	@JoinColumn(name = "ID_TIPOLOGIA_NOTIZIA", nullable = false)
-	private TipologiaEsercizio tipologia;
+	private TipologiaNotizia tipologia;
 
 	public Long getId() {
 		return id;
@@ -77,11 +77,11 @@ public class Notizia {
 		this.pubblicatoDa = pubblicatoDa;
 	}
 
-	public TipologiaEsercizio getTipologia() {
+	public TipologiaNotizia getTipologia() {
 		return tipologia;
 	}
 
-	public void setTipologia(TipologiaEsercizio tipologia) {
+	public void setTipologia(TipologiaNotizia tipologia) {
 		this.tipologia = tipologia;
 	}
 

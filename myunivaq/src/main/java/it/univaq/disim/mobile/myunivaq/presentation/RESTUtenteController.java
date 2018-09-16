@@ -2,7 +2,6 @@ package it.univaq.disim.mobile.myunivaq.presentation;
 
 import javax.servlet.http.HttpServletResponse;
 
-import it.univaq.disim.mobile.myunivaq.business.FitWomanService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -16,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import it.univaq.disim.mobile.myunivaq.business.MyUnivaqService;
 import it.univaq.disim.mobile.myunivaq.common.spring.security.JWTTokenUtil;
 import it.univaq.disim.mobile.myunivaq.common.spring.security.UserDetailsImpl;
 import it.univaq.disim.mobile.myunivaq.domain.Utente;
@@ -34,7 +34,7 @@ public class RESTUtenteController {
 	private JWTTokenUtil jwtTokenUtil;
 
 	@Autowired
-	private FitWomanService FitWomanService;
+	private MyUnivaqService myUnivaqService;
 
 	@PostMapping("/login")
 	public UtenteResponse login(@RequestBody AuthenticationRequest authenticationRequest, HttpServletResponse response) throws AuthenticationException {
@@ -53,7 +53,7 @@ public class RESTUtenteController {
 
 	@PostMapping("/utente/updateprofilo")
 	public UtenteResponse updateProfilo(@RequestBody Utente utente) {
-		Utente nuovoUtente = FitWomanService.updateProfilo(utente);
+		Utente nuovoUtente = myUnivaqService.updateProfilo(utente);		
 		return new UtenteResponse(nuovoUtente);
 	}
 	

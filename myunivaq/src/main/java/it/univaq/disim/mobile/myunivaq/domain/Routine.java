@@ -28,7 +28,7 @@ public class Routine {
     @Column (name = "DESCRIZIONE", nullable = false)
     private int descrzione;
 
-    @ManyToMany
+   /* @ManyToMany
     @JoinColumn(name = "ID_ESRCIZIO", nullable = false)
     private Esercizio esercizio;
 
@@ -36,7 +36,11 @@ public class Routine {
     @JoinTable(name="ROUTINE",
             joinColumns={@JoinColumn(name="ID_ROUTINE")},
             inverseJoinColumns={@JoinColumn(name="ID_ESERCIZIO")})
-    private Set<Esercizio> listaesercizi= new HashSet<>();
+    private Set<Esercizio> listaesercizi= new HashSet<>();*/
+
+    @ManyToOne
+    @JoinColumn (name = "ID_UTENTE")
+    private Utente utente;
 
 
     //GETTER AND SETTER
@@ -82,6 +86,13 @@ public class Routine {
         this.descrzione = descrzione;
     }
 
+    public Utente getUtente() {
+        return utente;
+    }
+
+    public void setUtente(Utente utente) {
+        this.utente = utente;
+    }
 
     @Override
     public boolean equals(Object o) {

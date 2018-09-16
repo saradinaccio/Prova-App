@@ -12,6 +12,9 @@ public class UtenteResponse {
 	private String matricola;
 	private String ruolo;
 	private String telefono;
+	private float peso;
+	private float altezza;
+	private int età;
 	
 	public UtenteResponse() {
 	}
@@ -19,15 +22,18 @@ public class UtenteResponse {
 	public UtenteResponse(Utente utente) {
 		this.nome = utente.getNome();
 		this.cognome = utente.getCognome();
-		//this.username = utente.getUsername();
+		this.username = utente.getUsername();
 		this.email = utente.getEmail();
-		//this.matricola = utente.getMatricola();
-		//this.telefono = utente.getTelefono();
+		this.matricola = utente.getMatricola();
+		this.telefono = utente.getTelefono();
 		if (utente instanceof Docente) {
 			this.ruolo = "docente";
 		} else {
 			this.ruolo = "studente";
 		}
+		this.altezza = utente.getAltezza();
+		this.età = utente.getEtà();
+		this.peso = utente.getPeso();
 	}
 	
 	public String getNome() {
@@ -77,4 +83,22 @@ public class UtenteResponse {
 		this.ruolo = ruolo;
 	}
 
+	public void setPeso(){ this.peso = peso; }
+	public float getPeso() { return peso; }
+
+	public float getAltezza() {
+		return altezza;
+	}
+
+	public void setAltezza(float altezza) {
+		this.altezza = altezza;
+	}
+
+	public int getEtà() {
+		return età;
+	}
+
+	public void setEtà(int età) {
+		this.età = età;
+	}
 }

@@ -11,28 +11,28 @@ import javax.persistence.Table;
 @Table(name="tipologie_esercizio")
 public class TipologiaEsercizio {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "ID_TIPOLOGIA_ESERCIZIO", nullable = false)
-	private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID_TIPOLOGIA_ESERCIZIO", nullable = false)
+    private Long id;
 
-	@Column(name = "NUMERO", nullable = false, length = 255)
-	private int numero;
+    @Column(name = "NUMERO", nullable = false, length = 255)
+    private int numero;
 
-	public Long getId() {
-		return id;
-	}
+    public Long getId() {
+        return id;
+    }
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-	public int getNumero() {
-		return numero;
-	}
+    public int getNumero() {
+        return numero;
+    }
 
-	public void setNumero(int numero) {
-		this.numero = numero;
-	}
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
 }
 

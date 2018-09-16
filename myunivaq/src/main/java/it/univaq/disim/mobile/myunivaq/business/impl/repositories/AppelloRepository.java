@@ -9,5 +9,5 @@ import it.univaq.disim.mobile.myunivaq.domain.Appello;
 public interface AppelloRepository extends JpaRepository<Appello, Long>{
 
 	List<Appello> findAppelliByInsegnamentoId(long idInsegnamento);
-		//find scheda by scheda id
+
 }

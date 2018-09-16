@@ -1,7 +1,9 @@
 package it.univaq.disim.mobile.myunivaq.domain;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 @Entity
 @Table(name = "Esercizi")
@@ -13,27 +15,38 @@ public class Esercizio {
     @Column (name = "ID_ESRCIZIO", nullable = false)
     private Long id;
 
-    @Column (name = "NOME", nullable = false)
+    @Column (name = "NOME")
     private String nome;
 
-    @Column(name = "DESCRIZIONE", nullable = false, length = 255)
+    @Column(name = "DESCRIZIONE", length = 255)
     private String descrizione;
 
-    @Column (name = "SERIE", nullable = false)
+    @Column (name = "SERIE")
     private int serie;
 
-    @Column (name = "RIPETIZIONI", nullable = false)
+    @Column (name = "RIPETIZIONI")
     private int ripetizioni;
 
-    @Column (name = "FOTO", nullable = false)
+    @Column (name = "FOTO")
     private String foto;
 
-    @Column (name = "VIDEO", nullable = false)
+    @Column (name = "VIDEO")
     private String video;
 
-    @Column (name = "RECUPERO", nullable = false)
+    @Column (name = "RECUPERO")
     private int recupero;
 
+   @ManyToMany
+    @JoinTable (name = "ESERCIZIO_SCHEDAPERSONALE",
+            joinColumns = {@JoinColumn(name = "ID_ESERCIZIO")},
+            inverseJoinColumns = {@JoinColumn (name = "ID_SCHEDAPERSONALE")})
+    private Set<SchedaPersonale> schedepersonali = new HashSet<>();
+
+   @ManyToMany
+   @JoinTable (name = "ESERCIZIO_SCHEDA",
+            joinColumns =  {@JoinColumn (name = "ID_ESERCIZIO")},
+            inverseJoinColumns = {@JoinColumn (name = "ID_SCHEDA")})
+   private Set<Scheda> schede = new HashSet<>();
 
     // GETTER AND SETTER
 
@@ -102,6 +115,30 @@ public class Esercizio {
         this.recupero = recupero;
     }
 
+    public Set<SchedaPersonale> getSchedepersonali() {
+        return schedepersonali;
+    }
+
+    public Set<Scheda> getSchede() {
+        return schede;
+    }
+
+    public void setSchede(Set<Scheda> schede) {
+        this.schede = schede;
+    }
+
+    public void setSchedepersonali(Set<SchedaPersonale> schedepersonali) {
+        this.schedepersonali = schedepersonali;
+    }
+
+    public void addSchedaPersonale (SchedaPersonale schedaPersonale){
+        this.schedepersonali.add(schedaPersonale);
+    }
+
+    public void addScheda (Scheda scheda){
+        this.schede.add(scheda);
+    }
+
     // EQUALS
 
 
@@ -121,3 +158,4 @@ public class Esercizio {
     }
 
 }
+

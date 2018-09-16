@@ -1,6 +1,5 @@
 package it.univaq.disim.mobile.myunivaq.common.spring.security;
 
-import it.univaq.disim.mobile.myunivaq.business.FitWomanService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -14,11 +13,11 @@ import it.univaq.disim.mobile.myunivaq.domain.Utente;
 public class UserDetailsServiceImpl implements UserDetailsService {
 
 	@Autowired
-	private FitWomanService service;
+	private MyUnivaqService service;
 
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		Utente utente = service.findUtente(username);
+		Utente utente = service.findUtenteByUsername(username);
 		if (utente == null) {
 			throw new UsernameNotFoundException("utente inesistente");
 		}

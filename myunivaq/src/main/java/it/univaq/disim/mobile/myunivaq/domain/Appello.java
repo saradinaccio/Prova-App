@@ -83,6 +83,5 @@ public class Appello {
 		this.studentiIscritti = studentiIscritti;
 	}
 
-	//EQUALS FALLO
 	
 }

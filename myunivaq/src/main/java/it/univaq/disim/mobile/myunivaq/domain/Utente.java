@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import java.util.Objects;
+import java.util.List;
 
 @Entity
 @Table(name = "utenti")
@@ -24,29 +24,39 @@ public class Utente {
 	@Column(name = "COGNOME", nullable = false, length = 255)
 	private String cognome;
 
+	@Column(name = "USERNAME", nullable = false, length = 16, updatable = false, unique = true)
+	private String username;
+
 	@JsonIgnore
 	@Column(name = "PASSWORD", nullable = false, length = 255)
 	private String password;
-	
+
 	@Column(name = "EMAIL", nullable = false, length = 255)
 	private String email;
 
-	@Column(name = "ETA", nullable = true, length = 6)
+	@Column(name = "ETA", length = 6)
 	private int età;
 
-	@Column(name = "PESO", nullable = true, length = 20)
+	@Column(name = "PESO",  length = 20)
 	private Float peso;
 
-	@Column(name = "ALTEZZA", nullable = true)
+	@Column(name = "ALTEZZA")
 	private Float altezza;
 
-	@OneToMany
-	@JoinColumn ( name = "ID_SCHEDAPERSONALE", nullable = false)
-	private SchedaPersonale schedapersonale;
+	@Column(name = "MATRICOLA", length = 6)
+	private String matricola;
 
-	@OneToMany
-	@JoinColumn ( name = "ID_SCHEDA", nullable = false)
-	private Scheda scheda;
+	@Column(name = "TELEFONO", length = 20)
+	private String telefono;
+
+	@OneToMany (mappedBy = "utente", targetEntity = Scheda.class)
+	private List<Scheda> scheda;
+
+	@OneToMany (mappedBy = "utente", targetEntity = SchedaPersonale.class)
+	private List<SchedaPersonale> schedapersonale;
+
+	@OneToMany (mappedBy = "utente", targetEntity = Routine.class)
+	private List<Routine> routine;
 
 
 
@@ -72,6 +82,14 @@ public class Utente {
 
 	public void setCognome(String cognome) {
 		this.cognome = cognome;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 	public String getPassword() {
@@ -114,20 +132,20 @@ public class Utente {
 		this.altezza = altezza;
 	}
 
+	public String getMatricola() {
+		return matricola;
+	}
 
-	@Override
-	public boolean equals(Object o) {
-		if (this == o) return true;
-		if (o == null || getClass() != o.getClass()) return false;
-		Utente utente = (Utente) o;
-		return età == utente.età &&
-				Objects.equals(id, utente.id) &&
-				Objects.equals(nome, utente.nome) &&
-				Objects.equals(cognome, utente.cognome) &&
-				Objects.equals(password, utente.password) &&
-				Objects.equals(email, utente.email) &&
-				Objects.equals(peso, utente.peso) &&
-				Objects.equals(altezza, utente.altezza);
+	public void setMatricola(String matricola) {
+		this.matricola = matricola;
+	}
+
+	public String getTelefono() {
+		return telefono;
+	}
+
+	public void setTelefono(String telefono) {
+		this.telefono = telefono;
 	}
 
 }

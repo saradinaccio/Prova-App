@@ -9,24 +9,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import it.univaq.disim.mobile.myunivaq.business.MyUnivaqService;
-import it.univaq.disim.mobile.myunivaq.domain.Esercizio;
+import it.univaq.disim.mobile.myunivaq.domain.Notizia;
 
 @RestController
-@RequestMapping("/api/esercizi")
-public class RESTEserciziController {
-
-    @Autowired
-    private MyUnivaqService service;
-
-    @GetMapping
-    public List<Esercizio> list() {
-        System.out.println("ciao");
-        return service.findAllEsercizi();
-    }
-
-	/*@GetMapping("/{id}")
-	public Esercizio findById(@PathVariable Long id) {
-		return service.findEsercizioById(Long idEsercizio);
-	}*/
+@RequestMapping("/api/notizie")
+public class RESTNotizieController {
+	
+	@Autowired
+	private MyUnivaqService service;
+	
+	@GetMapping
+	public List<Notizia> list() {
+		return service.findAllNotizie();
+	}
+	
+	@GetMapping("/{id}")
+	public Notizia findById(@PathVariable Long id) {
+		return service.findNotiziaById(id);
+	}
 
 }

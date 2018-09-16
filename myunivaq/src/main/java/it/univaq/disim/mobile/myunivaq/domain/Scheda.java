@@ -23,19 +23,11 @@ public class Scheda {
     @Column (name = "CALORIE", nullable = false)
     private int calorie;
 
+    @ManyToMany (mappedBy = "schede")
+    private Set<Esercizio> esercizioSchedeSet = new HashSet<>();
 
-    @ManyToMany
-    @JoinColumn(name = "ID_ESRCIZIO", nullable = false)
-    private Esercizio esercizio;
-
-   /* @ManyToMany
-    @JoinTable(name="SCHEDA",
-            joinColumns={@JoinColumn(name="ID_SCHEDA")},
-            inverseJoinColumns={@JoinColumn(name="ID_ESERCIZIO")})
-    private Set<Esercizio> listaesercizi= new HashSet<>();*/
-
-   @OneToMany
-   @JoinColumn (name = "ID_UTENTE", nullable = false)
+   @ManyToOne
+   @JoinColumn (name = "ID_UTENTE")
    private Utente utente;
 
 
@@ -62,6 +54,7 @@ public class Scheda {
         return zona;
     }
 
+
     public void setZona(String zona) {
         this.zona = zona;
     }
@@ -72,6 +65,14 @@ public class Scheda {
 
     public void setCalorie(int calorie) {
         this.calorie = calorie;
+    }
+
+    public Utente getUtente() {
+        return utente;
+    }
+
+    public void setUtente(Utente utente) {
+        this.utente = utente;
     }
 
     @Override
