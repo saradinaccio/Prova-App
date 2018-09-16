@@ -6,13 +6,13 @@ import java.util.Objects;
 import java.util.Set;
 
 @Entity
-@Table(name = "Esercizi")
+@Table(name = "esercizi")
 
 public class Esercizio {
 
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    @Column (name = "ID_ESRCIZIO", nullable = false)
+    @Column (name = "ID_ESERCIZIO", nullable = false)
     private Long id;
 
     @Column (name = "NOME")
