@@ -1,0 +1,87 @@
+<ion-header color="primary">
+    <ion-navbar color="primary">
+        <ion-title>{{ 'HOMEPAGE' | translate }}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+    <div class="Stile">ALLENAMENTO PER ADDOMI
+
+        <ion-card (click)="addomi(1)">
+            <img src="../../assets/imgs/Primo.jpg" />
+            <div class="card-title">Principiante</div>
+            <div class="card-subtitle">155kcal 6 minuti</div>
+        </ion-card>
+
+        <ion-card (click)="addomi(2)">
+            <img src="../../assets/imgs/Secondo.jpg" />
+            <div class="card-title">Intermedio</div>
+            <div class="card-subtitle">189 kcal 7 minuti</div>
+        </ion-card>
+
+        <ion-card (click)="addomi(3)">
+            <img src="../../assets/imgs/Terzo.jpg" />
+            <div class="card-title">Avanzato</div>
+            <div class="card-subtitle">217 kcal 10 minuti</div>
+        </ion-card>
+
+
+    </div>
+    <div class="ciao"></div>
+    <div class="Stile">ALLENAMENTO PER GLUTEI
+        <ion-card (click)="glutei(1)">
+            <img src="../../assets/imgs/gluteo2.jpg" />
+            <div class="card-title">Principiante</div>
+            <div class="card-subtitle">113kcal 4 minuti</div>
+        </ion-card>
+
+        <ion-card (click)="glutei(2)">
+            <img src="../../assets/imgs/glutei-3.jpg" />
+            <div class="card-title">Intermedio</div>
+            <div class="card-subtitle">152kcal 5 minuti</div>
+        </ion-card>
+
+        <ion-card (click)="glutei(3)">
+            <img src="../../assets/imgs/gluteo1.jpg" />
+            <div class="card-title">Avanzato</div>
+            <div class="card-subtitle">218kcal 8 minuti</div>
+        </ion-card>
+
+
+    </div>
+
+    <div class="ciao"></div>
+
+    <div class="Stile">ALLENAMENTO PER GAMBE
+
+        <ion-card (click)="gambe(1)">
+            <img src="../../assets/imgs/cosce.jpg" />
+            <div class="card-title">Principiante</div>
+            <div class="card-subtitle">133kcal 5 minuti</div>
+        </ion-card>
+
+        <ion-card (click)="gambe(2)">
+            <img src="../../assets/imgs/cosce2.jpg" />
+            <div class="card-title">Intermedio</div>
+            <div class="card-subtitle">162kcal 6 minuti</div>
+        </ion-card>
+
+        <ion-card (click)="gambe(3)">
+            <img src="../../assets/imgs/cosce3.jpg" />
+            <div class="card-title">Avanzato</div>
+            <div class="card-subtitle">186kcal 7 minuti</div>
+        </ion-card>
+
+
+    </div>
+
+    <!-- <ion-tabs>
+        <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>
+        <ion-tab [root]="tab2Root" tabTitle="Routine" tabIcon="checkbox-outline"></ion-tab>
+        <ion-tab [root]="tab3Root" tabTitle="Scheda" tabIcon="create"></ion-tab>
+        <ion-tab [root]="tab4Root" tabTitle="Profilo" tabIcon="contact"></ion-tab>
+    </ion-tabs>
+ -->
+
+
+</ion-content>
