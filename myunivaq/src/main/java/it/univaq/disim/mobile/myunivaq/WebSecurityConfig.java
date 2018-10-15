@@ -34,8 +34,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Autowired
 	private UserDetailsService userDetailsService;
 
-	//ciao :)
-
 	@Autowired
 	public void configureAuthentication(AuthenticationManagerBuilder authenticationManagerBuilder) throws Exception {
 		authenticationManagerBuilder.userDetailsService(this.userDetailsService).passwordEncoder(passwordEncoder());
@@ -53,10 +51,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		return new BCryptPasswordEncoder();
 	}
 
-	@Bean
-	public JWTAuthenticationTokenFilter authenticationTokenFilterBean() throws Exception {
-		return new JWTAuthenticationTokenFilter();
-	}
+//	@Bean
+//	public JWTAuthenticationTokenFilter authenticationTokenFilterBean() throws Exception {
+//		return new JWTAuthenticationTokenFilter();
+//	}
 
 	// configurazione Cors per poter consumare le api restful con richieste ajax
 	@Bean
@@ -82,10 +80,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 				.antMatchers("/api/notizie/**").authenticated()
 				.antMatchers("/api/insegnamenti/**", "/api/appelli/**").hasAnyRole("docente")
 				.antMatchers("/api/utente/**").authenticated();
-			
+
 
 		// Filtro Custom JWT
-		httpSecurity.addFilterBefore(authenticationTokenFilterBean(), UsernamePasswordAuthenticationFilter.class);
+		//httpSecurity.addFilterBefore(authenticationTokenFilterBean(), UsernamePasswordAuthenticationFilter.class);
 
 		httpSecurity.headers().cacheControl();
 	}

@@ -18,11 +18,7 @@ public class MyUnivaqApplication {
 	private PasswordEncoder passwordEncoder;
 
 	@Bean
-	public CommandLineRunner loadData(UtenteRepository utenteRepository, NotiziaRepository notiziaRepository,
-									  TipologiaNotiziaRepository tipologiaNotiziaRepository,
-									  CorsoDiLaureaRepository corsoDiLaureaRepository,
-									  InsegnamentoRepository insegnamentoRepository,
-									  AppelloRepository appelloRepository, SchedaRepository schedaRepository,
+	public CommandLineRunner loadData(UtenteRepository utenteRepository, SchedaRepository schedaRepository,
 									  SchedaPersonaleRepository schedaPersonaleRepository,
 									  RoutineRepository routineRepository,
 									  EsercizioRepository esercizioRepository) {

@@ -1,6 +1,5 @@
 package it.univaq.disim.mobile.myunivaq.presentation;
 
-import it.univaq.disim.mobile.myunivaq.domain.Docente;
 import it.univaq.disim.mobile.myunivaq.domain.Utente;
 
 public class UtenteResponse {
@@ -26,11 +25,11 @@ public class UtenteResponse {
 		this.email = utente.getEmail();
 		this.matricola = utente.getMatricola();
 		this.telefono = utente.getTelefono();
-		if (utente instanceof Docente) {
-			this.ruolo = "docente";
-		} else {
-			this.ruolo = "studente";
-		}
+//		if (utente instanceof Docente) {
+//			this.ruolo = "docente";
+//		} else {
+//			this.ruolo = "studente";
+//		}
 		this.altezza = utente.getAltezza();
 		this.età = utente.getEtà();
 		this.peso = utente.getPeso();

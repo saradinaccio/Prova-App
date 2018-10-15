@@ -21,14 +21,6 @@ public class MyUnivaqServiceImpl implements MyUnivaqService {
 	@Autowired
 	private UtenteRepository utenteRepository;
 
-	@Autowired
-	private NotiziaRepository notiziaRepository;
-
-	@Autowired
-	private InsegnamentoRepository insegnamentoRepository;
-
-	@Autowired
-	private AppelloRepository appelloRepository;
 
 	@Autowired
 	private SchedaRepository schedaRepository;
@@ -69,15 +61,7 @@ public class MyUnivaqServiceImpl implements MyUnivaqService {
 		return utenteRepository.findByUsername(username);
 	}
 
-	@Override
-	public List<Notizia> findAllNotizie() throws BusinessException {
-		return notiziaRepository.findAll(JpaSort.unsafe(Direction.DESC, "dataPubblicazione"));
-	}
 
-	@Override
-	public Notizia findNotiziaById(Long id) throws BusinessException {
-		return notiziaRepository.findById(id).get();
-	}
 
 	@Override
 	public Utente updateProfilo(Utente profilo) throws BusinessException {
@@ -86,38 +70,6 @@ public class MyUnivaqServiceImpl implements MyUnivaqService {
 		utente.setTelefono(profilo.getTelefono());
 		return utente;
 	}
-
-	@Override
-	public List<Insegnamento> findAllInsegnamenti(Utente utente) throws BusinessException {
-		return insegnamentoRepository.findInsegnamentiByDocenteId(utente.getId(), JpaSort.unsafe(Direction.ASC, "denominazione"));
-	}
-
-	@Override
-	public List<Appello> findAllAppelli(long idInsegnamento) throws BusinessException {
-		return appelloRepository.findAppelliByInsegnamentoId(idInsegnamento);
-	}
-
-	@Override
-	public void createAppello(Appello appello) throws BusinessException {
-		appelloRepository.save(appello);		
-	}
-
-	@Override
-	public Appello findAppelloById(long idAppello) throws BusinessException {
-		return appelloRepository.findById(idAppello).get();
-	}
-
-	@Override
-	public void updateAppello(Appello appello) throws BusinessException {
-		appelloRepository.save(appello);
-	}
-
-	@Override
-	public void deleteAppello(long idAppello) throws BusinessException {
-		appelloRepository.deleteById(idAppello);
-		
-	}
-
 
 
 }
