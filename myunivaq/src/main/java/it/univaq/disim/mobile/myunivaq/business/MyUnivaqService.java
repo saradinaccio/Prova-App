@@ -36,3 +36,5 @@ public interface MyUnivaqService {
 	void deleteScheda(long idScheda) throws BusinessException;
 
 }
+
+//ciqopkjhfhjgfjgvjjfg,njgyhuh porchiddio
