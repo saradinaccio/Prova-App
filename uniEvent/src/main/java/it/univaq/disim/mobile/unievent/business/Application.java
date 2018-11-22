@@ -37,7 +37,7 @@ public class Application {
             esercizio.setNome("asda");
             esercizio.setDescrizione("descrizione");
             esercizio.setFoto("foto");
-            esercizio.setRecupero(12);
+            esercizio.setZona("Glutei");
             esercizio.setRipetizioni(12);
             esercizio.setLivello(1L);
             esercizioRepository.save(esercizio);
@@ -46,7 +46,7 @@ public class Application {
             esercizio1.setNome("prova");
             esercizio1.setDescrizione("una descrizione");
             esercizio1.setFoto("fotofoto");
-            esercizio1.setRecupero(12);
+            esercizio1.setZona("Glutei");
             esercizio1.setRipetizioni(12);
             esercizio1.setLivello(2L);
             esercizioRepository.save(esercizio1);

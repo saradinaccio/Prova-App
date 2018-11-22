@@ -34,8 +34,8 @@ public class Esercizio {
     @Column (name = "LIVELLO")
     private Long livello;
 
-    @Column (name = "RECUPERO")
-    private int recupero;
+    @Column (name = "ZONA")
+    private String zona;
 
     @ManyToMany
     @JoinTable (name = "ESERCIZIO_SCHEDAPERSONALE",
@@ -108,12 +108,12 @@ public class Esercizio {
         this.livello = livello;
     }
 
-    public int getRecupero() {
-        return recupero;
+    public String getZona() {
+        return zona;
     }
 
-    public void setRecupero(int recupero) {
-        this.recupero = recupero;
+    public void setZona(String zona) {
+        this.zona = zona;
     }
 
     public Set<SchedaPersonale> getSchedepersonali() {
@@ -144,25 +144,41 @@ public class Esercizio {
 
 
     @Override
+    public String toString() {
+        return "Esercizio{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", descrizione='" + descrizione + '\'' +
+                ", serie=" + serie +
+                ", ripetizioni=" + ripetizioni +
+                ", foto='" + foto + '\'' +
+                ", livello=" + livello +
+                ", zona='" + zona + '\'' +
+                ", schedepersonali=" + schedepersonali +
+                ", schede=" + schede +
+                '}';
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Esercizio esercizio = (Esercizio) o;
         return serie == esercizio.serie &&
                 ripetizioni == esercizio.ripetizioni &&
-                livello == esercizio.livello &&
-                recupero == esercizio.recupero &&
                 Objects.equals(id, esercizio.id) &&
                 Objects.equals(nome, esercizio.nome) &&
                 Objects.equals(descrizione, esercizio.descrizione) &&
                 Objects.equals(foto, esercizio.foto) &&
+                Objects.equals(livello, esercizio.livello) &&
+                Objects.equals(zona, esercizio.zona) &&
                 Objects.equals(schedepersonali, esercizio.schedepersonali) &&
                 Objects.equals(schede, esercizio.schede);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, nome, descrizione, serie, ripetizioni, foto, livello, recupero, schedepersonali, schede);
+        return Objects.hash(id, nome, descrizione, serie, ripetizioni, foto, livello, zona, schedepersonali, schede);
     }
 }
 
