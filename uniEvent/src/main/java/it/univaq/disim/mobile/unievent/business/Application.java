@@ -39,7 +39,17 @@ public class Application {
             esercizio.setFoto("foto");
             esercizio.setRecupero(12);
             esercizio.setRipetizioni(12);
+            esercizio.setLivello(1L);
             esercizioRepository.save(esercizio);
+
+            Esercizio esercizio1 = new Esercizio();
+            esercizio1.setNome("prova");
+            esercizio1.setDescrizione("una descrizione");
+            esercizio1.setFoto("fotofoto");
+            esercizio1.setRecupero(12);
+            esercizio1.setRipetizioni(12);
+            esercizio1.setLivello(2L);
+            esercizioRepository.save(esercizio1);
             //            User user = new User();
 //            user.setEmail("prova");
 //            user.setPassword("prova");

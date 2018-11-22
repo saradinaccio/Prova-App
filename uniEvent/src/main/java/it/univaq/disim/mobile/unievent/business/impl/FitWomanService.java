@@ -7,10 +7,16 @@ import java.util.List;
 
 public interface FitWomanService {
 
-    Utente findUtenteByUsername(String username);
-
-    Utente updateProfilo(Utente utente);
     List<Esercizio> findAllEsercizi();
+    Esercizio findEsercizioById(Long id);
+    List<Esercizio> findEsercizioByLivello(Long livello);
+
+
+
+
+
+    Utente findUtenteByUsername(String username);
+    Utente updateProfilo(Utente utente);
     List<Scheda> findAllSchede();
     // List<Esercizio> findEsercizioById(long idEsercizio) throws BusinessException;
     void createScheda(Scheda scheda);

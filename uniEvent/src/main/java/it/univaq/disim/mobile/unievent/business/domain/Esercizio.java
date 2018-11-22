@@ -31,8 +31,8 @@ public class Esercizio {
     @Column (name = "FOTO")
     private String foto;
 
-    @Column (name = "VIDEO")
-    private String video;
+    @Column (name = "LIVELLO")
+    private Long livello;
 
     @Column (name = "RECUPERO")
     private int recupero;
@@ -100,12 +100,12 @@ public class Esercizio {
         this.foto = foto;
     }
 
-    public String getVideo() {
-        return video;
+    public Long getLivello() {
+        return livello;
     }
 
-    public void setVideo(String video) {
-        this.video = video;
+    public void setLivello(Long livello) {
+        this.livello = livello;
     }
 
     public int getRecupero() {
@@ -150,13 +150,19 @@ public class Esercizio {
         Esercizio esercizio = (Esercizio) o;
         return serie == esercizio.serie &&
                 ripetizioni == esercizio.ripetizioni &&
+                livello == esercizio.livello &&
                 recupero == esercizio.recupero &&
                 Objects.equals(id, esercizio.id) &&
                 Objects.equals(nome, esercizio.nome) &&
                 Objects.equals(descrizione, esercizio.descrizione) &&
                 Objects.equals(foto, esercizio.foto) &&
-                Objects.equals(video, esercizio.video);
+                Objects.equals(schedepersonali, esercizio.schedepersonali) &&
+                Objects.equals(schede, esercizio.schede);
     }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, nome, descrizione, serie, ripetizioni, foto, livello, recupero, schedepersonali, schede);
+    }
 }
 
