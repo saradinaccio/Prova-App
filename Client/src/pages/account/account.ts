@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { LoginPage } from '../login/login';
+import {InizioPage} from "../inizio/inizio";
 
 /**
  * Generated class for the AccountPage page.
@@ -26,7 +26,7 @@ export class AccountPage {
   goToOtherPage() {
     //push another page onto the history stack
     //causing the nav controller to animate the new page in
-    this.navCtrl.push(LoginPage);
+    this.navCtrl.push(InizioPage);
   }
 
   cambia() {

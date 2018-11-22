@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { EsercizioService} from "../../services/esercizio.service";
+import { Esercizio} from "../../models/esercizio.model";
 
 /**
  * Generated class for the CoscePage page.
@@ -15,11 +17,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class CoscePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  esercizi: Array<Esercizio>
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public esercizioService: EsercizioService) {
   }
 
   ionViewDidLoad() {
+    this.esercizioService.esercizi().subscribe((data: Array<Esercizio>) => {
+      this.esercizi = data;
+    });
     console.log('ionViewDidLoad CoscePage');
   }
 
-}
+};
