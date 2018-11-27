@@ -9,7 +9,7 @@ import java.util.Set;
 @Table (name = "schedepersonali")
 public class SchedaPersonale {
 
-    @Id
+      @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     @Column (name ="ID_SCHEDAPERSONALE", nullable = false)
     private Long id;

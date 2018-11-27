@@ -44,12 +44,6 @@ public class Utente {
     @Column(name = "ALTEZZA")
     private Float altezza;
 
-    @Column(name = "MATRICOLA", length = 6)
-    private String matricola;
-
-    @Column(name = "TELEFONO", length = 20)
-    private String telefono;
-
     @OneToMany (mappedBy = "utente", targetEntity = Scheda.class)
     private List<Scheda> scheda;
 
@@ -131,22 +125,6 @@ public class Utente {
 
     public void setAltezza(Float altezza) {
         this.altezza = altezza;
-    }
-
-    public String getMatricola() {
-        return matricola;
-    }
-
-    public void setMatricola(String matricola) {
-        this.matricola = matricola;
-    }
-
-    public String getTelefono() {
-        return telefono;
-    }
-
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
     }
 
 }

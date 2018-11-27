@@ -9,7 +9,8 @@ export const URL = {
     NOTIZIE: URL_BASE + "/notizie",
     INSEGNAMENTI: URL_BASE + "/insegnamenti",
     APPELLI: URL_BASE + "/appelli",
-    ESERCIZI: URL_BASE + "/esercizi"
+    ESERCIZI: URL_BASE + "/esercizi",
+    SCHEDEPERSONALI: URL_BASE + "/schede"
 }
 
 export const X_AUTH = "X-Auth";

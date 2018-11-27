@@ -20,6 +20,9 @@ public class FitWomanServiceImpl implements FitWomanService {
     @Autowired
     private EsercizioRepository esercizioRepository;
 
+    @Autowired
+    private SchedaPersonaleRepository schedaPersonaleRepository;
+
     @Override
     public Utente findUtenteByUsername(String username) {
         return null;
@@ -56,8 +59,11 @@ public class FitWomanServiceImpl implements FitWomanService {
         return null;
     }
 
+
     @Override
-    public void createScheda(Scheda scheda) {
+    public void createScheda(SchedaPersonale scheda) {
+
+    this.schedaPersonaleRepository.save(scheda);
 
     }
 

@@ -1,7 +1,9 @@
 package it.univaq.disim.mobile.unievent.business;
 
 import it.univaq.disim.mobile.unievent.business.domain.Esercizio;
+import it.univaq.disim.mobile.unievent.business.domain.SchedaPersonale;
 import it.univaq.disim.mobile.unievent.business.impl.EsercizioRepository;
+import it.univaq.disim.mobile.unievent.business.impl.SchedaPersonaleRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -26,7 +28,7 @@ public class Application {
 
 
     @Bean
-    public CommandLineRunner loadData( EsercizioRepository esercizioRepository) {
+    public CommandLineRunner loadData(EsercizioRepository esercizioRepository, SchedaPersonaleRepository schedaPersonaleRepository) {
         return (args) -> {
 
             /*
@@ -50,6 +52,12 @@ public class Application {
             esercizio1.setRipetizioni(12);
             esercizio1.setLivello(2L);
             esercizioRepository.save(esercizio1);
+
+
+            SchedaPersonale schedaCreata = new SchedaPersonale();
+            schedaCreata.setGoal("Goal chissa");
+            schedaPersonaleRepository.save(schedaCreata);
+
             //            User user = new User();
 //            user.setEmail("prova");
 //            user.setPassword("prova");

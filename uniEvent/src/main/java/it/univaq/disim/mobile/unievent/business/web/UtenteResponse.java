@@ -8,9 +8,6 @@ public class UtenteResponse {
     private String nome;
     private String cognome;
     private String email;
-    private String matricola;
-    private String ruolo;
-    private String telefono;
     private float peso;
     private float altezza;
     private int età;
@@ -23,8 +20,6 @@ public class UtenteResponse {
         this.cognome = utente.getCognome();
         this.username = utente.getUsername();
         this.email = utente.getEmail();
-        this.matricola = utente.getMatricola();
-        this.telefono = utente.getTelefono();
 //		if (utente instanceof Docente) {
 //			this.ruolo = "docente";
 //		} else {
@@ -58,28 +53,6 @@ public class UtenteResponse {
     }
     public void setEmail(String email) {
         this.email = email;
-    }
-    public String getMatricola() {
-        return matricola;
-    }
-    public void setMatricola(String matricola) {
-        this.matricola = matricola;
-    }
-
-    public String getTelefono() {
-        return telefono;
-    }
-
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
-    }
-
-    public String getRuolo() {
-        return ruolo;
-    }
-
-    public void setRuolo(String ruolo) {
-        this.ruolo = ruolo;
     }
 
     public void setPeso(){ this.peso = peso; }
