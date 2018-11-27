@@ -51,7 +51,7 @@ export class CreaSchedaPage {
            // this.schede.push(data);
             this.SchedaPersonale.goal = data.nome;
             console.log(this.SchedaPersonale);
-            this.schedaPersonaleService.crea(this.SchedaPersonale.goal).subscribe((data: Boolean)=> {
+            this.schedaPersonaleService.crea(this.SchedaPersonale).subscribe((data: Boolean)=> {
               console.log(data);
             });
           }

@@ -23,6 +23,7 @@ import { StretchingPage } from '../pages/stretching/stretching';
 import { EsercizioService } from '../services/esercizio.service';
 import {CoscePage} from "../pages/cosce/cosce";
 import {GluteiPage} from "../pages/glutei/glutei";
+import {SchedaPersonaleService} from "../services/schedaPersonale.service";
 
 
 export function createTranslateLoader(http: HttpClient) { return new TranslateHttpLoader(http, './assets/i18n/', '.json'); } 
@@ -79,7 +80,8 @@ export function createTranslateLoader(http: HttpClient) { return new TranslateHt
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthService,
-    EsercizioService
+    EsercizioService,
+    SchedaPersonaleService
   ]
 })
 export class AppModule {}

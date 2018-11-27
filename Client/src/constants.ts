@@ -1,16 +1,14 @@
 export const USE_PROXY = true;
 
-export const URL_BASE = USE_PROXY ? 'api' : 'http://localhost:8100/api';
+export const URL_BASE = USE_PROXY ? 'api' : 'http://localhost:8080/api';
 
 export const URL = {
     LOGIN: URL_BASE + "/login",
     LOGOUT: URL_BASE + "/logout",
     UPDATE_PROFILO: URL_BASE + "/utente/updateprofilo",
-    NOTIZIE: URL_BASE + "/notizie",
-    INSEGNAMENTI: URL_BASE + "/insegnamenti",
-    APPELLI: URL_BASE + "/appelli",
     ESERCIZI: URL_BASE + "/esercizi",
-    SCHEDEPERSONALI: URL_BASE + "/schede"
+    SCHEDEPERSONALI: URL_BASE + "/schede/creaScheda",
+    SCHEDE: URL_BASE + "/schede"
 }
 
 export const X_AUTH = "X-Auth";
