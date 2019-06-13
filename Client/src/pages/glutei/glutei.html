@@ -6,13 +6,25 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>glutei</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>{{title}}</ion-title>
+    </ion-navbar>
 
 </ion-header>
 
+<ion-content>
 
-<ion-content padding>
+    <ion-list>
+
+        <ion-item *ngFor="let x of esercizio" (click)="doAlert(x)">
+            <ion-avatar item-start>
+                <img src="https://media.giphy.com/media/fQlSGUqS3Dz4Xs5MIl/giphy.gif">
+            </ion-avatar>
+            <h2>{{x.nome}}</h2>
+            <h3>{{x.serie}}x{{x.ripetizioni}}</h3>
+            <p>Listen, I've had a pretty messed up day...</p>
+        </ion-item>
+
+    </ion-list>
 
 </ion-content>

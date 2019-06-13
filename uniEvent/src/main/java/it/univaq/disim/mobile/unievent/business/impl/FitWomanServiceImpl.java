@@ -59,6 +59,10 @@ public class FitWomanServiceImpl implements FitWomanService {
         return null;
     }
 
+    @Override
+    public List<Esercizio> findEserciziByLivelloAndZona(long livello, String zona) {
+        return esercizioRepository.findEserciziByLivelloAndZona(livello, zona);
+    }
 
     @Override
     public void createScheda(SchedaPersonale scheda) {

@@ -14,7 +14,7 @@ import { AuthService } from '../providers/auth-service/auth-service';
 import { RegisterPage } from '../pages/register/register';
 import { CreaSchedaPage } from '../pages/crea-scheda/crea-scheda';
 import { AccountPage } from '../pages/account/account';
-import { AddomiPage} from "../pages/addomi/addomi";
+import AddomiPage from "../pages/addomi/addomi";
 import { RoutinePage } from '../pages/routine/routine';
 import { SceltaZonaPage } from '../pages/scelta-zona/scelta-zona';
 import { InizioPage } from '../pages/inizio/inizio';

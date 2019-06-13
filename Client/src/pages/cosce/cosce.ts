@@ -16,17 +16,34 @@ import { Esercizio} from "../../models/esercizio.model";
   templateUrl: 'cosce.html',
 })
 export class CoscePage {
-
-  esercizi: Array<Esercizio>
+  public value : any;
+  public title : String ="";
+  esercizio: Array<Esercizio>
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public esercizioService: EsercizioService) {
+
+    this.value = navParams.get('Item');
   }
 
   ionViewDidLoad() {
-    this.esercizioService.esercizi().subscribe((data: Array<Esercizio>) => {
-      this.esercizi = data;
-    });
     console.log('ionViewDidLoad CoscePage');
-  }
+    console.log(this.value);
+    switch(this.value){
+      case 1: this.title = 'Principiante Gambe';
+     break;
+     case 2: this.title = 'Intermedio Gambe';
+     break;
+     case 3: this.title = 'Avanzato Gambe';
+     break;
+    }
+    
+      this.esercizioService.esercizi(this.value, 'Gambe').subscribe((data: Array<Esercizio>) => {
+      this.esercizio = data;
 
+      console.log(data);
+      console.log ('Primo');
+
+    })
+  
+  }
 };

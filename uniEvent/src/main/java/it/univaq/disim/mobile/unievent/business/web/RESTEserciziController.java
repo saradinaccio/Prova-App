@@ -37,12 +37,22 @@ public class RESTEserciziController {
         return service.findEsercizioById(id);
 	}
 
-	@GetMapping("/livello/{livello}")
+	/*@GetMapping("/addome/livello/{livello}")
     public List<Esercizio> listEserciziLivello(@PathVariable Long livello) {
         System.out.println("metodo listEserciziLivello");
 
         List<Esercizio> esercizios = service.findEsercizioByLivello(livello);
         System.out.println(esercizios);
         return esercizios;
+    }*/
+
+    @GetMapping("/livello/{livello}/{zona}")
+    public List<Esercizio> findEserciziByLivelloAndZona(@PathVariable long livello, @PathVariable String zona) {
+        System.out.println("metodo listEserciziLivello");
+
+        List<Esercizio> esercizios = service.findEserciziByLivelloAndZona(livello, zona);
+        System.out.println(esercizios);
+        return esercizios;
     }
+
 }

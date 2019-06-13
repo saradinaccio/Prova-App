@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
-import { AddomiPage } from './addomi';
+import AddomiPage from './addomi';
 
 @NgModule({
   declarations: [
