@@ -4,8 +4,7 @@ export class Esercizio {
     public descrizione: string = "";
     public foto: string = "";
     public ripetizioni: string = "";
-    public recupero: string = "";
-
+    public serie : string = "";
     constructor (obj ? : any){
         this.set(obj);
     }
@@ -16,7 +15,7 @@ export class Esercizio {
             this.descrizione = obj.descrizione || this.descrizione;
             this.foto = obj.foto || this.foto;
             this.ripetizioni = obj.ripetizioni || this.ripetizioni;
-            this.recupero = obj.recupero || this.recupero;
+            this.serie = obj.serie || this.serie;
         }
     }
 }

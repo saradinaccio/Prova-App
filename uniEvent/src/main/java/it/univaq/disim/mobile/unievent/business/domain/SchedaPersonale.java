@@ -5,6 +5,7 @@ import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
+
 @Entity
 @Table (name = "schedepersonali")
 public class SchedaPersonale {
@@ -29,8 +30,20 @@ public class SchedaPersonale {
     @JoinColumn (name = "ID_UTENTE")
     private Utente utente;
 
+    public Set<Esercizio> getEsercizioSet() {
+        return esercizioSet;
+    }
+
+    public void setEsercizioSet(Set<Esercizio> esercizioSet) {
+        this.esercizioSet = esercizioSet;
+    }
+
     @ManyToMany (mappedBy = "schedepersonali")
     private Set<Esercizio> esercizioSet = new HashSet<>();
+
+/* @OneToMany (mappedBy = "Esercizio")
+    private Set<SchedaPersonale> schedaPersonaleset;*/
+
 
     // GETTER AND SETTER
 

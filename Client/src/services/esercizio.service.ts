@@ -15,4 +15,10 @@ export class EsercizioService{
     
     }
 
+    allEsercizi(): Observable<Array<Esercizio>>{
+        console.log("Ciao");
+        return this.http.get<Array<Esercizio>>(URL.ESERCIZI); //Richiama sul server UrlEsercizi e prende i dati dal database e mi ridà un array di esercizi
+    
+    }
+
     }

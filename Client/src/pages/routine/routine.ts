@@ -6,6 +6,8 @@ import { LoginPage } from '../login/login';
 import { InizioPage } from '../inizio/inizio';
 import { RiscaldamentoPage } from '../riscaldamento/riscaldamento';
 import { StretchingPage } from '../stretching/stretching';
+import { AggiungiEserciziPage } from '../aggiungi-esercizi/aggiungi-esercizi';
+import { SceltaZonaPage } from '../scelta-zona/scelta-zona';
 
 /**
  * Generated class for the RoutinePage page.
@@ -29,7 +31,7 @@ export class RoutinePage {
   goToOtherPage() {
     //push another page onto the history stack
     //causing the nav controller to animate the new page in
-    this.navCtrl.push(InizioPage);
+    this.navCtrl.push(AggiungiEserciziPage);
   }
 
   riscaldamento(){

@@ -12,6 +12,7 @@ public interface FitWomanService {
     Esercizio findEsercizioById(Long id);
     List<Esercizio> findEsercizioByLivello(Long livello);
     List<Esercizio>findEserciziByLivelloAndZona(long livello, String zona);
+    List<SchedaPersonale> FindAllSchedePersonali ();
 
 
 

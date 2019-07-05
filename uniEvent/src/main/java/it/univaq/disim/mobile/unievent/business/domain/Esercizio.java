@@ -43,6 +43,11 @@ public class Esercizio {
             inverseJoinColumns = {@JoinColumn (name = "ID_SCHEDAPERSONALE")})
     private Set<SchedaPersonale> schedepersonali = new HashSet<>();
 
+/*    @ManyToOne
+    @JoinColumn (name = "EsercizioId", nullable = false)
+    private Esercizio esercizio;*/
+
+
     @ManyToMany
     @JoinTable (name = "ESERCIZIO_SCHEDA",
             joinColumns =  {@JoinColumn (name = "ID_ESERCIZIO")},

@@ -1,9 +1,13 @@
 package it.univaq.disim.mobile.unievent.business;
 
 import it.univaq.disim.mobile.unievent.business.domain.Esercizio;
+import it.univaq.disim.mobile.unievent.business.domain.Scheda;
 import it.univaq.disim.mobile.unievent.business.domain.SchedaPersonale;
+import it.univaq.disim.mobile.unievent.business.domain.Utente;
 import it.univaq.disim.mobile.unievent.business.impl.EsercizioRepository;
 import it.univaq.disim.mobile.unievent.business.impl.SchedaPersonaleRepository;
+import it.univaq.disim.mobile.unievent.business.impl.SchedaRepository;
+import it.univaq.disim.mobile.unievent.business.impl.UtenteRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -28,7 +32,7 @@ public class Application {
 
 
     @Bean
-    public CommandLineRunner loadData(EsercizioRepository esercizioRepository, SchedaPersonaleRepository schedaPersonaleRepository) {
+    public CommandLineRunner loadData(EsercizioRepository esercizioRepository, SchedaPersonaleRepository schedaPersonaleRepository, UtenteRepository utenteRepository, SchedaRepository schedaRepository) {
         return (args) -> {
 
             /*
@@ -84,7 +88,7 @@ public class Application {
             Squat.setSerie(3);
             Squat.setRipetizioni(15);
             Squat.setLivello(1L);
-            esercizioRepository.save(Squat);
+
 
           /*  Esercizio SquatGlutei = new Esercizio();
             SquatGlutei.setNome("Squat");
@@ -146,10 +150,34 @@ public class Application {
             PonteSollevamento.setLivello(3L);
             esercizioRepository.save(PonteSollevamento);
 
+            Utente esempio = new Utente();
+            esempio.setCognome("DI Naccio");
+            esempio.setNome("Sara");
+            esempio.setEtà(23);
+            esempio.setUsername("rebysa");
+            esempio.setEmail("sara.dinaccio@gmail.com");
+            esempio.setPassword("ciaociao");
+            utenteRepository.save(esempio);
+
 
             SchedaPersonale schedaCreata = new SchedaPersonale();
             schedaCreata.setGoal("Goal chissa");
             schedaPersonaleRepository.save(schedaCreata);
+
+            Scheda scheda = new Scheda();
+            scheda.setLivello("sjdcnf");
+            scheda.setZona("edfcvbgf");
+            schedaRepository.save(scheda);
+
+            Squat.getSchedepersonali().add(schedaCreata);
+            schedaCreata.getEsercizioSet().add(Squat);
+            esercizioRepository.save(Squat);
+            schedaPersonaleRepository.save(schedaCreata);
+
+
+
+
+
 
             //            User user = new User();
 //            user.setEmail("prova");

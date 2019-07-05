@@ -18,10 +18,10 @@ export class SchedaPersonaleService{
 
   crea(SchedaPersonale : schedaPersonale): Observable<boolean>{
     console.log("LOG.CREA_SCHEDA: " + URL.SCHEDEPERSONALI);
-    return this.http.post<boolean>(URL.SCHEDEPERSONALI, SchedaPersonale, {observe: 'response'})
+    return this.http.post<boolean>(URL.CREASCHEDEPERSONALI, SchedaPersonale, {observe: 'response'})
       .map((resp: HttpResponse<boolean>) => {
-      console.log("resp.body.valueOf():" + resp.body.valueOf());
-
+    //  console.log("resp.body.valueOf():" + resp.body.valueOf());
+    console.log("resp.body.valueOf()");
       return resp.body;
 
     });

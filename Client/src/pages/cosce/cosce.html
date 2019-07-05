@@ -7,7 +7,7 @@
 <ion-header>
 
     <ion-navbar>
-        <ion-title>{{title}}</ion-title>
+        <ion-title>{{titolo}}</ion-title>
     </ion-navbar>
 
 </ion-header>
@@ -21,9 +21,9 @@
             <ion-avatar item-start>
                 <img src="https://media.giphy.com/media/fQlSGUqS3Dz4Xs5MIl/giphy.gif">
             </ion-avatar>
-            <h2>{{x.nome}}</h2>
-            <h3>{{x.serie}}x{{x.ripetizioni}}</h3>
-            <p>Listen, I've had a pretty messed up day...</p>
+            <h2>{{x[0]}}</h2>
+            <h3>{{x[1]}}x{{x[2]}}</h3>
+            <p>{{x[3]}}</p>
         </ion-item>
 
     </ion-list>

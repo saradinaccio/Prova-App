@@ -24,7 +24,9 @@ import { EsercizioService } from '../services/esercizio.service';
 import {CoscePage} from "../pages/cosce/cosce";
 import {GluteiPage} from "../pages/glutei/glutei";
 import {SchedaPersonaleService} from "../services/schedaPersonale.service";
-
+import { LongPressModule } from "ionic-long-press";
+import { AggiungiEserciziPage } from '../pages/aggiungi-esercizi/aggiungi-esercizi';
+import { FileTransfer, FileTransferObject } from '@ionic-native/file-transfer/ngx';
 
 export function createTranslateLoader(http: HttpClient) { return new TranslateHttpLoader(http, './assets/i18n/', '.json'); } 
 
@@ -43,13 +45,15 @@ export function createTranslateLoader(http: HttpClient) { return new TranslateHt
     StretchingPage,
     AddomiPage,
     CoscePage,
-    GluteiPage
+    GluteiPage,
+    AggiungiEserciziPage
 
 
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    LongPressModule,
     IonicModule.forRoot(MyApp),
     TranslateModule.forRoot({ 
       loader: { 
@@ -72,7 +76,8 @@ export function createTranslateLoader(http: HttpClient) { return new TranslateHt
     StretchingPage,
     AddomiPage,
     CoscePage,
-    GluteiPage
+    GluteiPage,
+    AggiungiEserciziPage
 
   ],
   providers: [
@@ -81,7 +86,10 @@ export function createTranslateLoader(http: HttpClient) { return new TranslateHt
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthService,
     EsercizioService,
-    SchedaPersonaleService
+    SchedaPersonaleService,  
+    FileTransfer,
+    FileTransferObject,
+    File,
   ]
 })
 export class AppModule {}

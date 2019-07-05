@@ -7,7 +7,8 @@ export const URL = {
     LOGOUT: URL_BASE + "/logout",
     UPDATE_PROFILO: URL_BASE + "/utente/updateprofilo",
     ESERCIZI: URL_BASE + "/esercizi",
-    SCHEDEPERSONALI: URL_BASE + "/schede/creaScheda",
+    CREASCHEDEPERSONALI: URL_BASE + "/schede/creaScheda",
+    SCHEDEPERSONALI: URL_BASE + "/schede/personale",
     SCHEDE: URL_BASE + "/schede"
 }
 

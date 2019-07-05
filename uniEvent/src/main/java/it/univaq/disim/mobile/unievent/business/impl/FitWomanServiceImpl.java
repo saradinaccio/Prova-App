@@ -52,7 +52,10 @@ public class FitWomanServiceImpl implements FitWomanService {
         return esercizioRepository.findEsercizioByLivello(livello);
     }
 
-
+    @Override
+    public List<SchedaPersonale> FindAllSchedePersonali (){
+        return schedaPersonaleRepository.FindAllSchedePersonali();
+    }
 
     @Override
     public List<Scheda> findAllSchede() {
@@ -61,7 +64,11 @@ public class FitWomanServiceImpl implements FitWomanService {
 
     @Override
     public List<Esercizio> findEserciziByLivelloAndZona(long livello, String zona) {
-        return esercizioRepository.findEserciziByLivelloAndZona(livello, zona);
+        List<Esercizio> sc = esercizioRepository.findEserciziByLivelloAndZona(livello, zona);
+        System.out.println(sc);
+        return sc;
+       // return esercizioRepository.findEserciziByLivelloAndZona(livello, zona);
+
     }
 
     @Override

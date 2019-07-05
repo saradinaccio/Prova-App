@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import {EsercizioService } from '../../services/esercizio.service';
 import { Esercizio } from '../../models/esercizio.model';
 
@@ -19,8 +19,11 @@ export class GluteiPage {
 
   public value : any;
   public esercizio : Array<Esercizio>;
-  public title : String = "";
-  constructor(public navCtrl: NavController, public navParams: NavParams, public esercizioService: EsercizioService) {
+  public title : string = "";
+  public titolo : string = "";
+  public message : string = "";
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alerCtrl: AlertController, public esercizioService: EsercizioService) {
     this.value = navParams.get('Item');
 
   }
@@ -29,11 +32,11 @@ export class GluteiPage {
     console.log('ionViewDidLoad GluteiPage');
     console.log(this.value);
     switch(this.value){
-      case 1: this.title = 'Principiante Glutei';
+      case 1: this.titolo = 'Principiante Glutei';
      break;
-     case 2: this.title = 'Intermedio Glutei';
+     case 2: this.titolo = 'Intermedio Glutei';
      break;
-     case 3: this.title = 'Avanzato Glutei';
+     case 3: this.titolo = 'Avanzato Glutei';
      break;
     }
     
@@ -45,5 +48,19 @@ export class GluteiPage {
 
     })
   }
+
+  
+  doAlert(x: any) {
+    this.title = x[0];
+    this.message=x.desc;
+    console.log(this.title);
+    let alert = this.alerCtrl.create({
+      title: this.title,
+      message: x[3],
+      buttons: ['Ok']
+    });
+    alert.present()
+  }
+
 
 }
