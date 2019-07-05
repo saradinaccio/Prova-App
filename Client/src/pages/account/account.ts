@@ -17,13 +17,18 @@ declare let cordova : any;
 @Component({
    selector: 'page-account',
    templateUrl: 'account.html',
+  
 
 })
 
 export class AccountPage {
 
   cambio:boolean=true;
-  utente:any={nome:"Sara",cognome:" Di Naccio"}
+  utente:any={nome:"Sara",cognome:" Di Naccio"};
+  image : any ;
+  foto : any;
+
+
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public transfer: FileTransfer, public File: File, public filePath: FilePath, public loadingCtrl: LoadingController,  public actionSheetCtrl: ActionSheetController) {
   }
@@ -82,15 +87,16 @@ private createFileName() {
       });
 
       loading.present();
+      
     
     // Destination URL
     var url = "http://dominiotestprova.altervista.org/upload.php";
 
     // File for Upload
-    var targetPath = cordova.file + "Cityshop/" + this.lastImage;
+    var targetPath = cordova.file + "Cityshop/" ;
 
     // File name only
-    var filename = this.lastImage;
+    var filename = "Ciao";
 
     var options = {
       fileKey: "file",

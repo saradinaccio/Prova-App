@@ -27,6 +27,8 @@ import {SchedaPersonaleService} from "../services/schedaPersonale.service";
 import { LongPressModule } from "ionic-long-press";
 import { AggiungiEserciziPage } from '../pages/aggiungi-esercizi/aggiungi-esercizi';
 import { FileTransfer, FileTransferObject } from '@ionic-native/file-transfer/ngx';
+import { File } from '@ionic-native/file/ngx';
+import { FilePath } from '@ionic-native/file-path/ngx';
 
 export function createTranslateLoader(http: HttpClient) { return new TranslateHttpLoader(http, './assets/i18n/', '.json'); } 
 
@@ -90,6 +92,7 @@ export function createTranslateLoader(http: HttpClient) { return new TranslateHt
     FileTransfer,
     FileTransferObject,
     File,
+    FilePath
   ]
 })
 export class AppModule {}
