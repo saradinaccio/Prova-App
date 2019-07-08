@@ -29,6 +29,7 @@ import { AggiungiEserciziPage } from '../pages/aggiungi-esercizi/aggiungi-eserci
 import { FileTransfer, FileTransferObject } from '@ionic-native/file-transfer/ngx';
 import { File } from '@ionic-native/file/ngx';
 import { FilePath } from '@ionic-native/file-path/ngx';
+import { Camera } from '@ionic-native/camera/ngx';
 
 export function createTranslateLoader(http: HttpClient) { return new TranslateHttpLoader(http, './assets/i18n/', '.json'); } 
 
@@ -92,7 +93,8 @@ export function createTranslateLoader(http: HttpClient) { return new TranslateHt
     FileTransfer,
     FileTransferObject,
     File,
-    FilePath
+    FilePath,
+    Camera
   ]
 })
 export class AppModule {}

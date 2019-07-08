@@ -5,6 +5,8 @@ import { File } from '@ionic-native/file/ngx';
 import { FileTransfer, FileTransferObject } from '@ionic-native/file-transfer/ngx';
 import { FilePath } from '@ionic-native/file-path/ngx';
 import { ActionSheetController } from 'ionic-angular';
+import { Camera } from '@ionic-native/camera/ngx';
+import { Platform } from 'ionic-angular';
 
 declare let cordova : any;
 /**
@@ -22,15 +24,27 @@ declare let cordova : any;
 })
 
 export class AccountPage {
-
+  lastImage: string = 'http://dominiotestprova.altervista.org/image/avatars/avatardefault.png';
   cambio:boolean=true;
   utente:any={nome:"Sara",cognome:" Di Naccio"};
-  image : any ;
-  foto : any;
+  image: string = "avatardefault.png";
+  file: any;
+
+  foto: String = "http://dominiotestprova.altervista.org/image/avatars/avatardefault.png";
+  
 
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public transfer: FileTransfer, public File: File, public filePath: FilePath, public loadingCtrl: LoadingController,  public actionSheetCtrl: ActionSheetController) {
+  constructor(public navCtrl: NavController,
+     public navParams: NavParams, 
+     public transfer: FileTransfer, 
+     public File: File, 
+     public filePath: FilePath, 
+     public loadingCtrl: LoadingController,  
+     public actionSheetCtrl: ActionSheetController, 
+     public camera : Camera, 
+     public plt: Platform 
+     ) {
   }
 
   goToOtherPage() {
@@ -51,27 +65,85 @@ export class AccountPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad AccountPage');
   }
-
-
-  presentActionSheet() {
-    let actionSheet = this.actionSheetCtrl.create({
-        title: "SELEZIONA LA FOTO",
-        buttons: [
-        {
-          icon: "md-image",
-          text: "FOGLIA LA GALLERIA",
-          cssClass: "action_gallery",
-          handler: () => {
-           
-          }
-        }, {
-          cssClass: "action_cancel",
-          text: "CANCELLA",
-          role: 'cancel',
+ 
+presentActionSheet() {
+  let actionSheet = this.actionSheetCtrl.create({
+      title: "SELEZIONA FOTO",
+      buttons: [
+      {
+        icon: "md-image",
+        text: "GALLERIA",
+        cssClass: "action_gallery",
+        handler: () => {
+          this.takePicture(this.camera.PictureSourceType.PHOTOLIBRARY);
         }
-      ]
-    });
-    actionSheet.present();
+      }, {
+        icon: 'md-camera',
+        text: "FOTO",
+        cssClass: "action_gallery",
+        handler: () => {
+          this.takePicture(this.camera.PictureSourceType.CAMERA);
+        }
+      }, {
+        cssClass: "action_cancel",
+        text: "CANCELLA",
+        role: 'cancel',
+      }
+    ]
+  });
+  actionSheet.present();
+}
+
+public takePicture(sourceType) { 
+        
+  // Create options for the Camera Dialog
+  var options = {
+    quality: 50,
+    sourceType: sourceType,
+    saveToPhotoAlbum: false,
+    correctOrientation: true
+  };
+
+  // Get the data of an image
+  this.camera.getPicture(options).then((imagePath) => {
+    // Special handling for Android library
+    if (this.plt.is('android') && sourceType === this.camera.PictureSourceType.PHOTOLIBRARY) {
+      this.filePath.resolveNativePath(imagePath)
+        .then(filePath => {
+          let correctPath = filePath.substr(0, filePath.lastIndexOf('/') + 1);
+          let currentName = imagePath.substring(imagePath.lastIndexOf('/') + 1, imagePath.lastIndexOf('?'));
+          this.copyFileToLocalDir(correctPath, currentName, this.createFileName());
+        });
+    } else {
+      var currentName = imagePath.substr(imagePath.lastIndexOf('/') + 1);
+      var correctPath = imagePath.substr(0, imagePath.lastIndexOf('/') + 1);
+      this.copyFileToLocalDir(correctPath, currentName, this.createFileName());
+    }
+  }, (err) => {
+       console.log(err);
+  
+  });
+}
+
+private copyFileToLocalDir(namePath, currentName, newFileName) {
+  let bool = this.file.checkDir(cordova.file.externalRootDirectory, "Cityshop");
+  if(!bool){
+      this.file.createDir(cordova.file.externalRootDirectory, "Cityshop", false)
+        .then(()=>{
+            alert("entra4");
+            let path = cordova.file.externalRootDirectory + "Cityshop";
+            this.file.copyFile(namePath, currentName, path, newFileName).then(() => {
+              this.lastImage = newFileName;
+              this.uploadImage();
+            });
+         });
+  } else {
+     let path = cordova.file.externalRootDirectory + "Cityshop";
+        this.file.copyFile(namePath, currentName, path, newFileName).then(() => {
+          this.lastImage = newFileName;
+          this.uploadImage();
+        }); 
+  }
 }
 
 private createFileName() {
@@ -117,6 +189,10 @@ private createFileName() {
         loading.dismiss();
         alert("SI E' VERIFICATO UN ERRORE");
     });
+}
+
+onLink(url: string) {
+  window.open(url);
 }
 
 }

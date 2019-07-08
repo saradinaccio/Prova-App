@@ -21,6 +21,7 @@
     "@angular/http": "5.2.11",
     "@angular/platform-browser": "5.2.11",
     "@angular/platform-browser-dynamic": "5.2.11",
+    "@ionic-native/camera": "^5.9.0",
     "@ionic-native/core": "4.7.0",
     "@ionic-native/file": "^5.8.0",
     "@ionic-native/file-path": "^5.8.0",
@@ -58,7 +59,9 @@
       "cordova-plugin-whitelist": {},
       "cordova-plugin-device": {},
       "cordova-plugin-splashscreen": {},
-      "cordova-plugin-ionic-webview": {},
+      "cordova-plugin-ionic-webview": {
+        "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+"
+      },
       "cordova-plugin-ionic-keyboard": {},
       "cordova-plugin-camera": {},
       "cordova-plugin-file-transfer": {},
