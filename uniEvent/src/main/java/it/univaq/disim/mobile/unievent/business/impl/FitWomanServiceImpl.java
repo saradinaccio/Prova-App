@@ -52,13 +52,17 @@ public class  FitWomanServiceImpl implements FitWomanService {
     }
 
     @Override
-    public boolean createUtente(Utente utente) {
+    public Session createUtente(Utente utente) {
         Utente u = utenteRepository.findByUsername(utente.getUsername());
         if (u != null) {
-            return false;
+            return null;
         }
-        utenteRepository.save(utente);
-        return true;
+        Utente newUtente = utenteRepository.save(utente);
+        Session session = new Session();
+        session.setUser(newUtente);
+        session.setToken(Utility.generateToken());
+        Session newSession = sessionRepository.save(session);
+        return newSession;
     }
 
     @Override

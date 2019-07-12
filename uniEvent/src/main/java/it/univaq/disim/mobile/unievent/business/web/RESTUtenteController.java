@@ -51,15 +51,14 @@ public class RESTUtenteController {
 
     @PostMapping("/utente")
     public Response createUser(@RequestBody Utente user) {
-        boolean result = fitWomanService.createUtente(user);
-        Response<Object> response = new Response<>();
-        response.setResult(result);
-        if (result) {
-            response.setMessage("Ok");
+        Response<Object> response = new Response<>(true, Response.DEFAULT_RESPONSE_OK.getMessage());
+        Session result = fitWomanService.createUtente(user);
+        if (result != null) {
+            response.setData(result);
+            return response;
         } else {
-            response.setMessage("L'utente già esiste!");
+            return Response.DEFAULT_RESPONSE_KO;
         }
-        return response;
     }
 
     @GetMapping("/utente/{token}/{Id}")

@@ -14,7 +14,7 @@ public interface FitWomanService {
 
     Session login(String username, String password);
     void logout(String token);
-    boolean createUtente(Utente utente);
+    Session createUtente(Utente utente);
     Utente findUtenteById(String token, Long Id);
     Utente updateUtente (String token, Utente utente);
 
