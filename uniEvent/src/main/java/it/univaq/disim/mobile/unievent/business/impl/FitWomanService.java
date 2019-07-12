@@ -15,10 +15,11 @@ public interface FitWomanService {
     Session login(String username, String password);
     void logout(String token);
     boolean createUtente(Utente utente);
+    Utente findUtenteById(String token, Long Id);
+    Utente updateUtente (String token, Utente utente);
 
 
     Utente findUtenteByUsername(String username);
-    Utente updateProfilo(Utente utente);
     List<Scheda> findAllSchede();
     // List<Esercizio> findEsercizioById(long idEsercizio) throws BusinessException;
     void createScheda(SchedaPersonale scheda);

@@ -15,7 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @Transactional
-public class FitWomanServiceImpl implements FitWomanService {
+public class  FitWomanServiceImpl implements FitWomanService {
 
     @Autowired
     private SessionRepository sessionRepository;
@@ -67,11 +67,6 @@ public class FitWomanServiceImpl implements FitWomanService {
     }
 
     @Override
-    public Utente updateProfilo(Utente utente) {
-        return null;
-    }
-
-    @Override
     public List<Esercizio> findAllEsercizi() {
         //List<Esercizio> esercizi = new ArrayList<Esercizio>();
 
@@ -112,7 +107,7 @@ public class FitWomanServiceImpl implements FitWomanService {
     @Override
     public void createScheda(SchedaPersonale scheda) {
 
-    this.schedaPersonaleRepository.save(scheda);
+        this.schedaPersonaleRepository.save(scheda);
 
     }
 
@@ -124,6 +119,51 @@ public class FitWomanServiceImpl implements FitWomanService {
     @Override
     public void deleteScheda(long idScheda) {
 
+    }
+
+    @Override
+    public Utente findUtenteById (String token, Long Id) {
+        Session session = sessionRepository.findByToken(token);
+        if (session != null) {
+            Utente utente = utenteRepository.findOne(Id);
+            if (utente != null) {
+                return utente;
+            }
+            else {
+                System.out.println("Utente non trovato");
+                return null;
+            }
+        }
+        else {
+            System.out.println("Non sei loggato");
+            return null;
+        }
+    }
+
+    @Override
+    public Utente updateUtente(String token, Utente newUtente) {
+        Session session = sessionRepository.findByToken(token);
+        if (session != null) {
+            Utente utente = utenteRepository.findOne(newUtente.getId());
+            if (utente != null) {
+                utente.setEmail(newUtente.getEmail());
+                utente.setEtà(newUtente.getEtà());
+                utente.setNome(newUtente.getNome());
+                utente.setUsername(newUtente.getUsername());
+                utente.setCognome(newUtente.getCognome());
+                utente.setAltezza(newUtente.getAltezza());
+                utente.setPeso(newUtente.getPeso());
+                return utente;
+            }
+            else {
+                System.out.println("Utente non trovato");
+                return null;
+            }
+        }
+        else {
+            System.out.println("Non sei loggato");
+            return null;
+        }
     }
 }
 

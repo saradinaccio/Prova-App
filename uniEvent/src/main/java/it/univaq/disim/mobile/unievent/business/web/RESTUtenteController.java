@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.web.bind.annotation.*;
 
+import javax.persistence.Id;
+
 @RestController
 @RequestMapping("/api")
 public class RESTUtenteController {
@@ -19,13 +21,13 @@ public class RESTUtenteController {
     private AuthenticationManager authenticationManager;
 
     @Autowired
-    private FitWomanService myUnivaqService;
+    private FitWomanService fitWomanService;
 
     @PostMapping("/login")
     public Response login(@RequestBody Utente u) {
         System.out.println(u.getUsername());
         System.out.println(u.getPassword());
-        Session session = myUnivaqService.login(u.getUsername(), u.getPassword());
+        Session session = fitWomanService.login(u.getUsername(), u.getPassword());
         if (session != null) {
             Response<Login> result = new Response<>(true, Response.DEFAULT_RESPONSE_OK.getMessage());
             Login login = new Login();
@@ -43,13 +45,13 @@ public class RESTUtenteController {
 
     @GetMapping("/logout/{token}")
     public Response logout(@PathVariable String token) {
-        myUnivaqService.logout(token);
+        fitWomanService.logout(token);
         return Response.DEFAULT_RESPONSE_OK;
     }
 
     @PostMapping("/utente")
     public Response createUser(@RequestBody Utente user) {
-        boolean result = myUnivaqService.createUtente(user);
+        boolean result = fitWomanService.createUtente(user);
         Response<Object> response = new Response<>();
         response.setResult(result);
         if (result) {
@@ -60,10 +62,21 @@ public class RESTUtenteController {
         return response;
     }
 
-    @PostMapping("/utente/updateprofilo")
-    public UtenteResponse updateProfilo(@RequestBody Utente utente) {
-        Utente nuovoUtente = myUnivaqService.updateProfilo(utente);
-        return new UtenteResponse(nuovoUtente);
+    @GetMapping("/utente/{token}/{Id}")
+    public Response getUtente (@PathVariable(value = "token") String token, @PathVariable(value = "Id") Long Id){
+        Utente utente = fitWomanService.findUtenteById(token, Id);
+        Response<Utente> response = new Response<>(true, "utenteById");
+        response.setData(utente);
+        return response;
+    }
+
+    @PutMapping("/utente/{token}/{Id}")
+    public Response updateUtente (@PathVariable(value = "token") String token, @PathVariable(value = "Id") Long Id, @RequestBody Utente utente){
+        utente.setId(Id);
+        Utente newUtente = fitWomanService.updateUtente(token, utente);
+        Response<Utente> response = new Response<>(true, "updateUtente");
+        response.setData(utente);
+        return response;
     }
 
 }
