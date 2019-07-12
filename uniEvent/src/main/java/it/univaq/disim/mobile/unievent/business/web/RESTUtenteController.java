@@ -1,23 +1,12 @@
 package it.univaq.disim.mobile.unievent.business.web;
 
-import javax.servlet.http.HttpServletResponse;
-
-import it.univaq.disim.mobile.unievent.business.common.spring.security.JWTTokenUtil;
-import it.univaq.disim.mobile.unievent.business.common.spring.security.UserDetailsImpl;
+import it.univaq.disim.mobile.unievent.business.domain.Session;
 import it.univaq.disim.mobile.unievent.business.domain.Utente;
 import it.univaq.disim.mobile.unievent.business.impl.FitWomanService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.AuthenticationException;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api")
@@ -30,24 +19,45 @@ public class RESTUtenteController {
     private AuthenticationManager authenticationManager;
 
     @Autowired
-    private JWTTokenUtil jwtTokenUtil;
-
-    @Autowired
     private FitWomanService myUnivaqService;
 
     @PostMapping("/login")
-    public UtenteResponse login(@RequestBody AuthenticationRequest authenticationRequest, HttpServletResponse response) throws AuthenticationException {
-        // Effettuo l'autenticazione
-        Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(authenticationRequest.getUsername(), authenticationRequest.getPassword()));
-        SecurityContextHolder.getContext().setAuthentication(authentication);
+    public Response login(@RequestBody Utente u) {
+        System.out.println(u.getUsername());
+        System.out.println(u.getPassword());
+        Session session = myUnivaqService.login(u.getUsername(), u.getPassword());
+        if (session != null) {
+            Response<Login> result = new Response<>(true, Response.DEFAULT_RESPONSE_OK.getMessage());
+            Login login = new Login();
+            login.setToken(session.getToken());
+            login.setUsername(session.getUser().getUsername());
+            login.setFirstname(session.getUser().getNome());
+            login.setLastname(session.getUser().getCognome());
+            login.setEmail(session.getUser().getEmail());
+            result.setData(login);
+            return result;
+        } else {
+            return Response.DEFAULT_RESPONSE_KO;
+        }
+    }
 
-        // Genero Token e lo inserisco nell'header di risposta
-        UserDetails userDetails = (UserDetails) authentication.getPrincipal();
-        String token = jwtTokenUtil.generateToken(userDetails);
-        response.setHeader(tokenHeader, token);
+    @GetMapping("/logout/{token}")
+    public Response logout(@PathVariable String token) {
+        myUnivaqService.logout(token);
+        return Response.DEFAULT_RESPONSE_OK;
+    }
 
-        // Ritorno l'utente
-        return new UtenteResponse(((UserDetailsImpl) userDetails).getUtente());
+    @PostMapping("/utente")
+    public Response createUser(@RequestBody Utente user) {
+        boolean result = myUnivaqService.createUtente(user);
+        Response<Object> response = new Response<>();
+        response.setResult(result);
+        if (result) {
+            response.setMessage("Ok");
+        } else {
+            response.setMessage("L'utente già esiste!");
+        }
+        return response;
     }
 
     @PostMapping("/utente/updateprofilo")

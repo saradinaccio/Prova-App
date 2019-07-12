@@ -18,10 +18,48 @@ import org.springframework.transaction.annotation.Transactional;
 public class FitWomanServiceImpl implements FitWomanService {
 
     @Autowired
+    private SessionRepository sessionRepository;
+
+    @Autowired
+    private UtenteRepository utenteRepository;
+
+    @Autowired
     private EsercizioRepository esercizioRepository;
 
     @Autowired
     private SchedaPersonaleRepository schedaPersonaleRepository;
+
+    @Override
+    public Session login(String username, String password) {
+        Utente user = utenteRepository.findByUsername(username);
+        if (user != null && user.getPassword().equals(password)) {
+            Session session = new Session();
+            session.setUser(user);
+            session.setToken(Utility.generateToken());
+            Session newSession = sessionRepository.save(session);
+            return newSession;
+        } else {
+            return null;
+        }
+    }
+
+    @Override
+    public void logout(String token) {
+        Session session = sessionRepository.findByToken(token);
+        if (session != null) {
+            sessionRepository.delete(session);
+        }
+    }
+
+    @Override
+    public boolean createUtente(Utente utente) {
+        Utente u = utenteRepository.findByUsername(utente.getUsername());
+        if (u != null) {
+            return false;
+        }
+        utenteRepository.save(utente);
+        return true;
+    }
 
     @Override
     public Utente findUtenteByUsername(String username) {

@@ -30,6 +30,7 @@ import { FileTransfer, FileTransferObject } from '@ionic-native/file-transfer/ng
 import { File } from '@ionic-native/file/ngx';
 import { FilePath } from '@ionic-native/file-path/ngx';
 import { Camera } from '@ionic-native/camera/ngx';
+import { IonicStorageModule } from '@ionic/storage';
 
 export function createTranslateLoader(http: HttpClient) { return new TranslateHttpLoader(http, './assets/i18n/', '.json'); } 
 
@@ -57,6 +58,7 @@ export function createTranslateLoader(http: HttpClient) { return new TranslateHt
     BrowserModule,
     HttpClientModule,
     LongPressModule,
+    IonicStorageModule.forRoot(),
     IonicModule.forRoot(MyApp),
     TranslateModule.forRoot({ 
       loader: { 
@@ -94,7 +96,7 @@ export function createTranslateLoader(http: HttpClient) { return new TranslateHt
     FileTransferObject,
     File,
     FilePath,
-    Camera
+    Camera,
   ]
 })
 export class AppModule {}

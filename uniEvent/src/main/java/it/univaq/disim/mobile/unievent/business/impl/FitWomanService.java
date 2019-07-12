@@ -1,9 +1,7 @@
 package it.univaq.disim.mobile.unievent.business.impl;
 
-import it.univaq.disim.mobile.unievent.business.domain.Esercizio;
-import it.univaq.disim.mobile.unievent.business.domain.Scheda;
-import it.univaq.disim.mobile.unievent.business.domain.SchedaPersonale;
-import it.univaq.disim.mobile.unievent.business.domain.Utente;
+import it.univaq.disim.mobile.unievent.business.domain.*;
+
 import java.util.List;
 
 public interface FitWomanService {
@@ -14,8 +12,9 @@ public interface FitWomanService {
     List<Esercizio>findEserciziByLivelloAndZona(long livello, String zona);
     List<SchedaPersonale> FindAllSchedePersonali ();
 
-
-
+    Session login(String username, String password);
+    void logout(String token);
+    boolean createUtente(Utente utente);
 
 
     Utente findUtenteByUsername(String username);

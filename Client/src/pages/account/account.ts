@@ -5,7 +5,7 @@ import { File } from '@ionic-native/file/ngx';
 import { FileTransfer, FileTransferObject } from '@ionic-native/file-transfer/ngx';
 import { FilePath } from '@ionic-native/file-path/ngx';
 import { ActionSheetController } from 'ionic-angular';
-import { Camera } from '@ionic-native/camera/ngx';
+import { Camera, CameraOptions, PictureSourceType } from '@ionic-native/camera/ngx';
 import { Platform } from 'ionic-angular';
 
 declare let cordova : any;
@@ -94,26 +94,10 @@ presentActionSheet() {
   actionSheet.present();
 }
 
-public takePicture(sourceType) { 
-  
-  const options: CameraOptions = {
-          quality: 80,
-          destinationType: this.camera.DestinationType.FILE_URI,
-          encodingType: this.camera.EncodingType.JPEG,
-          mediaType: this.camera.MediaType.PICTURE,
-          sourceType: this.camera.PictureSourceType.PHOTOLIBRARY
-        }
-  
- this.camera.getPicture(options).then((imageData) => {
-         // imageData is either a base64 encoded string or a file URI
-         // If it's base64 (DATA_URL):
-         console.log(imageData);
-        }, (err) => {
-         // Handle error
-        });
-  
+public takePicture(sourceType : PictureSourceType) { 
+
   // Create options for the Camera Dialog
-  /*var options = {
+  var options: CameraOptions = {
     quality: 50,
     sourceType: sourceType,
     saveToPhotoAlbum: false,
@@ -138,7 +122,7 @@ public takePicture(sourceType) {
   }, (err) => {
        console.log(err);
   
-  });*/
+  });
 }
 
 private copyFileToLocalDir(namePath, currentName, newFileName) {

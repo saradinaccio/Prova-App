@@ -1,12 +1,12 @@
 package it.univaq.disim.mobile.unievent.business.web;
 
-import it.univaq.disim.mobile.unievent.business.domain.Utente;
-
 public class Login {
 
+    private String username;
     private String token;
-
-    private Utente user;
+    private String firstname;
+    private String lastname;
+    private String email;
 
     public String getToken() {
         return token;
@@ -16,40 +16,35 @@ public class Login {
         this.token = token;
     }
 
-
-
-
-
-    public Utente getUser() {
-        return user;
+    public String getFirstname() {
+        return firstname;
     }
 
-    public void setUser(Utente user) {
-        this.user = user;
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
     }
 
-    @Override
-    public String toString() {
-        return "Login{" +
-                "token='" + token + '\'' +
-                '}';
+    public String getLastname() {
+        return lastname;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Login login = (Login) o;
-
-        if (getToken() != null ? !getToken().equals(login.getToken()) : login.getToken() != null) return false;
-        return getUser() != null ? getUser().equals(login.getUser()) : login.getUser() == null;
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
     }
 
-    @Override
-    public int hashCode() {
-        int result = getToken() != null ? getToken().hashCode() : 0;
-        result = 31 * result + (getUser() != null ? getUser().hashCode() : 0);
-        return result;
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 }
