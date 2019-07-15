@@ -1,7 +1,122 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="213ee92b-0241-43b7-bb2b-6d90ce27277f" name="Default Changelist" comment="" />
+    <list default="true" id="213ee92b-0241-43b7-bb2b-6d90ce27277f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Client/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/constants.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/pages/account/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/pages/account/account.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/pages/account/account.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/pages/account/account.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/pages/aggiungi-esercizi/aggiungi-esercizi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/pages/aggiungi-esercizi/aggiungi-esercizi.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/pages/crea-scheda/crea-scheda.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/pages/crea-scheda/crea-scheda.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/pages/register/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/pages/register/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/pages/register/register.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/pages/register/register.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/providers/account.provider.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/providers/account.provider.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/services/esercizio.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/services/esercizio.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/services/schedaPersonale.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/services/schedaPersonale.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/app/app.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/app/app.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/app/app.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/app/app.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/app/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/assets/i18n/en.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/assets/i18n/it.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/assets/icon/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/assets/imgs/Primo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/assets/imgs/Riscaldamento.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/assets/imgs/SceltaZona.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/assets/imgs/Secondo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/assets/imgs/Stretching.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/assets/imgs/Terzo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/assets/imgs/Wellfit-Fitness-c02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/assets/imgs/avatar.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/assets/imgs/cosce.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/assets/imgs/cosce2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/assets/imgs/cosce3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/assets/imgs/cosi_ti_ricordi_che_esistiamo.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/assets/imgs/download.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/assets/imgs/glutei-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/assets/imgs/gluteo1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/assets/imgs/gluteo2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/assets/imgs/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/assets/imgs/image.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/assets/imgs/image1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/assets/imgs/images.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/assets/imgs/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/assets/imgs/stretching-per-le-gambe-orig.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/assets/imgs/yoga-fitness-risveglio-internauno.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/constants.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/interfaces/utenteRegisterInterface.interface.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/interfaces/utentepersistance.interface.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/models/esercizio.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/models/schedaPersonale.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/models/utente.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/Tabs/tabs.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/Tabs/tabs.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/Tabs/tabs.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/account/account.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/account/account.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/account/account.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/addomi/addomi.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/addomi/addomi.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/addomi/addomi.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/addomi/addomi.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/aggiungi-esercizi/aggiungi-esercizi.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/aggiungi-esercizi/aggiungi-esercizi.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/aggiungi-esercizi/aggiungi-esercizi.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/aggiungi-esercizi/aggiungi-esercizi.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/cosce/cosce.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/cosce/cosce.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/cosce/cosce.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/cosce/cosce.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/crea-scheda/crea-scheda.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/crea-scheda/crea-scheda.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/crea-scheda/crea-scheda.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/crea-scheda/crea-scheda.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/glutei/glutei.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/glutei/glutei.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/glutei/glutei.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/glutei/glutei.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/home/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/home/home.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/home/home.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/home/home.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/inizio/inizio.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/inizio/inizio.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/inizio/inizio.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/login/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/login/login.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/login/login.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/login/login.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/register/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/register/register.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/register/register.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/register/register.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/riscaldamento/riscaldamento.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/riscaldamento/riscaldamento.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/riscaldamento/riscaldamento.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/routine/routine.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/routine/routine.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/routine/routine.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/scelta-zona/scelta-zona.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/scelta-zona/scelta-zona.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/scelta-zona/scelta-zona.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/stretching/stretching.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/stretching/stretching.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/stretching/stretching.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/providers/account.provider.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/providers/auth-service/auth-service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/providers/utente-persistance.provider.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/service-worker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/services/esercizio.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/services/lingua.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/services/schedaPersonale.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/theme/variables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/src/types.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,7 +142,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/web/RESTUtenteController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-451">
+            <state relative-caret-position="-267">
               <caret line="39" column="26" lean-forward="true" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
             </state>
           </provider>
@@ -210,7 +325,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="400" />
     <option name="y" value="225" />
     <option name="width" value="1035" />
@@ -358,7 +473,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26848000" />
+    <option name="totallyTimeSpent" value="28315000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
@@ -373,7 +488,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.844504" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.8458445" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -571,7 +686,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/web/RESTUtenteController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-451">
+        <state relative-caret-position="-267">
           <caret line="39" column="26" lean-forward="true" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
         </state>
       </provider>

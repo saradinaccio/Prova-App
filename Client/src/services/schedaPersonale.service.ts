@@ -12,7 +12,7 @@ export class SchedaPersonaleService{
 
   schedePersonali(): Observable<Array<schedaPersonale>>{
     console.log("Ciao");
-    return this.http.get<Array<schedaPersonale>>(URL.SCHEDEPERSONALI); //Richiama sul server UrlSchedePersonali e prende i dati dal database
+    return this.http.get<Array<schedaPersonale>>(URL.SCHEDEPERSONALI + '/personale'); //Richiama sul server UrlSchedePersonali e prende i dati dal database
 
   }
 

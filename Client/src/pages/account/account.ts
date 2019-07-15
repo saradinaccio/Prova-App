@@ -7,6 +7,8 @@ import { FilePath } from '@ionic-native/file-path/ngx';
 import { ActionSheetController } from 'ionic-angular';
 import { Camera, CameraOptions, PictureSourceType } from '@ionic-native/camera/ngx';
 import { Platform } from 'ionic-angular';
+import { AccountProvider} from '../../providers/account.provider';
+import { Utente } from '../../models/utente.model';
 
 declare let cordova : any;
 /**
@@ -26,9 +28,9 @@ declare let cordova : any;
 export class AccountPage {
   lastImage: string = 'http://dominiotestprova.altervista.org/image/avatars/avatardefault.png';
   cambio:boolean=true;
-  utente:any={nome:"Sara",cognome:" Di Naccio"};
   image: string = "avatardefault.png";
   file: any;
+  utente: Utente;
 
   foto: String = "http://dominiotestprova.altervista.org/image/avatars/avatardefault.png";
   
@@ -43,8 +45,10 @@ export class AccountPage {
      public loadingCtrl: LoadingController,  
      public actionSheetCtrl: ActionSheetController, 
      public camera : Camera, 
-     public plt: Platform 
+     public plt: Platform,
+     public sAccount : AccountProvider
      ) {
+       this.utente=this.sAccount.getUtente();
   }
 
   goToOtherPage() {
@@ -190,6 +194,22 @@ private createFileName() {
         alert("SI E' VERIFICATO UN ERRORE");
     });
 }
+
+
+logout() {
+              const loading = this.loadingCtrl.create({content: "CARICAMENTO"});
+              loading.present();
+
+              this.sAccount.logout()
+                  .then(() => {
+                      loading.dismiss().then(() => {
+                          this.navCtrl.setRoot(InizioPage);
+                      });
+                  })
+                  .catch(() => {
+
+                  });
+          }
 
 onLink(url: string) {
   window.open(url);

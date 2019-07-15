@@ -3,7 +3,7 @@ import { Platform, NavController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import {AccountProvider} from '../providers/account.provider';
-import { LoginPage } from '../pages/login/login';
+import { InizioPage } from '../pages/inizio/inizio';
 
 /*import { TranslateService } from '@ngx-translate/core';
 import { LinguaService } from '../services/lingua.service';*/
@@ -44,7 +44,7 @@ console.log("LOGGATA");
                       this.rootPage = 'TabsPage';
                   } else {
                     console.log("NON LOGGATO");
-                      this.rootPage = LoginPage;
+                      this.rootPage = InizioPage;
                   }
               });
   

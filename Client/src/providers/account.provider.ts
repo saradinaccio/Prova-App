@@ -35,7 +35,7 @@ export class AccountProvider{
         });
     }
     
-    getUser(): Utente {
+    getUtente(): Utente {
         return this._utente;
     }
 
@@ -64,7 +64,7 @@ export class AccountProvider{
         });
     }
 
-    signup(utente: UtenteRegisterInterface): Promise<any>{
+    register(utente: UtenteRegisterInterface): Promise<any>{
         return new Promise((resolve, reject) =>{
             this._http.post(URL.REGISTRAZIONE, utente)
                 .toPromise()
@@ -81,4 +81,22 @@ export class AccountProvider{
             .catch((err: Response) => {reject(err)});
         })
     }
+
+    logout(): Promise<any> {
+        return new Promise((resolve, reject) => {
+        
+        console.log(this._utente);
+        
+        this._http.get(URL.LOGOUT + '/' + this._utente.token, "").toPromise()
+        .then(() => {
+        
+        this._utente = null;
+        this._sUtentePersistance.remove();
+        resolve();
+        
+        }).catch((err: Response) => {console.log(err); reject(`Errore status: ${err.status}`)});
+        
+        
+        });
+        }
 }

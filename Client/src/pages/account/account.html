@@ -29,34 +29,60 @@
             </ion-avatar>
         </ion-col>
         <ion-col>
-            <h6 ion-text>{{utente.nome}}{{utente.cognome}}</h6>
-            <button ion-button class="bottone" (click)="goToOtherPage()">LOGOUT</button>
+
+            <button ion-button class="bottone" (click)="logout()">LOGOUT</button>
         </ion-col>
     </ion-row>
 
 
 
+    <div>
+        <ion-list>
 
-    <ion-list>
+            <ion-item>
+                <ion-label stacked>Nome</ion-label>
+                <ion-input type="text" placeholder="nome" (change)="cambia()" [(ngModel)]="utente.nome"></ion-input>
+            </ion-item>
 
-        <ion-item>
-            <ion-label stacked>Altezza</ion-label>
-            <ion-input type="text" placeholder="cm" (change)="cambia()"></ion-input>
-        </ion-item>
+            <ion-item>
+                <ion-label stacked>Cognome</ion-label>
+                <ion-input type="text" placeholder="cognome" (change)="cambia()" [(ngModel)]="utente.cognome"></ion-input>
+            </ion-item>
 
-        <ion-item>
-            <ion-label stacked>Peso</ion-label>
-            <ion-input type="text" placeholder="kg" (change)="cambia()"></ion-input>
-        </ion-item>
-
-        <ion-item>
-            <ion-label stacked>Data di nascita</ion-label>
-            <ion-datetime type="text" placeholder="gg/mm/aaaa" (change)="cambia()"></ion-datetime>
-        </ion-item>
-    </ion-list>
+            <ion-item>
+                <ion-label stacked>Email</ion-label>
+                <ion-input type="text" placeholder="email" (change)="cambia()" [(ngModel)]="utente.email"></ion-input>
+            </ion-item>
 
 
-    <ion-list radio-group>
+            <ion-item>
+                <ion-label stacked>Username</ion-label>
+                <ion-input type="text" placeholder="username" (change)="cambia()" [(ngModel)]="utente.username"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label stacked>Altezza</ion-label>
+                <ion-input type="text" placeholder="cm" (change)="cambia()" [(ngModel)]="utente.altezza"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label stacked>Peso</ion-label>
+                <ion-input type="text" placeholder="kg" (change)="cambia()" [(ngModel)]="utente.peso"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label stacked>Età</ion-label>
+                <ion-input type="text" placeholder="anni" (change)="cambia()" [(ngModel)]="utente.eta"></ion-input>
+            </ion-item>
+
+
+
+        </ion-list>
+
+    </div>
+
+
+    <!--   <ion-list radio-group>
         <ion-list-header class="radio">
             Cambia lingua
         </ion-list-header>
@@ -71,7 +97,7 @@
             <ion-radio item-start class="prova" value="en"></ion-radio>
         </ion-item>
 
-    </ion-list>
+    </ion-list> -->
 
     <!-- </ion-list> -->
 

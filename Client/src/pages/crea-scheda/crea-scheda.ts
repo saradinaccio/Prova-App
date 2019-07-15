@@ -4,6 +4,7 @@ import {schedaPersonale} from '../../models/schedaPersonale.model';
 import {SchedaPersonaleService} from "../../services/schedaPersonale.service";
 import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { ActionSheetController } from 'ionic-angular';
+import { ThrowStmt } from '@angular/compiler';
 
 
 
@@ -84,10 +85,10 @@ export class CreaSchedaPage {
            // this.schede.push(data);
           
             this.SchedaPersonale.goal = data.nome;
-            console.log(this.SchedaPersonale);
-            this.schedaPersonaleService.crea(this.SchedaPersonale).subscribe((data: Boolean)=> {
-              console.log(data);
-            }); 
+            this.navCtrl.push("AggiungiEserciziPage", {nome: data.nome});
+         //   this.schedaPersonaleService.crea(this.SchedaPersonale).subscribe((data: Boolean)=> {
+           //   console.log(data);
+           // }); 
           }
         }
       ]

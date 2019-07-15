@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { EsercizioService } from '../../services/esercizio.service';
 import { Esercizio } from '../../models/esercizio.model';
+import { Utente } from '../../models/utente.model';
+import { UtentePersistanceProvider } from '../../providers/utente-persistance.provider';
 
 
 /**
@@ -20,14 +22,18 @@ export class AggiungiEserciziPage {
 
   public allEsercizi : Array<Esercizio>;
   public eserciziScelti : Array<String> =  [];
+  public nome : "";
+  public utente : Utente;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public esercizioService : EsercizioService) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public esercizioService : EsercizioService, public sAccount : UtentePersistanceProvider) {
+    this.nome = this.navParams.get("nome");
+    console.log(this.nome);
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AggiungiEserciziPage');
-
-    this.esercizioService.allEsercizi().subscribe((data: Array<Esercizio>) => {
+    
+    this.esercizioService.allEsercizi(this.utente).subscribe((data: Array<Esercizio>) => {
       this.allEsercizi = data;
 
       console.log(data);
@@ -37,9 +43,6 @@ export class AggiungiEserciziPage {
 
 
   }
-
-
-
    selectEsercizi (esercizioScelto) {
      if(this.eserciziScelti.indexOf(esercizioScelto.nome) == -1) //Vuol dire che nel mio Array non c'è
       this.eserciziScelti.push(esercizioScelto.nome);

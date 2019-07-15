@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, AlertController, LoadingController } from 'ionic-angular';
+import { NavController, AlertController, LoadingController, IonicPage } from 'ionic-angular';
 import { AccountProvider } from '../../providers/account.provider';
 
 //interfaces
@@ -7,6 +7,9 @@ import {UtenteRegisterInterface} from '../../interfaces/utenteRegisterInterface.
 
 //providers
 import {UtentePersistanceProvider} from '../../providers/utente-persistance.provider';
+import { SceltaZonaPage } from '../scelta-zona/scelta-zona';
+import { Utente } from '../../models/utente.model';
+import { TabsPage } from '../Tabs/tabs';
  
 @IonicPage()
 @Component({
@@ -35,9 +38,16 @@ export class RegisterPage {
     this._validate().then(() => {
       const loading = this.loadingCtrl.create({content: "Caricamento"});
       loading.present();
-      this.acntProvider.signup(this.utente)
-              .then((id) => {
-                  console.log(id);
+      this.acntProvider.register(this.utente)
+              .then((result) => {
+                  var utente = new Utente(result);
+                  console.log('utente');
+                  console.log(utente);
+                  this._sUtentePersistance.save(utente).then(()=> {
+                    loading.dismiss().then(()=>{
+                      this.nav.setRoot(TabsPage);
+                    })
+                  });
 
               })
               .catch(msg => { 

@@ -21,25 +21,25 @@
                     <ion-list inset>
                         <ion-item>
 
-                            <ion-input type="text" placeholder="Nome" name="nome" [(ngModel)]="nome" required></ion-input>
+                            <ion-input type="text" placeholder="Nome" name="nome" [(ngModel)]="utente.nome" required></ion-input>
 
                         </ion-item>
 
                         <ion-item>
-                            <ion-input type="text" placeholder="Cognome" name="cognome" [(ngModel)]="cognome" required></ion-input>
+                            <ion-input type="text" placeholder="Cognome" name="cognome" [(ngModel)]="utente.cognome" required></ion-input>
 
                         </ion-item>
 
                         <ion-item>
-                            <ion-input type="text" placeholder="Email" name="email" [(ngModel)]="email" required></ion-input>
+                            <ion-input type="text" placeholder="Email" name="email" [(ngModel)]="utente.email" required></ion-input>
 
                         </ion-item>
                         <ion-item>
-                            <ion-input type="text" placeholder="Username" name="username" [(ngModel)]="username" required></ion-input>
+                            <ion-input type="text" placeholder="Username" name="username" [(ngModel)]="utente.username" required></ion-input>
 
                         </ion-item>
                         <ion-item>
-                            <ion-input type="{{type}}" placeholder="Password" name="password" ngModel #password="ngModel" required></ion-input>
+                            <ion-input type="{{type}}" placeholder="Password" name="password" [(ngModel)]="utente.password" required></ion-input>
                             <button *ngIf="!showPass" class="bottone" ion-button item-right (click)="showPassword()"> <ion-icon name="eye-off" color="primary"></ion-icon></button>
                             <button *ngIf="showPass" class="bottone" ion-button item-right (click)="showPassword()"> <ion-icon name="eye" color="primary"></ion-icon></button>
                         </ion-item>
