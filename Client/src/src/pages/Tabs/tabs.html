@@ -1,0 +1,21 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>FitWoman</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<!--<ion-tabs>
+  <ion-tab [root]="tab1Root" [rootParams]= "idUtente" tabTitle="EVENTI CREATI" tabIcon="home"></ion-tab>
+  <ion-tab [root]="tab2Root"  [rootParams]= "idUtente" tabTitle="EVENTI A CUI PARTECIPI" tabIcon="home"></ion-tab>
+</ion-tabs> -->
+
+<ion-tabs id="tabs">
+    <ion-tab tabIcon="home" tabTitle="Home" [root]="tab1"></ion-tab>
+    <ion-tab tabIcon="checkbox-outline" tabTitle="Routine" [root]="tab2"></ion-tab>
+    <ion-tab tabIcon="create" tabTitle="Le tue schede" [root]="tab3"></ion-tab>
+    <ion-tab tabIcon="person" tabTitle="Account" [root]="tab4"></ion-tab>
+
+</ion-tabs>
