@@ -6,11 +6,10 @@ import java.util.List;
 
 public interface FitWomanService {
 
-    List<Esercizio> findAllEsercizi();
-    Esercizio findEsercizioById(Long id);
-    List<Esercizio> findEsercizioByLivello(Long livello);
-    List<Esercizio>findEserciziByLivelloAndZona(long livello, String zona);
-    List<SchedaPersonale> FindAllSchedePersonali ();
+    List<Esercizio> findAllEsercizi(String token);
+    Esercizio getEsercizioById(String token, Long id);
+    List<Esercizio> getEserciziByZona(String token, String zona);
+    List<Esercizio> getEserciziByLivelloAndZona(String token, Long livello, String zona);
 
     Session login(String username, String password);
     void logout(String token);
@@ -21,10 +20,11 @@ public interface FitWomanService {
 
     Utente findUtenteByUsername(String username);
     List<Scheda> findAllSchede();
-    // List<Esercizio> findEsercizioById(long idEsercizio) throws BusinessException;
-    void createScheda(SchedaPersonale scheda);
-    void updateScheda(Scheda scheda) ;
-    void deleteScheda(long idScheda);
+    List<SchedaPersonale> getAllSchedePersonali(String token);
+    SchedaPersonale getSchedaPersonaleById(String token, Long id);
+    boolean createSchedaPersonale(String token, SchedaPersonale scheda);
+    SchedaPersonale updateSchedaPersonale(String token, SchedaPersonale newScheda) ;
+    boolean deleteSchedaPersonale(String token, Long id);
 
 }
 

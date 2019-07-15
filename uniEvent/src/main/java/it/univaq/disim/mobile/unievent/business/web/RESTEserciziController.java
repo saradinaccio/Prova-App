@@ -1,7 +1,5 @@
 package it.univaq.disim.mobile.unievent.business.web;
 
-
-
 import java.util.List;
 
 import it.univaq.disim.mobile.unievent.business.domain.Esercizio;
@@ -20,21 +18,32 @@ public class RESTEserciziController {
     @Autowired
     private FitWomanService service;
 
-    @GetMapping
-    public List<Esercizio> listEsercizi() {
-        System.out.println("metodo listEsercizi");
+    @GetMapping("/{token}")
+    public Response getAllEsercizi(@PathVariable(value = "token") String token) {
 
-        List<Esercizio> esercizios = service.findAllEsercizi();
+        List<Esercizio> esercizi = service.findAllEsercizi(token);
 
-        System.out.println(esercizios);
-        return esercizios;
+        if(esercizi != null) {
+            Response<Object> response = new Response<>(true, "getAllEsercizi");
+            response.setData(esercizi);
+            return response;
+        } else {
+            return Response.DEFAULT_RESPONSE_KO;
+        }
     }
 
-	@GetMapping("/{id}")
-	public Esercizio findById(@PathVariable Long id) {
-        System.out.println("metodo findById");
+	@GetMapping("/{token}/{id}")
+	public Response getEsercizioById(@PathVariable String token, @PathVariable Long id) {
 
-        return service.findEsercizioById(id);
+        Esercizio esercizio = service.getEsercizioById(token, id);
+
+        if(esercizio != null) {
+            Response<Object> response = new Response<>(true, "getEsercizioById");
+            response.setData(esercizio);
+            return response;
+        } else {
+            return Response.DEFAULT_RESPONSE_KO;
+        }
 	}
 
 	/*@GetMapping("/addome/livello/{livello}")
@@ -46,13 +55,29 @@ public class RESTEserciziController {
         return esercizios;
     }*/
 
-    @GetMapping("/livello/{livello}/{zona}")
-    public List<Esercizio> findEserciziByLivelloAndZona(@PathVariable long livello, @PathVariable String zona) {
-        System.out.println("metodo listEserciziLivello");
+    @GetMapping("{token}/livello/{livello}/{zona}")
+    public Response getEserciziByLivelloAndZona(@PathVariable String token, @PathVariable long livello, @PathVariable String zona) {
+        List<Esercizio> esercizi = service.getEserciziByLivelloAndZona(token, livello, zona);
 
-        List<Esercizio> esercizios = service.findEserciziByLivelloAndZona(livello, zona);
-        System.out.println(esercizios);
-        return esercizios;
+        if(esercizi != null) {
+            Response<Object> response = new Response<>(true, "getEserciziByLivelloAndZona");
+            response.setData(esercizi);
+            return response;
+        } else {
+            return Response.DEFAULT_RESPONSE_KO;
+        }
     }
 
+    @GetMapping("/{token}/zona/{zona}")
+    public Response getEserciziByZona(@PathVariable(value = "token") String token, @PathVariable String zona) {
+        List<Esercizio> esercizi = service.getEserciziByZona(token, zona);
+
+        if (esercizi != null) {
+            Response<Object> response = new Response<>(true, "getEserciziByZona");
+            response.setData(esercizi);
+            return response;
+        } else {
+            return Response.DEFAULT_RESPONSE_KO;
+        }
+    }
 }

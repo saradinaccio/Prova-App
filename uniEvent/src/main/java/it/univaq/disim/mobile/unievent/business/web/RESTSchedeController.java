@@ -6,7 +6,6 @@ import it.univaq.disim.mobile.unievent.business.impl.FitWomanService;
 import it.univaq.disim.mobile.unievent.business.domain.Scheda;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import it.univaq.disim.mobile.unievent.business.domain.EserciziWrapper;
 
 import java.util.List;
 
@@ -14,44 +13,70 @@ import java.util.List;
 @RequestMapping("/api/schede")
 class RESTSchedeController {
 
-
     @Autowired
     private FitWomanService service;
+    
 
-    @GetMapping("/{idScheda}")
-    public List<Scheda> findAllSchede() { return service.findAllSchede();
+    @GetMapping ("/{token}/personale")
+     public Response getAllSchedePersonali(@PathVariable(value = "token") String token) {
+        List<SchedaPersonale> schede = service.getAllSchedePersonali(token);
+
+        if(schede != null) {
+            Response<Object> response = new Response<>(true, "getAllSchedePersonali");
+
+            for(SchedaPersonale scheda : schede) {
+                for(Esercizio esercizio : scheda.getEsercizi()) {
+                    esercizio.setSchedepersonali(null);
+                }
+            }
+            response.setData(schede);
+            return response;
+        } else {
+            return Response.DEFAULT_RESPONSE_KO;
+        }
     }
 
-/*    @PostMapping ("/eserciziDaAggiungere")
-        public boolean aggiungi(@RequestBody EserciziWrapper eserciWra){
+    @GetMapping ("/{token}/personale/{id}")
+    public Response getSchedaPersonaleById(@PathVariable(value = "token") String token, @PathVariable(value = "id") Long id) {
+        SchedaPersonale scheda = service.getSchedaPersonaleById(token, id);
 
-        System.out.println(eserciWra.getI());
-        return true;
-    }*/
+        if(scheda != null) {
+            Response<Object> response = new Response<>(true, "getSchedPersonaleById");
 
+            for(Esercizio esercizio : scheda.getEsercizi()) {
+                esercizio.setSchedepersonali(null);
+            }
 
-    @GetMapping ("/personale")
-     public List<SchedaPersonale> FindAllSchedePersonali () {
-        System.out.println(service.FindAllSchedePersonali());
-        return service.FindAllSchedePersonali();
-    }
-    @PostMapping("/creaScheda")
-    public void createScheda(@RequestBody SchedaPersonale scheda) {
-        System.out.println("Scheda:" + scheda);
-
-        service.createScheda(scheda);
-
-        System.out.println("Scheda creata");
+            response.setData(scheda);
+            return response;
+        } else {
+            return Response.DEFAULT_RESPONSE_KO;
+        }
     }
 
+    @PostMapping("/{token}/personale")
+    public Response createSchedaPersonale(@PathVariable(value = "token") String token, @RequestBody SchedaPersonale scheda) {
 
-    @PutMapping
-    public void updateScheda(@RequestBody Scheda scheda) {
-        service.updateScheda(scheda);
+        if(service.createSchedaPersonale(token, scheda)) return Response.DEFAULT_RESPONSE_OK;
+        else return Response.DEFAULT_RESPONSE_KO;
     }
 
-    @DeleteMapping("/{idScheda}")
-    public void deleteScheda( @PathVariable long idScheda) {
-        service.deleteScheda(idScheda);
+
+    @PutMapping("/{token}/personale")
+    public Response updateSchedaPersonale(@PathVariable(value = "token") String token, @RequestBody SchedaPersonale scheda) {
+        SchedaPersonale newScheda = service.updateSchedaPersonale(token, scheda);
+        if(newScheda != null) {
+            Response<Object> response = new Response<>(true, "updateSchedaPersonale");
+            response.setData(newScheda);
+            return response;
+        } else {
+            return Response.DEFAULT_RESPONSE_KO;
+        }
+    }
+
+    @DeleteMapping("/{token}/personale/{id}")
+    public Response deleteSchedaPersonale(@PathVariable(value = "token") String token, @PathVariable long id) {
+        if(service.deleteSchedaPersonale(token, id)) return Response.DEFAULT_RESPONSE_OK;
+        else return Response.DEFAULT_RESPONSE_KO;
     }
 }

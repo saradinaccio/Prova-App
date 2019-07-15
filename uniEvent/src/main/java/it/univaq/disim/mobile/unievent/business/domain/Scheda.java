@@ -23,13 +23,23 @@ public class Scheda {
 
     @Column (name = "CALORIE", nullable = false)
     private int calorie;
-
+    /*
     @ManyToMany (mappedBy = "schede")
     private Set<Esercizio> esercizioSchedeSet = new HashSet<>();
-
+    */
     @ManyToOne
     @JoinColumn (name = "ID_UTENTE")
     private Utente utente;
+
+    @ManyToMany(fetch = FetchType.EAGER,
+            cascade = {
+                    CascadeType.MERGE,
+                    CascadeType.REFRESH
+            })
+    @JoinTable(name = "esercizio_scheda",
+            joinColumns = { @JoinColumn(name = "id_scheda") },
+            inverseJoinColumns = { @JoinColumn(name = "id_esercizio") })
+    private Set<Esercizio> esercizi = new HashSet<>();
 
 
 

@@ -14,12 +14,6 @@ import javax.persistence.Id;
 @RequestMapping("/api")
 public class RESTUtenteController {
 
-    @Value("${jwt.header}")
-    private String tokenHeader;
-
-    @Autowired
-    private AuthenticationManager authenticationManager;
-
     @Autowired
     private FitWomanService fitWomanService;
 
@@ -33,13 +27,17 @@ public class RESTUtenteController {
             Login login = new Login();
             login.setToken(session.getToken());
             login.setUsername(session.getUser().getUsername());
-            login.setFirstname(session.getUser().getNome());
-            login.setLastname(session.getUser().getCognome());
+            login.setNome(session.getUser().getNome());
+            login.setCognome(session.getUser().getCognome());
             login.setEmail(session.getUser().getEmail());
+            login.setAltezza(session.getUser().getAltezza());
+            login.setId(session.getUser().getId());
+            login.setEta(session.getUser().getEtà());
             result.setData(login);
             return result;
         } else {
-            return Response.DEFAULT_RESPONSE_KO;
+            Response<Login> result = new Response<>(false, Response.DEFAULT_RESPONSE_KO.getMessage());
+            return result;
         }
     }
 
@@ -74,8 +72,7 @@ public class RESTUtenteController {
         utente.setId(Id);
         Utente newUtente = fitWomanService.updateUtente(token, utente);
         Response<Utente> response = new Response<>(true, "updateUtente");
-        response.setData(utente);
+        response.setData(newUtente);
         return response;
     }
-
 }

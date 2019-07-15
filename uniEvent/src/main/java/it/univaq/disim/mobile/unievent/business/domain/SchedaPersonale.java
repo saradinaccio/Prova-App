@@ -29,7 +29,7 @@ public class SchedaPersonale {
     @ManyToOne
     @JoinColumn (name = "ID_UTENTE")
     private Utente utente;
-
+    /*
     public Set<Esercizio> getEsercizioSet() {
         return esercizioSet;
     }
@@ -37,9 +37,16 @@ public class SchedaPersonale {
     public void setEsercizioSet(Set<Esercizio> esercizioSet) {
         this.esercizioSet = esercizioSet;
     }
-
-    @ManyToMany (mappedBy = "schedepersonali")
-    private Set<Esercizio> esercizioSet = new HashSet<>();
+    */
+    @ManyToMany(fetch = FetchType.EAGER,
+            cascade = {
+                    CascadeType.MERGE,
+                    CascadeType.REFRESH
+            })
+    @JoinTable(name = "esercizio_schedapersonale",
+            joinColumns = { @JoinColumn(name = "id_schedapersonale") },
+            inverseJoinColumns = { @JoinColumn(name = "id_esercizio") })
+    private Set<Esercizio> esercizi = new HashSet<>();
 
 /* @OneToMany (mappedBy = "Esercizio")
     private Set<SchedaPersonale> schedaPersonaleset;*/
@@ -70,5 +77,13 @@ public class SchedaPersonale {
 
     public void setUtente(Utente utente) {
         this.utente = utente;
+    }
+
+    public Set<Esercizio> getEsercizi() {
+        return esercizi;
+    }
+
+    public void setEsercizi(Set<Esercizio> esercizi) {
+        this.esercizi = esercizi;
     }
 }

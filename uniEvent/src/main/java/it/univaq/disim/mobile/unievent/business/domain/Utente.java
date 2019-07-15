@@ -111,7 +111,10 @@ public class Utente {
     }
 
     public Float getPeso() {
-        return peso;
+        if (peso == null)
+            return 0f;
+        else
+            return peso;
     }
 
     public void setPeso(Float peso) {
@@ -119,7 +122,10 @@ public class Utente {
     }
 
     public Float getAltezza() {
-        return altezza;
+        if (altezza == null)
+                return 0f;
+        else
+            return altezza;
     }
 
     public void setAltezza(Float altezza) {
