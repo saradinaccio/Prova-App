@@ -64,16 +64,19 @@ export class AccountProvider{
         });
     }
 
-    register(utente: UtenteRegisterInterface): Promise<any>{
+    register(utenteNuovo: Utente): Promise<Utente>{
         return new Promise((resolve, reject) =>{
-            this._http.post(URL.REGISTRAZIONE, utente)
+            this._http.post(URL.REGISTRAZIONE, utenteNuovo)
                 .toPromise()
                 .then((res: Response) => {
                     const json = res.json() as ResponseServer; 
                     console.log (json.data);
                     if (json.result == true) {
-                        console.log(json.result);
-                        resolve(json.data);
+                        var utente = new Utente(json.data);
+                        this._utente = utente;
+                        console.log(this._utente);
+                        this._sUtentePersistance.save(this._utente);
+                        resolve(utente);
                     } else {
                         reject(res);
                     }
@@ -87,7 +90,7 @@ export class AccountProvider{
         
         console.log(this._utente);
         
-        this._http.get(URL.LOGOUT + '/' + '2904899154611209978', "").toPromise()
+        this._http.get(URL.LOGOUT + '/' + this._utente.token, "").toPromise()
         .then(() => {
         
         this._utente = null;

@@ -4,5 +4,8 @@ export interface UtenteRegisterInterface {
     cognome: string;
     email: string;
     password: string;
-    username: string;    
+    altezza: Number;
+    peso: Number;
+    eta: Number;
+    username: String;    
 }

@@ -25,7 +25,7 @@ export class SchedaPersonaleService{
 
   getSchedePersonali() : Promise<Array<schedaPersonale>> {
     return new Promise((resolve, reject) =>{
-        this.http.get(URL.SCHEDEPERSONALI + '/2904899154611209978' + '/personale')
+        this.http.get(URL.SCHEDEPERSONALI + '/'+ this._sAccount.getUtente().token + '/personale')
             .toPromise()
             .then((res: Response) => {
               console.log("sei tu ?"); 
@@ -59,7 +59,7 @@ export class SchedaPersonaleService{
   getSchedaById(id: String): Promise<any> {
     return new Promise((resolve, reject) => {
     this._scheda = null;
-    this.http.get(URL.SCHEDE + '/2904899154611209978' + '/personale/' + id)
+    this.http.get(URL.SCHEDE + '/' + this._sAccount.getUtente().token + '/personale/' + id)
     .toPromise()
       .then((res: Response) => {
               const json = res.json() as ResponseServer; 
@@ -77,7 +77,7 @@ export class SchedaPersonaleService{
 
   creaScheda(scheda: schedaPersonale): Promise<any>{
     return new Promise((resolve, reject) =>{
-        this.http.post(URL.SCHEDEPERSONALI + '/2904899154611209978' + '/personale', scheda)
+        this.http.post(URL.SCHEDEPERSONALI + '/' + this._sAccount.getUtente().token + '/personale', scheda)
             .toPromise()
             .then((res: Response) => {
               console.log(res);
@@ -97,9 +97,10 @@ export class SchedaPersonaleService{
 deleteSchedaPersonale(id: number): Promise<any>{
   console.log(id);
   return new Promise((resolve, reject) =>{
-    this.http.delete(URL.SCHEDEPERSONALI + '/2904899154611209978' + '/personale/' + id)
+    this.http.delete(URL.SCHEDEPERSONALI + '/' + this._sAccount.getUtente().token + '/personale/' + id)
         .toPromise()
         .then((res: Response) => {
+          console.log("sono dentro delete");
           console.log(res);
           
             const json = res.json() as ResponseServer; 

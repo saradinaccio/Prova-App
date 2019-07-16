@@ -17,7 +17,7 @@
     <h2>{{scheda?.goal}}</h2>
     <ion-list>
 
-        <ion-item *ngFor="let esercizio of esercizi" (click)="doAlert(x)">
+        <ion-item *ngFor="let esercizio of esercizi" (click)="doAlert(esercizio)">
             <ion-avatar item-start>
                 <img src="https://media.giphy.com/media/fQlSGUqS3Dz4Xs5MIl/giphy.gif">
             </ion-avatar>

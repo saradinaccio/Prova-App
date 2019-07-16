@@ -23,7 +23,7 @@ public class RESTUtenteController {
         System.out.println(u.getPassword());
         Session session = fitWomanService.login(u.getUsername(), u.getPassword());
         if (session != null) {
-            Response<Login> result = new Response<>(true, Response.DEFAULT_RESPONSE_OK.getMessage());
+            Response<Login> response = new Response<>(true, Response.DEFAULT_RESPONSE_OK.getMessage());
             Login login = new Login();
             login.setToken(session.getToken());
             login.setUsername(session.getUser().getUsername());
@@ -33,8 +33,8 @@ public class RESTUtenteController {
             login.setAltezza(session.getUser().getAltezza());
             login.setId(session.getUser().getId());
             login.setEta(session.getUser().getEtà());
-            result.setData(login);
-            return result;
+            response.setData(login);
+            return response;
         } else {
             Response<Login> result = new Response<>(false, Response.DEFAULT_RESPONSE_KO.getMessage());
             return result;
@@ -49,10 +49,19 @@ public class RESTUtenteController {
 
     @PostMapping("/utente")
     public Response createUser(@RequestBody Utente user) {
-        Response<Object> response = new Response<>(true, Response.DEFAULT_RESPONSE_OK.getMessage());
-        Session result = fitWomanService.createUtente(user);
-        if (result != null) {
-            response.setData(result);
+        Session session = fitWomanService.createUtente(user);
+        if (session != null) {
+            Response<Login> response = new Response<>(true, Response.DEFAULT_RESPONSE_OK.getMessage());
+            Login login = new Login();
+            login.setToken(session.getToken());
+            login.setUsername(session.getUser().getUsername());
+            login.setNome(session.getUser().getNome());
+            login.setCognome(session.getUser().getCognome());
+            login.setEmail(session.getUser().getEmail());
+            login.setAltezza(session.getUser().getAltezza());
+            login.setId(session.getUser().getId());
+            login.setEta(session.getUser().getEtà());
+            response.setData(login);
             return response;
         } else {
             return Response.DEFAULT_RESPONSE_KO;

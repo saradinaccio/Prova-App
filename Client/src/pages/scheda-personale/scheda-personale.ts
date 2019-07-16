@@ -64,6 +64,15 @@ export class SchedaPersonalePage {
     console.log('ionViewDidLoad SchedaPersonalePage');
   }
 
+  doAlert(esercizio: Esercizio) {
+    let alert = this.alertCtrl.create({
+      title: esercizio.nome,
+      message: esercizio.descrizione,
+      buttons: ['Ok']
+    });
+    alert.present()
+  }
+
 
 
 }

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { URL } from '../constants';
 import { Esercizio } from '../models/esercizio.model';
-import { Utente } from '../models/utente.model';
+import { AccountProvider } from '../providers/account.provider';
 import { ResponseServer } from '../types';
 import { Http, Response} from '@angular/http';
 
@@ -10,7 +10,7 @@ import { Http, Response} from '@angular/http';
 @Injectable()
 
 export class EsercizioService{
-    constructor (private http: Http){}
+    constructor (private http: Http,  private _sAccount: AccountProvider){}
 /*
     esercizi(livello: any, zona:any): Observable<Array<Esercizio>>{
         console.log("Ciao");
@@ -26,7 +26,7 @@ export class EsercizioService{
 */
     getAllEsercizi(): Promise<Array<Esercizio>>{
         return new Promise((resolve, reject) =>{
-            this.http.get(URL.ESERCIZI + '/' + '2904899154611209978')
+            this.http.get(URL.ESERCIZI + '/' + this._sAccount.getUtente().token)
                 .toPromise()
                 .then((res: Response) => {
                     const json = res.json() as any as ResponseServer; 
@@ -45,7 +45,7 @@ export class EsercizioService{
 
     esercizi(livello: any, zona:any): Promise<Array<Esercizio>>{
         return new Promise((resolve, reject) =>{
-            this.http.get(URL.ESERCIZI + '/2904899154611209978' +'/livello' + '/' + livello + '/' + zona)
+            this.http.get(URL.ESERCIZI + '/' + this._sAccount.getUtente().token +'/livello' + '/' + livello + '/' + zona)
                 .toPromise()
                 .then((res: Response) => {
                     const json = res.json() as any as ResponseServer; 

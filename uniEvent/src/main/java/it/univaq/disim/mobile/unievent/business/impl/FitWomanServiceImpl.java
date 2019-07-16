@@ -199,7 +199,11 @@ public class  FitWomanServiceImpl implements FitWomanService {
     public boolean deleteSchedaPersonale(String token, Long id) {
         Session session = sessionRepository.findByToken(token);
         if (session != null) {
-            schedaPersonaleRepository.delete(id);
+            System.out.println(id);
+            SchedaPersonale scheda = schedaPersonaleRepository.findOne(id);
+            scheda.getEsercizi().removeAll(scheda.getEsercizi());
+            schedaPersonaleRepository.delete(scheda);
+
             return true;
         } else {
             return false;

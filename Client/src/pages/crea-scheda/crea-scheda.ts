@@ -42,7 +42,7 @@ export class CreaSchedaPage {
       title: 'Vuoi eliminare la tua scheda?',
       buttons: [
          {
-          text: 'Cancella',
+          text: 'Elimina',
           handler: data => {
             const loading = this.loadingCtrl.create({content: "Caricamento"});
              loading.present();
@@ -50,6 +50,7 @@ export class CreaSchedaPage {
               this.schedaPersonaleService.deleteSchedaPersonale(id)
             .then(result => {
               if(result){
+                console.log("sono dentro delete 2");
                 loading.dismiss();
                 this.alertCtrl.create({
                   title: "Creazione Scheda",

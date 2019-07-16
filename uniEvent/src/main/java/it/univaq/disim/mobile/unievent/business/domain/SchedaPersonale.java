@@ -10,7 +10,7 @@ import java.util.Set;
 @Table (name = "schedepersonali")
 public class SchedaPersonale {
 
-      @Id
+    @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     @Column (name ="ID_SCHEDAPERSONALE", nullable = false)
     private Long id;
@@ -40,8 +40,8 @@ public class SchedaPersonale {
     */
     @ManyToMany(fetch = FetchType.EAGER,
             cascade = {
-                    CascadeType.MERGE,
-                    CascadeType.REFRESH
+                    CascadeType.REFRESH,
+                    CascadeType.MERGE
             })
     @JoinTable(name = "esercizio_schedapersonale",
             joinColumns = { @JoinColumn(name = "id_schedapersonale") },

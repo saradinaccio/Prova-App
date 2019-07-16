@@ -18,36 +18,45 @@ import { TabsPage } from '../Tabs/tabs';
 })
 
 export class RegisterPage {
-  utente: UtenteRegisterInterface;
+  utente: Utente;
+  public nome: string = "";
+  public cognome: string = "";
+  public email: string = "";
+  public password: string = "";
+  public altezza: Number;
+  public peso: Number;
+  public eta: Number;
+  public username: String = "";
   public type = 'password';
   createSuccess = false;
   public showPass = false;
  
   constructor(private nav: NavController, private acntProvider: AccountProvider, private alertCtrl: AlertController, private _sUtentePersistance: UtentePersistanceProvider, private loadingCtrl: LoadingController) 
   { 
-    this.utente = {
-            nome: "",
-            cognome: "",
-            email: "",
-            password: "",
-            username: "",
-    };
   }
  
   public register() {
     this._validate().then(() => {
       const loading = this.loadingCtrl.create({content: "Caricamento"});
       loading.present();
+      this.utente = new Utente();
+      this.utente.nome = this.nome;
+      this.utente.cognome = this.cognome;
+      this.utente.email = this.email;
+      this.utente.password = this.password;
+      this.utente.altezza = this.altezza;
+      this.utente.peso = this.peso;
+      this.utente.eta = this.eta;
+      this.utente.username = this.username;
+      console.log("eccomi");
+      console.log(this.utente);
       this.acntProvider.register(this.utente)
-              .then((result) => {
-                  var utente = new Utente(result);
-                  console.log('utente');
-                  console.log(utente);
-                  this._sUtentePersistance.save(utente).then(()=> {
-                    loading.dismiss().then(()=>{
-                      this.nav.setRoot(TabsPage);
-                    })
-                  });
+              .then((utente: Utente) => {
+                this.utente = utente;
+
+                loading.dismiss().then(() => {
+                    this.nav.setRoot(TabsPage);
+                });
 
               })
               .catch(msg => { 
@@ -65,20 +74,20 @@ export class RegisterPage {
         return new Promise((resolve, reject) => {
             let msg = "";
 
-            if (this.utente.email.trim() === "") {
+            if (this.email.trim() === "") {
                 msg = "Non hai inserito la email";
             }
 
-            else if (this.utente.password.trim() === "") {
+            else if (this.password.trim() === "") {
                 msg = "Non hai inserito la password";
             }
-            else if (this.utente.nome.trim() === "") {
+            else if (this.nome.trim() === "") {
                 msg = "Non hai inserito il nome";
             }
-            else if (this.utente.cognome.trim() === "") {
+            else if (this.cognome.trim() === "") {
                 msg = "Non hai inserito il cognome";
             }
-            else if (this.utente.username.trim() === "") {
+            else if (this.username.trim() === "") {
                 msg = "Non hai inserito l'username";
             }
 

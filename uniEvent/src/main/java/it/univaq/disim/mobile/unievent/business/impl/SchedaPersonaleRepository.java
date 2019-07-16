@@ -13,6 +13,8 @@ public interface SchedaPersonaleRepository extends JpaRepository<SchedaPersonale
     @Query("SELECT schedaP FROM SchedaPersonale schedaP WHERE schedaP.utente =:utente")
     List<SchedaPersonale> getAllSchedePersonali(@Param("utente") Utente utente);
 
+    @Query("DELETE FROM  SchedaPersonale schedaP WHERE schedaP.id =:id")
+    boolean deleteScheda(@Param("id") Long id);
 
 }
 
