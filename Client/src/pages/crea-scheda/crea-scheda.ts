@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController, LoadingController } from 'ionic-angular';
 import {schedaPersonale} from '../../models/schedaPersonale.model';
 import {SchedaPersonaleService} from "../../services/schedaPersonale.service";
 import { HttpClient, HttpHeaders} from '@angular/common/http';
@@ -31,19 +31,48 @@ export class CreaSchedaPage {
   // public SchedaPersonale: schedaPersonale ;
   SchedaPersonale: schedaPersonale = new schedaPersonale();
   public var : string = "";
-  schedaPersonaleLista : Array<schedaPersonale>;
+  public schedaPersonaleLista : Array<schedaPersonale> = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController, public schedaPersonaleService: SchedaPersonaleService, public http : HttpClient, public asc : ActionSheetController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController, public schedaPersonaleService: SchedaPersonaleService, public http : HttpClient, public asc : ActionSheetController, public loadingCtrl: LoadingController) {
   }
 
 
-  optionList(){
+  optionList(id: number){
     let actionSheet = this.alertCtrl.create({
       title: 'Vuoi eliminare la tua scheda?',
       buttons: [
          {
           text: 'Cancella',
           handler: data => {
+            const loading = this.loadingCtrl.create({content: "Caricamento"});
+             loading.present();
+             console.log(id);
+              this.schedaPersonaleService.deleteSchedaPersonale(id)
+            .then(result => {
+              if(result){
+                loading.dismiss();
+                this.alertCtrl.create({
+                  title: "Creazione Scheda",
+                  message: "Scheda eliminata con successo!",
+                  buttons: [{
+                      text: "OK",
+                      handler: () => {
+                          this.navCtrl.setRoot("CreaSchedaPage");
+
+                      }
+                  }]
+              }).present();
+
+              }
+            })
+            .catch(msg => { 
+                loading.dismiss();
+                this.alertCtrl.create({
+                    title: "FitWoman",
+                    message: "Non è stato possibile eliminare la tua scheda",
+                    buttons: ["Ok"]
+                }).present();
+            });
             console.log('Cancel clicked');
           }
         },
@@ -97,8 +126,8 @@ export class CreaSchedaPage {
 
     }
 
-    enter() {
-      
+    goToScheda(id: number) {
+      this.navCtrl.push("SchedaPersonalePage", {id: id});
     }
  
 
@@ -106,12 +135,31 @@ export class CreaSchedaPage {
     console.log('ionViewDidLoad CreaSchedaPage');
     console.log(this.schedaPersonaleLista);
 
-    
+    const loading = this.loadingCtrl.create({content: "Caricamento"});
+    loading.present();
+    this.schedaPersonaleService.getSchedePersonali()
+            .then(result => {
+              console.log("dfgh");
+                this.schedaPersonaleLista = result;
+                console.log(this.schedaPersonaleLista);
+                loading.dismiss();
+            })
+            .catch(msg => { 
+                loading.dismiss();
+                this.alertCtrl.create({
+                    title: "FitWoman",
+                    message: "Non è stato possibile recuperare le tue schede personali",
+                    buttons: ["Ok"]
+                }).present();
+            });
+
+    /*
     this.schedaPersonaleService.schedePersonali().subscribe((schedaP: Array<schedaPersonale>)=> {
       
       this.schedaPersonaleLista= schedaP;
       console.log(this.schedaPersonaleLista[0]);
     })
+    */
   }
 
 

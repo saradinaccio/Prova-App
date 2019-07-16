@@ -8,7 +8,7 @@ export const URL = {
     UPDATE_PROFILO: URL_BASE + "/utente/updateprofilo",
     ESERCIZI: URL_BASE + "/esercizi",
     CREASCHEDEPERSONALI: URL_BASE + "/schede/creaScheda",
-    SCHEDEPERSONALI: URL_BASE + "/schede/",
+    SCHEDEPERSONALI: URL_BASE + "/schede",
     SCHEDE: URL_BASE + "/schede",
     REGISTRAZIONE: URL_BASE + "/utente"
 }

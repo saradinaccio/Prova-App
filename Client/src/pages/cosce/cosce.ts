@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController} from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController, LoadingController} from 'ionic-angular';
 import { EsercizioService} from "../../services/esercizio.service";
 import { Esercizio} from "../../models/esercizio.model";
 
@@ -22,7 +22,12 @@ export class CoscePage {
   public message : string = "";
   esercizio: Array<Esercizio>;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public alerCtrl: AlertController, public esercizioService: EsercizioService) {
+  constructor(public navCtrl: NavController, 
+    public navParams: NavParams, 
+    public alertCtrl: AlertController, 
+    public esercizioService: EsercizioService,
+    public loadingCtrl: LoadingController
+    ) {
 
     this.value = navParams.get('Item');
   }
@@ -38,7 +43,7 @@ export class CoscePage {
      case 3: this.titolo = 'Avanzato Gambe';
      break;
     }
-    
+    /*
       this.esercizioService.esercizi(this.value, 'Gambe').subscribe((data: Array<Esercizio>) => {
       this.esercizio = data;
 
@@ -46,7 +51,25 @@ export class CoscePage {
       console.log ('Primo');
 
     })
+*/
 
+console.log(this.value);
+    const loading = this.loadingCtrl.create({content: "Caricamento"});
+    loading.present();
+    this.esercizioService.esercizi(this.value, 'Cosce')
+            .then(result => {
+                this.esercizio = result;
+                console.log(this.esercizio);
+                loading.dismiss();
+            })
+            .catch(msg => { 
+                loading.dismiss();
+                this.alertCtrl.create({
+                    title: "FitWoman",
+                    message: "Non è stato possibile recuperare gli esercizi per le gambe",
+                    buttons: ["Ok"]
+                }).present();
+            });
     
   }
 
@@ -54,7 +77,7 @@ export class CoscePage {
     this.title = x[0];
     this.message=x.desc;
     console.log(this.title);
-    let alert = this.alerCtrl.create({
+    let alert = this.alertCtrl.create({
       title: this.title,
       message: x[3],
       buttons: ['Ok']

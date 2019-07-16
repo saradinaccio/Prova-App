@@ -34,6 +34,7 @@ import {AccountProvider} from '../providers/account.provider';
 import { UtentePersistanceProvider } from '../providers/utente-persistance.provider';
 import {TabsPageModule} from '../pages/Tabs/tabs.module';
 import { AggiungiEserciziPageModule } from '../pages/aggiungi-esercizi/aggiungi-esercizi.module';
+import { CreaSchedaPageModule } from '../pages/crea-scheda/crea-scheda.module';
 //import { TabsPage } from '../pages/Tabs/tabs';
 
 //export function createTranslateLoader(http: HttpModule) {  new TranslateHttpLoader(http, './assets/i18n/', '.json'); } 
@@ -43,7 +44,7 @@ import { AggiungiEserciziPageModule } from '../pages/aggiungi-esercizi/aggiungi-
     MyApp,
     HomePage,
     LoginPage,
-    CreaSchedaPage,
+   // CreaSchedaPage,
     AccountPage,
     SceltaZonaPage,
     RoutinePage,
@@ -67,7 +68,8 @@ import { AggiungiEserciziPageModule } from '../pages/aggiungi-esercizi/aggiungi-
     IonicStorageModule.forRoot(),
     IonicModule.forRoot(MyApp),
     TabsPageModule,
-    AggiungiEserciziPageModule
+    AggiungiEserciziPageModule,
+    CreaSchedaPageModule
    // TranslateModule.forRoot({ 
     //  loader: { 
      //   provide: TranslateLoader, 
@@ -79,7 +81,7 @@ import { AggiungiEserciziPageModule } from '../pages/aggiungi-esercizi/aggiungi-
     MyApp,
     HomePage,
     LoginPage,
-    CreaSchedaPage,
+   // CreaSchedaPage,
     AccountPage,
     SceltaZonaPage,
     RoutinePage,

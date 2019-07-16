@@ -17,13 +17,12 @@
 
     <ion-list>
 
-        <button ion-item full outline *ngFor="let x of schedaPersonaleLista" (press)="optionList()" (click)="enter()">
+        <button ion-item full outline *ngFor="let scheda of schedaPersonaleLista" (press)="optionList(scheda.id)" (click)="goToScheda(scheda.id)">
            
           <ion-avatar item-start>
                 <img src="assets/imgs/avatar.jpg">
             </ion-avatar>
-            <h2>{{x[0]}}</h2>
-            <p> {{x[0]}} Listen, I've had a pretty messed up day...</p>
+            <h2>{{scheda.goal}}</h2>
             
         </button>
 

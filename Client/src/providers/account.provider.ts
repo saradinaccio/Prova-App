@@ -87,7 +87,7 @@ export class AccountProvider{
         
         console.log(this._utente);
         
-        this._http.get(URL.LOGOUT + '/' + this._utente.token, "").toPromise()
+        this._http.get(URL.LOGOUT + '/' + '2904899154611209978', "").toPromise()
         .then(() => {
         
         this._utente = null;

@@ -2,120 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="213ee92b-0241-43b7-bb2b-6d90ce27277f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Client/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/app/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Client/src/constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/constants.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/pages/account/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/pages/account/account.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/pages/account/account.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/pages/account/account.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/models/schedaPersonale.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/models/schedaPersonale.model.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Client/src/pages/aggiungi-esercizi/aggiungi-esercizi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/pages/aggiungi-esercizi/aggiungi-esercizi.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Client/src/pages/crea-scheda/crea-scheda.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/pages/crea-scheda/crea-scheda.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/pages/register/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/pages/register/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/pages/register/register.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/pages/register/register.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/pages/scheda-personale/scheda-personale.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/pages/scheda-personale/scheda-personale.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/pages/scheda-personale/scheda-personale.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/pages/scheda-personale/scheda-personale.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Client/src/providers/account.provider.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/providers/account.provider.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Client/src/services/esercizio.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/services/esercizio.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Client/src/services/schedaPersonale.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/services/schedaPersonale.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/app/app.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/app/app.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/app/app.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/app/app.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/app/main.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/assets/i18n/en.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/assets/i18n/it.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/assets/icon/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/assets/imgs/Primo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/assets/imgs/Riscaldamento.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/assets/imgs/SceltaZona.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/assets/imgs/Secondo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/assets/imgs/Stretching.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/assets/imgs/Terzo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/assets/imgs/Wellfit-Fitness-c02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/assets/imgs/avatar.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/assets/imgs/cosce.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/assets/imgs/cosce2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/assets/imgs/cosce3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/assets/imgs/cosi_ti_ricordi_che_esistiamo.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/assets/imgs/download.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/assets/imgs/glutei-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/assets/imgs/gluteo1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/assets/imgs/gluteo2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/assets/imgs/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/assets/imgs/image.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/assets/imgs/image1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/assets/imgs/images.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/assets/imgs/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/assets/imgs/stretching-per-le-gambe-orig.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/assets/imgs/yoga-fitness-risveglio-internauno.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/constants.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/interfaces/utenteRegisterInterface.interface.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/interfaces/utentepersistance.interface.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/models/esercizio.model.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/models/schedaPersonale.model.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/models/utente.model.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/Tabs/tabs.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/Tabs/tabs.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/Tabs/tabs.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/account/account.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/account/account.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/account/account.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/addomi/addomi.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/addomi/addomi.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/addomi/addomi.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/addomi/addomi.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/aggiungi-esercizi/aggiungi-esercizi.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/aggiungi-esercizi/aggiungi-esercizi.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/aggiungi-esercizi/aggiungi-esercizi.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/aggiungi-esercizi/aggiungi-esercizi.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/cosce/cosce.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/cosce/cosce.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/cosce/cosce.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/cosce/cosce.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/crea-scheda/crea-scheda.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/crea-scheda/crea-scheda.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/crea-scheda/crea-scheda.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/crea-scheda/crea-scheda.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/glutei/glutei.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/glutei/glutei.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/glutei/glutei.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/glutei/glutei.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/home/home.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/home/home.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/home/home.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/home/home.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/inizio/inizio.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/inizio/inizio.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/inizio/inizio.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/login/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/login/login.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/login/login.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/login/login.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/register/register.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/register/register.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/register/register.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/register/register.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/riscaldamento/riscaldamento.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/riscaldamento/riscaldamento.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/riscaldamento/riscaldamento.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/routine/routine.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/routine/routine.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/routine/routine.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/scelta-zona/scelta-zona.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/scelta-zona/scelta-zona.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/scelta-zona/scelta-zona.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/stretching/stretching.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/stretching/stretching.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/pages/stretching/stretching.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/providers/account.provider.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/providers/auth-service/auth-service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/providers/utente-persistance.provider.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/service-worker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/services/esercizio.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/services/lingua.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/services/schedaPersonale.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/theme/variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/src/types.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/web/RESTEserciziController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/web/RESTEserciziController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/it/univaq/disim/mobile/unievent/business/AdvanceSearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/it/univaq/disim/mobile/unievent/business/AdvanceSearch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/it/univaq/disim/mobile/unievent/business/BaseSearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/it/univaq/disim/mobile/unievent/business/BaseSearch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/it/univaq/disim/mobile/unievent/business/CustomerDateAndTimeDeserialize.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/it/univaq/disim/mobile/unievent/business/CustomerDateAndTimeDeserialize.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/it/univaq/disim/mobile/unievent/business/common/spring/security/JWTTokenUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/it/univaq/disim/mobile/unievent/business/common/spring/security/JWTTokenUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/it/univaq/disim/mobile/unievent/business/domain/Esercizio.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/it/univaq/disim/mobile/unievent/business/domain/Esercizio.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/it/univaq/disim/mobile/unievent/business/domain/Routine.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/it/univaq/disim/mobile/unievent/business/domain/Routine.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/it/univaq/disim/mobile/unievent/business/domain/Scheda.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/it/univaq/disim/mobile/unievent/business/domain/Scheda.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/it/univaq/disim/mobile/unievent/business/domain/Session.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/it/univaq/disim/mobile/unievent/business/domain/Session.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/it/univaq/disim/mobile/unievent/business/impl/FitWomanServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/it/univaq/disim/mobile/unievent/business/impl/FitWomanServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/it/univaq/disim/mobile/unievent/business/web/RESTSchedeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/it/univaq/disim/mobile/unievent/business/web/RESTSchedeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/it/univaq/disim/mobile/unievent/business/web/RESTUtenteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/it/univaq/disim/mobile/unievent/business/web/RESTUtenteController.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -131,27 +40,9 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/domain/Scheda.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="756">
-              <caret line="39" column="39" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/web/RESTUtenteController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-267">
-              <caret line="39" column="26" lean-forward="true" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/web/Login.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1365">
+            <state relative-caret-position="819">
               <caret line="65" column="32" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
             </state>
           </provider>
@@ -219,26 +110,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/domain/SchedaPersonale.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1491">
-              <caret line="89" selection-start-line="89" selection-end-line="89" />
+            <state relative-caret-position="-546">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1488#1489#0" expanded="true" />
-                <element signature="e#1513#1514#0" expanded="true" />
-                <element signature="e#1547#1548#0" expanded="true" />
-                <element signature="e#1575#1576#0" expanded="true" />
-                <element signature="e#1606#1607#0" expanded="true" />
-                <element signature="e#1633#1634#0" expanded="true" />
-                <element signature="e#1673#1674#0" expanded="true" />
-                <element signature="e#1705#1706#0" expanded="true" />
-                <element signature="e#1738#1739#0" expanded="true" />
-                <element signature="e#1767#1768#0" expanded="true" />
-                <element signature="e#1811#1812#0" expanded="true" />
-                <element signature="e#1847#1848#0" expanded="true" />
-                <element signature="e#1890#1891#0" expanded="true" />
-                <element signature="e#1921#1922#0" expanded="true" />
-                <element signature="e#1977#1978#0" expanded="true" />
-                <element signature="e#2017#2018#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -247,10 +122,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/impl/EsercizioRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
+            <state relative-caret-position="420">
               <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#0#130#0" expanded="true" />
+                <element signature="e#0#98#0" expanded="true" />
+                <element signature="e#0#67#1" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -259,8 +137,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/impl/FitWomanServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3591">
-              <caret line="254" selection-start-line="254" selection-end-line="254" />
+            <state relative-caret-position="-1533">
+              <caret line="73" column="34" selection-start-line="73" selection-start-column="34" selection-end-line="73" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -271,11 +149,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/web/RESTEserciziController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1260">
-              <caret line="68" column="5" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
+            <state relative-caret-position="-504">
+              <caret line="27" column="9" lean-forward="true" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/web/RESTSchedeController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-84">
+              <caret line="57" column="111" lean-forward="true" selection-start-line="57" selection-start-column="111" selection-end-line="57" selection-end-column="111" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/impl/FitWomanService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -320,8 +216,8 @@
         <option value="$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/impl/SchedaRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/web/RESTSchedeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/impl/SchedaPersonaleRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/web/RESTEserciziController.java" />
         <option value="$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/impl/EsercizioRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/web/RESTEserciziController.java" />
       </list>
     </option>
   </component>
@@ -337,8 +233,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -419,6 +313,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -460,7 +356,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="7066c003-24f5-4e9e-b0a0-33d452b11f2a" name="Default Changelist" comment="" />
+      <changelist id="213ee92b-0241-43b7-bb2b-6d90ce27277f" name="Default Changelist" comment="" />
       <created>1563007321738</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -469,16 +365,28 @@
       <workItem from="1563094576290" duration="11153000" />
       <workItem from="1563178405994" duration="823000" />
       <workItem from="1563195796001" duration="6269000" />
+      <workItem from="1563219296855" duration="3344000" />
+      <workItem from="1563267128781" duration="5620000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28315000" />
+    <option name="totallyTimeSpent" value="37279000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+      <is-preview-enabled value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21610738" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22214764" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -488,19 +396,19 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.8458445" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.5831099" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32936078" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3297587" />
+      <window_info anchor="bottom" id="Spring" order="7" weight="0.3297587" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32936078" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3297587" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
-      <window_info anchor="bottom" id="Version Control" order="14" />
+      <window_info anchor="bottom" id="Version Control" order="14" weight="0.3297587" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -552,6 +460,57 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/impl/SessionRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="14" lean-forward="true" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/domain/Utente.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="108" column="33" lean-forward="true" selection-start-line="108" selection-start-column="33" selection-end-line="108" selection-end-column="33" />
+          <folding>
+            <element signature="e#2392#2393#0" expanded="true" />
+            <element signature="e#2419#2420#0" expanded="true" />
+            <element signature="e#2483#2484#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/Object.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/impl/SchedaRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="57" lean-forward="true" selection-start-line="6" selection-start-column="57" selection-end-line="6" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/web/UtenteResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/impl/SchedaPersonaleRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="e#0#73#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/domain/Scheda.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="756">
@@ -559,10 +518,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/impl/SessionRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/web/RESTUtenteController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        <state relative-caret-position="651">
+          <caret line="39" column="26" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/web/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="819">
+          <caret line="65" column="32" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -621,25 +587,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="14" lean-forward="true" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/domain/Utente.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="108" column="33" lean-forward="true" selection-start-line="108" selection-start-column="33" selection-end-line="108" selection-end-column="33" />
-          <folding>
-            <element signature="e#2392#2393#0" expanded="true" />
-            <element signature="e#2419#2420#0" expanded="true" />
-            <element signature="e#2483#2484#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/Application.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3108">
@@ -652,112 +599,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/Object.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/impl/SchedaRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="6" column="57" lean-forward="true" selection-start-line="6" selection-start-column="57" selection-end-line="6" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/impl/FitWomanServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3591">
-          <caret line="254" selection-start-line="254" selection-end-line="254" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/web/Login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1365">
-          <caret line="65" column="32" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/web/UtenteResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/web/RESTUtenteController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-267">
-          <caret line="39" column="26" lean-forward="true" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/domain/SchedaPersonale.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1491">
-          <caret line="89" selection-start-line="89" selection-end-line="89" />
+        <state relative-caret-position="-546">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1488#1489#0" expanded="true" />
-            <element signature="e#1513#1514#0" expanded="true" />
-            <element signature="e#1547#1548#0" expanded="true" />
-            <element signature="e#1575#1576#0" expanded="true" />
-            <element signature="e#1606#1607#0" expanded="true" />
-            <element signature="e#1633#1634#0" expanded="true" />
-            <element signature="e#1673#1674#0" expanded="true" />
-            <element signature="e#1705#1706#0" expanded="true" />
-            <element signature="e#1738#1739#0" expanded="true" />
-            <element signature="e#1767#1768#0" expanded="true" />
-            <element signature="e#1811#1812#0" expanded="true" />
-            <element signature="e#1847#1848#0" expanded="true" />
-            <element signature="e#1890#1891#0" expanded="true" />
-            <element signature="e#1921#1922#0" expanded="true" />
-            <element signature="e#1977#1978#0" expanded="true" />
-            <element signature="e#2017#2018#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/web/RESTSchedeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="21" column="52" selection-start-line="21" selection-start-column="52" selection-end-line="21" selection-end-column="52" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/impl/FitWomanService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="40" lean-forward="true" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
+        <state relative-caret-position="126">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/impl/SchedaPersonaleRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/impl/EsercizioRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="420">
+          <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
           <folding>
-            <element signature="e#0#73#1" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#0#130#0" expanded="true" />
+            <element signature="e#0#98#0" expanded="true" />
+            <element signature="e#0#67#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/impl/FitWomanServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1533">
+          <caret line="73" column="34" selection-start-line="73" selection-start-column="34" selection-end-line="73" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/web/RESTEserciziController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
-          <caret line="68" column="5" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
+        <state relative-caret-position="-504">
+          <caret line="27" column="9" lean-forward="true" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/impl/EsercizioRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/web/RESTSchedeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="-84">
+          <caret line="57" column="111" lean-forward="true" selection-start-line="57" selection-start-column="111" selection-end-line="57" selection-end-column="111" />
         </state>
       </provider>
     </entry>

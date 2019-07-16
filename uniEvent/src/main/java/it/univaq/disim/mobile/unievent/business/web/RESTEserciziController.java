@@ -23,6 +23,10 @@ public class RESTEserciziController {
 
         List<Esercizio> esercizi = service.findAllEsercizi(token);
 
+        for(Esercizio esercizio : esercizi) {
+            esercizio.setSchedepersonali(null);
+        }
+
         if(esercizi != null) {
             Response<Object> response = new Response<>(true, "getAllEsercizi");
             response.setData(esercizi);

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, AlertController } from 'ionic-angular';
+import { NavController, NavParams, AlertController, LoadingController } from 'ionic-angular';
 import {EsercizioService } from '../../services/esercizio.service';
 import { Esercizio } from '../../models/esercizio.model';
 
@@ -24,7 +24,12 @@ export default class AddomiPage {
   public titolo : string = "";
   public message : string= "";
   public esercizio : Array<Esercizio>;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public alerCtrl: AlertController, public esercizioService: EsercizioService){
+  constructor(public navCtrl: NavController, 
+    public navParams: NavParams, 
+    public alertCtrl: AlertController, 
+    public esercizioService: EsercizioService,
+    public loadingCtrl: LoadingController
+    ){
   
     this.value = navParams.get('Item');
   }
@@ -42,6 +47,23 @@ export default class AddomiPage {
    }
 
     console.log(this.value);
+    const loading = this.loadingCtrl.create({content: "Caricamento"});
+    loading.present();
+    this.esercizioService.esercizi(this.value, 'Addome')
+            .then(result => {
+                this.esercizio = result;
+                console.log(this.esercizio);
+                loading.dismiss();
+            })
+            .catch(msg => { 
+                loading.dismiss();
+                this.alertCtrl.create({
+                    title: "FitWoman",
+                    message: "Non è stato possibile recuperare gli esercizi per gli addomi",
+                    buttons: ["Ok"]
+                }).present();
+            });
+/*
       this.esercizioService.esercizi(this.value, 'Addome').subscribe((data: Array<Esercizio>) => {
       this.esercizio = data;
 
@@ -49,13 +71,14 @@ export default class AddomiPage {
       console.log ('Primo');
 
     })
+    */
   }
 
   doAlert(x: any) {
     this.title = x[0];
     this.message=x.desc;
     console.log(this.title);
-    let alert = this.alerCtrl.create({
+    let alert = this.alertCtrl.create({
       title: this.title,
       message: x[3],
       buttons: ['Ok']

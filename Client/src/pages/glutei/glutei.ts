@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController, LoadingController } from 'ionic-angular';
 import {EsercizioService } from '../../services/esercizio.service';
 import { Esercizio } from '../../models/esercizio.model';
 
@@ -23,7 +23,12 @@ export class GluteiPage {
   public titolo : string = "";
   public message : string = "";
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public alerCtrl: AlertController, public esercizioService: EsercizioService) {
+  constructor(public navCtrl: NavController, 
+    public navParams: NavParams, 
+    public alertCtrl: AlertController, 
+    public esercizioService: EsercizioService,
+    public loadingCtrl: LoadingController
+    ) {
     this.value = navParams.get('Item');
 
   }
@@ -39,14 +44,32 @@ export class GluteiPage {
      case 3: this.titolo = 'Avanzato Glutei';
      break;
     }
-    
+    /*
       this.esercizioService.esercizi(this.value, 'Glutei').subscribe((data: Array<Esercizio>) => {
       this.esercizio = data;
 
       console.log(data);
       console.log ('Primo');
 
-    })
+    })*/
+
+    console.log(this.value);
+    const loading = this.loadingCtrl.create({content: "Caricamento"});
+    loading.present();
+    this.esercizioService.esercizi(this.value, 'Glutei')
+            .then(result => {
+                this.esercizio = result;
+                console.log(this.esercizio);
+                loading.dismiss();
+            })
+            .catch(msg => { 
+                loading.dismiss();
+                this.alertCtrl.create({
+                    title: "FitWoman",
+                    message: "Non è stato possibile recuperare gli esercizi per i glutei",
+                    buttons: ["Ok"]
+                }).present();
+            });
   }
 
   
@@ -54,7 +77,7 @@ export class GluteiPage {
     this.title = x[0];
     this.message=x.desc;
     console.log(this.title);
-    let alert = this.alerCtrl.create({
+    let alert = this.alertCtrl.create({
       title: this.title,
       message: x[3],
       buttons: ['Ok']
