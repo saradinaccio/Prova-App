@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {IonicPage, NavParams} from 'ionic-angular';
+import {IonicPage, NavParams, ViewController} from 'ionic-angular';
 import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
@@ -18,9 +18,14 @@ export class TabsPage {
     tab2: any;
     tab3: any;
     tab4: any;
+    data: any;
 
 
-    constructor(public platform : Platform, public params: NavParams, public statusBar : StatusBar, public splashScreen : SplashScreen) {
+    constructor(public platform : Platform, 
+        public params: NavParams, 
+        public statusBar : StatusBar, 
+        public splashScreen : SplashScreen,
+        public viewCtrl : ViewController) {
           // constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, private linguaService: LinguaService, private translate: TranslateService ) {
     platform.ready().then(() => {
         // Okay, so the platform is ready and our plugins are available.
@@ -30,6 +35,10 @@ export class TabsPage {
         //this.initTranslate();
   
       });
+
+      this.data = {
+        viewCtrl: this.viewCtrl
+      }
      
       this.tab1 = HomePage;
       this.tab2 = RoutinePage;

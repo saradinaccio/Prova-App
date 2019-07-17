@@ -1,10 +1,20 @@
 <ion-header>
-    <ion-navbar color="primary">
+    <!--  <ion-navbar color="primary">
         <button ion-button menuToggle>
             <ion-icon name="menu"></ion-icon>
         </button>
         <ion-title>FitWoman</ion-title>
+    </ion-navbar> -->
+
+    <ion-navbar color="primary">
+        <ion-buttons left>
+            <button ion-button icon-only (click)="onClickCancel()">
+            <ion-icon name="arrow-back"></ion-icon>
+          </button>
+        </ion-buttons>
+        <ion-title>FitWoman</ion-title>
     </ion-navbar>
+
 </ion-header>
 
 <!--<ion-tabs>

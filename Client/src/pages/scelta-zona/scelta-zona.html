@@ -18,23 +18,23 @@
 
     <ion-item class="addominali" no-lines>
         <ion-label class="text1">Addominali</ion-label>
-        <ion-checkbox checked="true" class="prova1"></ion-checkbox>
+        <ion-checkbox (click)="selectZona('Addominali')" checked="false" class="prova1"></ion-checkbox>
     </ion-item>
 
     <ion-item class="cosce" no-lines>
         <ion-label class="text1 text2">Cosce</ion-label>
-        <ion-checkbox checked="true" class="prova2"></ion-checkbox>
+        <ion-checkbox (click)="selectZona('Cosce')" checked="false" class="prova2"></ion-checkbox>
     </ion-item>
 
     <ion-item class="glutei" no-lines>
         <ion-label class="text text1">Glutei</ion-label>
-        <ion-checkbox checked="true" class="prova3" item-right></ion-checkbox>
+        <ion-checkbox (click)="selectZona('Glutei')" checked="false" class="prova3" item-right></ion-checkbox>
     </ion-item>
 
 
     <ion-footer no-shadow no-border>
 
-        <button ion-button round class="bottone" (click)="goToOtherPage()">Avanti</button>
+        <button ion-button round class="bottone" (click)="goToFinishRegistration()">Avanti</button>
 
     </ion-footer>
 

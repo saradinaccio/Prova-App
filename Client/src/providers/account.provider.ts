@@ -85,12 +85,21 @@ export class AccountProvider{
         })
     }
 
+    recuperaPassword(email: string): Promise<any> {
+        return new Promise((resolve, reject) => {
+            this._http.post(URL.RECUPERO + email, "").toPromise().then(() => {
+                resolve();
+            }).catch(() => reject());
+        });
+    }
+
     logout(): Promise<any> {
         return new Promise((resolve, reject) => {
         
         console.log(this._utente);
         
-        this._http.get(URL.LOGOUT + '/' + this._utente.token, "").toPromise()
+       //this._http.get(URL.LOGOUT + '/' + this._utente.token, "").toPromise()
+      this._http.get(URL.LOGOUT + '/' + '2878804225676321926', "").toPromise()
         .then(() => {
         
         this._utente = null;

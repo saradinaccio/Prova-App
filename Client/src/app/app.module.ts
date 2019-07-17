@@ -35,6 +35,7 @@ import { UtentePersistanceProvider } from '../providers/utente-persistance.provi
 import {TabsPageModule} from '../pages/Tabs/tabs.module';
 import { AggiungiEserciziPageModule } from '../pages/aggiungi-esercizi/aggiungi-esercizi.module';
 import { CreaSchedaPageModule } from '../pages/crea-scheda/crea-scheda.module';
+import { RecuperaPasswordPage } from '../pages/recupera-password/recupera-password';
 //import { TabsPage } from '../pages/Tabs/tabs';
 
 //export function createTranslateLoader(http: HttpModule) {  new TranslateHttpLoader(http, './assets/i18n/', '.json'); } 
@@ -55,6 +56,7 @@ import { CreaSchedaPageModule } from '../pages/crea-scheda/crea-scheda.module';
     AddomiPage,
     CoscePage,
     GluteiPage,
+    RecuperaPasswordPage
     //AggiungiEserciziPage
     //TabsPage
 
@@ -92,6 +94,7 @@ import { CreaSchedaPageModule } from '../pages/crea-scheda/crea-scheda.module';
     AddomiPage,
     CoscePage,
     GluteiPage,
+    RecuperaPasswordPage
     //AggiungiEserciziPage
     //TabsPage
 

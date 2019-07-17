@@ -10,7 +10,8 @@ export const URL = {
     CREASCHEDEPERSONALI: URL_BASE + "/schede/creaScheda",
     SCHEDEPERSONALI: URL_BASE + "/schede",
     SCHEDE: URL_BASE + "/schede",
-    REGISTRAZIONE: URL_BASE + "/utente"
+    REGISTRAZIONE: URL_BASE + "/utente",
+    RECUPERO:  URL_BASE + "/recupero"
 }
 
 export const X_AUTH = "X-Auth";

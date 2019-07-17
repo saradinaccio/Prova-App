@@ -29,7 +29,7 @@ export class EsercizioService{
             this.http.get(URL.ESERCIZI + '/' + this._sAccount.getUtente().token)
                 .toPromise()
                 .then((res: Response) => {
-                    const json = res.json() as any as ResponseServer; 
+                    const json = res.json() as ResponseServer; 
                     console.log (json.data);
                     if (json.result == true) {
                         console.log("dai");
@@ -48,7 +48,7 @@ export class EsercizioService{
             this.http.get(URL.ESERCIZI + '/' + this._sAccount.getUtente().token +'/livello' + '/' + livello + '/' + zona)
                 .toPromise()
                 .then((res: Response) => {
-                    const json = res.json() as any as ResponseServer; 
+                    const json = res.json() as ResponseServer; 
                     console.log (json.data);
                     if (json.result == true) {
                         console.log("dai");

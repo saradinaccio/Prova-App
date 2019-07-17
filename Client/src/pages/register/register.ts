@@ -9,7 +9,6 @@ import {UtenteRegisterInterface} from '../../interfaces/utenteRegisterInterface.
 import {UtentePersistanceProvider} from '../../providers/utente-persistance.provider';
 import { SceltaZonaPage } from '../scelta-zona/scelta-zona';
 import { Utente } from '../../models/utente.model';
-import { TabsPage } from '../Tabs/tabs';
  
 @IonicPage()
 @Component({
@@ -55,7 +54,7 @@ export class RegisterPage {
                 this.utente = utente;
 
                 loading.dismiss().then(() => {
-                    this.nav.setRoot(TabsPage);
+                    this.nav.setRoot(SceltaZonaPage);
                 });
 
               })

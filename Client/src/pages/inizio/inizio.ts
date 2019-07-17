@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { LoginPage } from '../login/login';
 import { RegisterPage } from '../register/register';
+import {RecuperaPasswordPage} from '../recupera-password/recupera-password';
+import { SceltaZonaPage } from '../scelta-zona/scelta-zona';
 
 /**
  * Generated class for the InizioPage page.
@@ -32,6 +34,10 @@ export class InizioPage {
 
   goToCreateAccount() {
     this.navCtrl.push(RegisterPage);
+  }
+
+  goToRecuperaPassword() {
+    this.navCtrl.push(RecuperaPasswordPage);
   }
 
 }

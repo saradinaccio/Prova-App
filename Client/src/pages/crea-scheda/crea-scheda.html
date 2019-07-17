@@ -28,6 +28,10 @@
 
     </ion-list>
 
+    <p ng-if="schedaPersonaleLista.length = 0">
+        <strong>Non ci sono schede personali.</strong>
+    </p>
+
     <ion-fab bottom right>
         <button ion-fab block (click)="doPrompt()"><ion-icon name="add"></ion-icon></button>
     </ion-fab>

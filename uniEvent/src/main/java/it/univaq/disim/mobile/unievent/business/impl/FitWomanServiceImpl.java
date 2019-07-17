@@ -201,7 +201,12 @@ public class  FitWomanServiceImpl implements FitWomanService {
         if (session != null) {
             System.out.println(id);
             SchedaPersonale scheda = schedaPersonaleRepository.findOne(id);
-            scheda.getEsercizi().removeAll(scheda.getEsercizi());
+            if(scheda != null) {
+                for(Esercizio esercizio : scheda.getEsercizi()) {
+                    esercizioRepository.delete(esercizio);
+                }
+            }
+            //scheda.getEsercizi().removeAll(scheda.getEsercizi());
             schedaPersonaleRepository.delete(scheda);
 
             return true;
