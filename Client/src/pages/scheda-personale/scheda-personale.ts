@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, LoadingController, NavController, NavParams, AlertController } from 'ionic-angular';
 import { Utente } from '../../models/utente.model';
 import { AccountProvider } from '../../providers/account.provider';
-import { SchedaPersonaleService } from '../../services/schedaPersonale.service';
+import { SchedaPersonaleService } from '../../providers/schedaPersonale.provider';
 import { schedaPersonale } from '../../models/schedaPersonale.model';
 import { Esercizio } from '../../models/esercizio.model';
 
@@ -21,12 +21,13 @@ import { Esercizio } from '../../models/esercizio.model';
 })
 export class SchedaPersonalePage {
 
-  utente: Utente;
-  id: String = ""; //id scheda
-  scheda: schedaPersonale = null;
-  esercizi: Array<Esercizio> = [];
+  public utente: Utente;
+  public id: String = ""; //id scheda
+  public scheda: schedaPersonale = null;
+  public esercizi: Array<Esercizio> = [];
 
-  constructor(public navCtrl: NavController, 
+  constructor(
+    public navCtrl: NavController, 
     public navParams: NavParams, 
     public sAccount: AccountProvider, 
     public loadingCtrl : LoadingController,

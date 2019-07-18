@@ -8,13 +8,14 @@ import {AccountProvider} from '../../providers/account.provider';
   templateUrl: 'recupera-password.html',
 })
 export class RecuperaPasswordPage {
-	email: string = "";
+	public email: string = "";
 
   constructor(
   	public navCtrl: NavController, 
   	public navParams: NavParams, 
   	public alertCtrl: AlertController, 
-  	public sAccount: AccountProvider) {
+    public sAccount: AccountProvider
+    ) {
     }
 
   ionViewDidLoad() {

@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController, AlertController } from 'ionic-angular';
-import { EsercizioService } from '../../services/esercizio.service';
+import { EsercizioService } from '../../providers/esercizio.provider';
 import { Esercizio } from '../../models/esercizio.model';
 import { Utente } from '../../models/utente.model';
 import { UtentePersistanceProvider } from '../../providers/utente-persistance.provider';
 import { schedaPersonale } from '../../models/schedaPersonale.model';
-import { SchedaPersonaleService } from '../../services/schedaPersonale.service';
+import { SchedaPersonaleService } from '../../providers/schedaPersonale.provider';
 
 
 /**
@@ -28,7 +28,8 @@ export class AggiungiEserciziPage {
   public utente : Utente;
   public schedaCreata: schedaPersonale = null;
 
-  constructor(public navCtrl: NavController, 
+  constructor(
+    public navCtrl: NavController, 
     public navParams: NavParams, 
     public esercizioService : EsercizioService, 
     public SchedaService: SchedaPersonaleService,

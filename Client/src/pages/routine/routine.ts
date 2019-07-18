@@ -1,13 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-// import { SceltaZonaPage } from '../scelta-zona/scelta-zona';
-// import { RegisterPage } from '../register/register';
-import { LoginPage } from '../login/login';
-import { InizioPage } from '../inizio/inizio';
 import { RiscaldamentoPage } from '../riscaldamento/riscaldamento';
 import { StretchingPage } from '../stretching/stretching';
 import { AggiungiEserciziPage } from '../aggiungi-esercizi/aggiungi-esercizi';
-import { SceltaZonaPage } from '../scelta-zona/scelta-zona';
 
 /**
  * Generated class for the RoutinePage page.
@@ -24,7 +19,10 @@ import { SceltaZonaPage } from '../scelta-zona/scelta-zona';
 
 export class RoutinePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams
+    ) {
     
   }
 

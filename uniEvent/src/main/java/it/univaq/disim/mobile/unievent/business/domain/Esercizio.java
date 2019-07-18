@@ -19,7 +19,7 @@ public class Esercizio {
     @Column (name = "NOME")
     private String nome;
 
-    @Column(name = "DESCRIZIONE", length = 255)
+    @Column(name = "DESCRIZIONE", length = 500)
     private String descrizione;
 
     @Column (name = "SERIE")

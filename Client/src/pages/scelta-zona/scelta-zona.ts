@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 import { NavController, NavParams, LoadingController, AlertController } from 'ionic-angular';
 import { MyApp } from '../../app/app.component';
 import { Esercizio } from '../../models/esercizio.model';
-import { EsercizioService } from '../../services/esercizio.service';
+import { EsercizioService } from '../../providers/esercizio.provider';
 import { schedaPersonale } from '../../models/schedaPersonale.model';
-import { SchedaPersonaleService } from '../../services/schedaPersonale.service';
+import { SchedaPersonaleService } from '../../providers/schedaPersonale.provider';
 
 /**
  * Generated class for the SceltaZonaPage page.
@@ -18,10 +18,11 @@ import { SchedaPersonaleService } from '../../services/schedaPersonale.service';
   templateUrl: 'scelta-zona.html',
 })
 export class SceltaZonaPage {
-  zoneScelte: Array<String> = [];
-  allEsercizi: Array<Esercizio> = [];
+  public zoneScelte: Array<String> = [];
+  public allEsercizi: Array<Esercizio> = [];
 
-  constructor(public navCtrl: NavController, 
+  constructor(
+    public navCtrl: NavController, 
     public navParams: NavParams,
     public esercizioService: EsercizioService,
     public schedaPerService: SchedaPersonaleService,

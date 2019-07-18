@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController, LoadingController } from 'ionic-angular';
 import {schedaPersonale} from '../../models/schedaPersonale.model';
-import {SchedaPersonaleService} from "../../services/schedaPersonale.service";
+import {SchedaPersonaleService} from "../../providers/schedaPersonale.provider";
 import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { ActionSheetController } from 'ionic-angular';
 import { ThrowStmt } from '@angular/compiler';
@@ -33,7 +33,15 @@ export class CreaSchedaPage {
   public var : string = "";
   public schedaPersonaleLista : Array<schedaPersonale> = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController, public schedaPersonaleService: SchedaPersonaleService, public http : HttpClient, public asc : ActionSheetController, public loadingCtrl: LoadingController) {
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams, 
+    public alertCtrl: AlertController, 
+    public schedaPersonaleService: SchedaPersonaleService, 
+    public http : HttpClient, 
+    public asc : ActionSheetController,
+    public loadingCtrl: LoadingController
+     ) {
   }
 
 

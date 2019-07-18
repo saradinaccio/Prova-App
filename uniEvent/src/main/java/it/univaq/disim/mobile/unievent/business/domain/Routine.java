@@ -10,34 +10,20 @@ public class Routine {
 
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    @Column (name = "ID_ROUTINE")
+    @Column (name = "ID_ROUTINE", nullable = false)
     private Long id;
 
-    @Column (name = "TIPO", nullable = false)
+    @Column (name = "TIPO")
     private int tipo;
 
-    @Column (name = "NOME", nullable = false)
+    @Column (name = "NOME")
     private String nome;
 
-    @Column (name = "DURATA", nullable = false)
+    @Column (name = "DURATA")
     private int durata;
 
-    @Column (name = "DESCRIZIONE", nullable = false)
-    private int descrzione;
-
-   /* @ManyToMany
-    @JoinColumn(name = "ID_ESRCIZIO", nullable = false)
-    private Esercizio esercizio;
-
-    @ManyToMany
-    @JoinTable(name="ROUTINE",
-            joinColumns={@JoinColumn(name="ID_ROUTINE")},
-            inverseJoinColumns={@JoinColumn(name="ID_ESERCIZIO")})
-    private Set<Esercizio> listaesercizi= new HashSet<>();*/
-
-    @ManyToOne
-    @JoinColumn (name = "ID_UTENTE")
-    private Utente utente;
+    @Column (name = "DESCRIZIONE")
+    private String descrizione;
 
 
     //GETTER AND SETTER
@@ -75,32 +61,11 @@ public class Routine {
         this.durata = durata;
     }
 
-    public int getDescrzione() {
-        return descrzione;
+    public String getDescrizione() {
+        return descrizione;
     }
 
-    public void setDescrzione(int descrzione) {
-        this.descrzione = descrzione;
+    public void setDescrizione(String descrizione) {
+        this.descrizione = descrizione;
     }
-
-    public Utente getUtente() {
-        return utente;
-    }
-
-    public void setUtente(Utente utente) {
-        this.utente = utente;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Routine routine = (Routine) o;
-        return tipo == routine.tipo &&
-                durata == routine.durata &&
-                descrzione == routine.descrzione &&
-                Objects.equals(id, routine.id) &&
-                Objects.equals(nome, routine.nome);
-    }
-
 }

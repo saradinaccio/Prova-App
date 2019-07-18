@@ -39,11 +39,11 @@ public class Application {
             CREAZIONE UTENTI
              */
 
-            /*
+/*
             Esercizio Bicicletta = new Esercizio();
             Bicicletta.setNome("Bicicletta");
-            //Bicicletta.setDescrizione("In posizione supina, metti le mani sotto il sedere, solleva le gambe da terra, cominciando a pedalare nel vuoto.\n" +
-            //        "Stendi bene le gambe e fai pedalate ampie.");
+            Bicicletta.setDescrizione("In posizione supina, metti le mani sotto il sedere, solleva le gambe da terra, cominciando a pedalare nel vuoto.\n" +
+                    "Stendi bene le gambe e fai pedalate ampie.");
             Bicicletta.setFoto("foto");
             Bicicletta.setZona("Addome");
             Bicicletta.setRipetizioni(10);
@@ -63,7 +63,7 @@ public class Application {
 
             Esercizio Planklaterale = new Esercizio();
             Planklaterale.setNome("Plank laterale");
-            //Planklaterale.setDescrizione("Mettiti su un fianco e assumi la posizione di Plank laterale tenendo l'altra mano a terra. Alza e abbassa i fianchi in modo che il corpo ritorni in linea retta, dalla tesa ai piedi." );
+            Planklaterale.setDescrizione("Mettiti su un fianco e assumi la posizione di Plank laterale tenendo l'altra mano a terra. Alza e abbassa i fianchi in modo che il corpo ritorni in linea retta, dalla tesa ai piedi." );
             Planklaterale.setFoto("foto");
             Planklaterale.setZona("Addome");
             Planklaterale.setRipetizioni(20);
@@ -73,7 +73,7 @@ public class Application {
 
             Esercizio Sollevamentogambe = new Esercizio();
             Sollevamentogambe.setNome("Sollevamento gambe");
-            //Sollevamentogambe.setDescrizione("Si parte da supini, con le braccia lungo il busto ed il palmo della mano poggiato al pavimento. Solleva le gambe unite e tese, mantenendo l’area sacrale ben salda a terra. Si abbassano lentamente le gambe, fino ad arrivare a pochi cm dal pavimento.\n");
+            Sollevamentogambe.setDescrizione("Si parte da supini, con le braccia lungo il busto ed il palmo della mano poggiato al pavimento. Solleva le gambe unite e tese, mantenendo l’area sacrale ben salda a terra. Si abbassano lentamente le gambe, fino ad arrivare a pochi cm dal pavimento.\n");
             Sollevamentogambe.setFoto("foto");
             Sollevamentogambe.setZona("Addome");
             Sollevamentogambe.setRipetizioni(20);
@@ -84,7 +84,7 @@ public class Application {
 
             Esercizio Squat = new Esercizio();
             Squat.setNome("Squat");
-            //Squat.setDescrizione("Parti in piedi, gambe distanti circa 40-50 cm tra loro. Si esegue la discesa piegando le ginocchia e mantenendo le braccia distese lungo i fianchi. Il bacino si muove all’indietro e la schiena scende in linea verticale.");
+            Squat.setDescrizione("Parti in piedi, gambe distanti circa 40-50 cm tra loro. Si esegue la discesa piegando le ginocchia e mantenendo le braccia distese lungo i fianchi. Il bacino si muove all’indietro e la schiena scende in linea verticale.");
             Squat.setFoto("Foto");
             Squat.setZona("Gambe");
             Squat.setSerie(3);
@@ -94,7 +94,7 @@ public class Application {
 
             Esercizio SquatGlutei = new Esercizio();
             SquatGlutei.setNome("Squat");
-            //SquatGlutei.setDescrizione("La posizione di partenza è in piedi, gambe distanti circa 40-50 cm tra loro, con alcune possibili varianti legate alla posizione delle mani. Nel suo esercizio base si esegue la discesa piegando le ginocchia e mantenendo le braccia distese lungo i fianchi. Il bacino si muove all’indietro e la schiena scende in linea verticale, i talloni dovranno poi mantenere il contatto con il terreno o l’esercizio risulterà mal eseguito.");
+            SquatGlutei.setDescrizione("La posizione di partenza è in piedi, gambe distanti circa 40-50 cm tra loro, con alcune possibili varianti legate alla posizione delle mani. Nel suo esercizio base si esegue la discesa piegando le ginocchia e mantenendo le braccia distese lungo i fianchi. Il bacino si muove all’indietro e la schiena scende in linea verticale, i talloni dovranno poi mantenere il contatto con il terreno o l’esercizio risulterà mal eseguito.");
             SquatGlutei.setFoto("Foto");
             SquatGlutei.setZona("Glutei");
             SquatGlutei.setSerie(3);
@@ -104,7 +104,7 @@ public class Application {
 
             Esercizio ClimberGlutei = new Esercizio();
             ClimberGlutei.setNome("Climber");
-            //ClimberGlutei.setDescrizione("Assumi la posizione di Push up; con le braccia dritte e il corpo fermo crea una linea retta dalla testa fino ai piedi. Spingi le punte dei piedi in avanti e indietro portando le ginocchia verso il petto; alterna gamba destra e sinistra.");
+            ClimberGlutei.setDescrizione("Assumi la posizione di Push up; con le braccia dritte e il corpo fermo crea una linea retta dalla testa fino ai piedi. Spingi le punte dei piedi in avanti e indietro portando le ginocchia verso il petto; alterna gamba destra e sinistra.");
             ClimberGlutei.setFoto("foto");
             ClimberGlutei.setZona("Glutei");
             ClimberGlutei.setRipetizioni(20);
@@ -114,7 +114,7 @@ public class Application {
 
             Esercizio Ponte = new Esercizio();
             Ponte.setNome("Ponte");
-            //Ponte.setDescrizione("In posizione prena, piega le gambe e tieni i piedia terra. Braccia lungo i fianchi. Alza i glutei dal suolo il più possibile, come per formare un ponte.");
+            Ponte.setDescrizione("In posizione prena, piega le gambe e tieni i piedia terra. Braccia lungo i fianchi. Alza i glutei dal suolo il più possibile, come per formare un ponte.");
             Ponte.setFoto("foto");
             Ponte.setZona("Glutei");
             Ponte.setRipetizioni(12);
@@ -124,7 +124,7 @@ public class Application {
 
             Esercizio AffondoIncrociato = new Esercizio();
             AffondoIncrociato.setNome("Affondo incrociato");
-            //AffondoIncrociato.setDescrizione("Stando in piedi, porta indietro verso destra la gamba sinistra piegando le ginocchia. Torna in posizione eretta e cambia lato.");
+            AffondoIncrociato.setDescrizione("Stando in piedi, porta indietro verso destra la gamba sinistra piegando le ginocchia. Torna in posizione eretta e cambia lato.");
             AffondoIncrociato.setFoto("fotofoto");
             AffondoIncrociato.setZona("Glutei");
             AffondoIncrociato.setRipetizioni(15);
@@ -132,6 +132,18 @@ public class Application {
             AffondoIncrociato.setLivello(2L);
             esercizioRepository.save(AffondoIncrociato);
 
+
+            Utente esempio = new Utente();
+            esempio.setCognome("DI Naccio");
+            esempio.setNome("Sara");
+            esempio.setEtà(23);
+            esempio.setUsername("rebysa");
+            esempio.setEmail("sara.dinaccio@gmail.com");
+            esempio.setPassword("ciaociao");
+            utenteRepository.save(esempio);
+
+
+/*
             Esercizio SquatSumo = new Esercizio();
             SquatSumo.setNome("Squat Sumo");
             //SquatSumo.setDescrizione("Stando in piedi, Apri le gambe più che puoi. Tieni le braccia tese in avanti. Abbasati fino a portare le cosce parallele al pavimento. Torna in posizione  di partenza e ripetil'esercizio");

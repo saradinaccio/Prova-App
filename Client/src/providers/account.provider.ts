@@ -4,7 +4,6 @@ import 'rxjs/add/operator/map';
 import { Utente } from '../models/utente.model';
 import {URL_BASE, URL} from '../constants';
 import {UtentePersistanceInterface} from '../interfaces/utentepersistance.interface';
-import {UtenteRegisterInterface} from '../interfaces/utenteRegisterInterface.interface';
 import { UtentePersistanceProvider } from '../providers/utente-persistance.provider';
 import { Http, Response} from '@angular/http';
 import { ResponseServer} from '../types';
@@ -98,8 +97,8 @@ export class AccountProvider{
         
         console.log(this._utente);
         
-        this._http.get(URL.LOGOUT + '/' + this._utente.token, "").toPromise()
-      //this._http.get(URL.LOGOUT + '/' + '123454678', "").toPromise()
+        //this._http.get(URL.LOGOUT + '/' + this._utente.token, "").toPromise()
+        this._http.get(URL.LOGOUT + '/' + '3694964129244090425', "").toPromise()
         .then(() => {
         
         this._utente = null;

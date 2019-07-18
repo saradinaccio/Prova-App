@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController, LoadingController} from 'ionic-angular';
-import { EsercizioService} from "../../services/esercizio.service";
+import { EsercizioService} from "../../providers/esercizio.provider";
 import { Esercizio} from "../../models/esercizio.model";
 
 /**
@@ -22,7 +22,8 @@ export class CoscePage {
   public message : string = "";
   esercizio: Array<Esercizio>;
 
-  constructor(public navCtrl: NavController, 
+  constructor(
+    public navCtrl: NavController, 
     public navParams: NavParams, 
     public alertCtrl: AlertController, 
     public esercizioService: EsercizioService,

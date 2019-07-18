@@ -20,17 +20,13 @@
         <button ion-item full outline *ngFor="let scheda of schedaPersonaleLista" (press)="optionList(scheda.id)" (click)="goToScheda(scheda.id)">
            
           <ion-avatar item-start>
-                <img src="assets/imgs/avatar.jpg">
+                <img src="assets/imgs/IconaSchedePersonali.png">
             </ion-avatar>
             <h2>{{scheda.goal}}</h2>
             
         </button>
 
     </ion-list>
-
-    <p ng-if="schedaPersonaleLista.length = 0">
-        <strong>Non ci sono schede personali.</strong>
-    </p>
 
     <ion-fab bottom right>
         <button ion-fab block (click)="doPrompt()"><ion-icon name="add"></ion-icon></button>

@@ -3,11 +3,10 @@ package it.univaq.disim.mobile.unievent.business.impl;
 import it.univaq.disim.mobile.unievent.business.domain.*;
 
 import java.util.List;
-import java.util.Set;
-
 import it.univaq.disim.mobile.unievent.business.domain.Esercizio;
 import it.univaq.disim.mobile.unievent.business.domain.Scheda;
 import it.univaq.disim.mobile.unievent.business.domain.Utente;
+import it.univaq.disim.mobile.unievent.business.domain.Routine;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -28,6 +27,9 @@ public class  FitWomanServiceImpl implements FitWomanService {
 
     @Autowired
     private SchedaPersonaleRepository schedaPersonaleRepository;
+
+    @Autowired
+    private RoutineRepository routineRepository;
 
     @Override
     public Session login(String username, String password) {
@@ -259,5 +261,19 @@ public class  FitWomanServiceImpl implements FitWomanService {
             return null;
         }
     }
+
+    @Override
+    public List<Routine> getRoutineByTipo(String token, int tipo) {
+        Session session = sessionRepository.findByToken(token);
+        if(session != null) {
+            List<Routine> routines = routineRepository.getRoutineByTipo(tipo);
+            return routines;
+        }
+        else {
+            return null;
+        }
+    }
+
+
 }
 

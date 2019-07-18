@@ -11,7 +11,8 @@ export const URL = {
     SCHEDEPERSONALI: URL_BASE + "/schede",
     SCHEDE: URL_BASE + "/schede",
     REGISTRAZIONE: URL_BASE + "/utente",
-    RECUPERO:  URL_BASE + "/recupero"
+    RECUPERO:  URL_BASE + "/recupero",
+    ROUTINE: URL_BASE + "/routine"
 }
 
 export const X_AUTH = "X-Auth";

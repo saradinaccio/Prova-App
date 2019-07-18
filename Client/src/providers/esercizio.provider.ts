@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { URL } from '../constants';
 import { Esercizio } from '../models/esercizio.model';
-import { AccountProvider } from '../providers/account.provider';
+import { AccountProvider } from './account.provider';
 import { ResponseServer } from '../types';
 import { Http, Response} from '@angular/http';
 

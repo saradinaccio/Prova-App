@@ -49,10 +49,6 @@ public class Utente {
     @OneToMany (mappedBy = "utente", targetEntity = SchedaPersonale.class)
     private List<SchedaPersonale> schedapersonale;
 
-    @OneToMany (mappedBy = "utente", targetEntity = Routine.class)
-    private List<Routine> routine;
-
-
 
     public Long getId() {
         return id;

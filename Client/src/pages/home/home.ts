@@ -1,14 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-//import { TranslateService } from '@ngx-translate/core';
-//import { HttpClient } from '../../../node_modules/@angular/common/http';
 import { Observable } from '../../../node_modules/rxjs/Observable';
 import AddomiPage from '../addomi/addomi';
 import {CoscePage} from "../cosce/cosce";
 import {GluteiPage} from "../glutei/glutei";
-// import { AccountPage } from '../account/account';
-// import { RoutinePage } from '../routine/routine';
-// import { CreaSchedaPage } from '../crea-scheda/crea-scheda';
 
 @Component({
   selector: 'page-home',

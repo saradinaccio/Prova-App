@@ -27,10 +27,16 @@ export class RegisterPage {
   public eta: Number;
   public username: String = "";
   public type = 'password';
-  createSuccess = false;
+  public createSuccess = false;
   public showPass = false;
  
-  constructor(private nav: NavController, private acntProvider: AccountProvider, private alertCtrl: AlertController, private _sUtentePersistance: UtentePersistanceProvider, private loadingCtrl: LoadingController) 
+  constructor(
+    public nav: NavController, 
+    public acntProvider: AccountProvider, 
+    public alertCtrl: AlertController, 
+    public _sUtentePersistance: UtentePersistanceProvider, 
+    public loadingCtrl: LoadingController
+    ) 
   { 
   }
  

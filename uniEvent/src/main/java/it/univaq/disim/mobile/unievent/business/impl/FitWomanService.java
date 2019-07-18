@@ -25,6 +25,7 @@ public interface FitWomanService {
     boolean createSchedaPersonale(String token, SchedaPersonale scheda);
     SchedaPersonale updateSchedaPersonale(String token, SchedaPersonale newScheda) ;
     boolean deleteSchedaPersonale(String token, Long id);
+    List<Routine> getRoutineByTipo(String token, int tipo);
 
 }
 

@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams,  AlertController, LoadingController, Loading } from 'ionic-angular';
-import { AuthService} from '../../providers/auth-service/auth-service'
 
 import {AccountProvider} from '../../providers/account.provider';
 import { Utente } from '../../models/utente.model';
@@ -22,12 +21,17 @@ import { TabsPage } from '../Tabs/tabs';
 export class LoginPage {
   public type = 'password';
   public showPass = false;
-  loading: Loading;
-  username = '';
-  password = '';
-  utente: Utente;
+  public loading: Loading;
+  public username = '';
+  public password = '';
+  public utente: Utente;
 
-  constructor(private nav: NavController, private acntProvider: AccountProvider, private alertCtrl: AlertController, private loadingCtrl: LoadingController) {
+  constructor(
+    public nav: NavController, 
+    public acntProvider: AccountProvider, 
+    public alertCtrl: AlertController, 
+    public loadingCtrl: LoadingController
+    ) {
   }
 
   public createAccount() {
@@ -52,6 +56,12 @@ export class LoginPage {
               });
             })
             .catch((msg) => {
+              loading.dismiss();
+              this.alertCtrl.create({
+                title: "FitWoman",
+                message: "Non mi sono riuscito a loggare",
+                buttons: ["OK"]
+                }).present();
                 console.log("errore login: non mi sono riuscito a loggare");
 
             });
@@ -102,7 +112,7 @@ private _validate() {
     alert.present();
   }
 
-  showPassword() {
+ showPassword() {
     this.showPass = !this.showPass;
  
     if(this.showPass){
@@ -110,5 +120,5 @@ private _validate() {
     } else {
       this.type = 'password';
     }
-  }
+ }
 }

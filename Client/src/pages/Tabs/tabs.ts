@@ -14,14 +14,15 @@ import { AccountPage }from '../account/account';
 })
 export class TabsPage {
 
-    tab1: any;
-    tab2: any;
-    tab3: any;
-    tab4: any;
-    data: any;
+  public tab1: any;
+  public  tab2: any;
+  public  tab3: any;
+  public  tab4: any;
+  public  data: any;
 
 
-    constructor(public platform : Platform, 
+    constructor(
+      public platform : Platform, 
         public params: NavParams, 
         public statusBar : StatusBar, 
         public splashScreen : SplashScreen,

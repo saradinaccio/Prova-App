@@ -3,7 +3,6 @@ import { NavController, NavParams } from 'ionic-angular';
 import { LoginPage } from '../login/login';
 import { RegisterPage } from '../register/register';
 import {RecuperaPasswordPage} from '../recupera-password/recupera-password';
-import { SceltaZonaPage } from '../scelta-zona/scelta-zona';
 
 /**
  * Generated class for the InizioPage page.
@@ -18,7 +17,10 @@ import { SceltaZonaPage } from '../scelta-zona/scelta-zona';
 })
 export class InizioPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams
+    ) {
   }
 
   ionViewDidLoad() {
@@ -35,9 +37,4 @@ export class InizioPage {
   goToCreateAccount() {
     this.navCtrl.push(RegisterPage);
   }
-
-  goToRecuperaPassword() {
-    this.navCtrl.push(RecuperaPasswordPage);
-  }
-
 }

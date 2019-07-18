@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, LoadingController } from 'ionic-angular';
+import { NavController, NavParams, LoadingController, App } from 'ionic-angular';
 import {InizioPage} from "../inizio/inizio";
 import { File } from '@ionic-native/file/ngx';
 import { FileTransfer, FileTransferObject } from '@ionic-native/file-transfer/ngx';
@@ -46,7 +46,8 @@ export class AccountPage {
      public actionSheetCtrl: ActionSheetController, 
      public camera : Camera, 
      public plt: Platform,
-     public sAccount : AccountProvider
+     public sAccount : AccountProvider,
+     public app: App
      ) {
        this.utente=this.sAccount.getUtente();
   }
@@ -203,7 +204,7 @@ logout() {
               this.sAccount.logout()
                   .then(() => {
                       loading.dismiss().then(() => {
-                          this.navCtrl.setRoot(InizioPage);
+                          this.app.getRootNav().setRoot(InizioPage);
                       });
                   })
                   .catch(() => {
