@@ -2,48 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="213ee92b-0241-43b7-bb2b-6d90ce27277f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Immagini/Affondi.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Immagini/AffondoAllIndietro.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Immagini/AffondoIncrociato.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Immagini/Allungamento Gamba.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Immagini/Allungamento Tricipide.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Immagini/AllungamentoAddomi.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Immagini/AllungamentoQuadricipide.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Immagini/AllungamentoSpalle.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Immagini/BattitoAlternato.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Immagini/CalcioSulGluteo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Immagini/Crunch.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Immagini/JumpingJacks.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Immagini/Plank.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Immagini/Ponte.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Immagini/PonteSollevamentoGamba.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Immagini/SollevamentoGambaIncrociato.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Immagini/SollevamentoGambe.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Immagini/Squat.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Immagini/SquatSumo.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/pages/Tabs/tabs.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/pages/Tabs/tabs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/pages/Tabs/tabs.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/pages/Tabs/tabs.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/pages/account/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/pages/account/account.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/pages/account/account.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/pages/account/account.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/pages/aggiungi-esercizi/aggiungi-esercizi.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/pages/aggiungi-esercizi/aggiungi-esercizi.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/pages/aggiungi-esercizi/aggiungi-esercizi.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/pages/aggiungi-esercizi/aggiungi-esercizi.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/pages/crea-scheda/crea-scheda.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/pages/crea-scheda/crea-scheda.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/pages/crea-scheda/crea-scheda.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/pages/crea-scheda/crea-scheda.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/pages/inizio/inizio.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/pages/inizio/inizio.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/pages/login/login.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/pages/login/login.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/pages/register/register.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/pages/register/register.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/pages/riscaldamento/riscaldamento.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/pages/riscaldamento/riscaldamento.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/pages/riscaldamento/riscaldamento.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/pages/riscaldamento/riscaldamento.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/pages/riscaldamento/riscaldamento.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/pages/riscaldamento/riscaldamento.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/pages/routine/routine.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/pages/routine/routine.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/pages/routine/routine.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/pages/routine/routine.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/pages/stretching/stretching.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/pages/stretching/stretching.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/pages/stretching/stretching.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/pages/stretching/stretching.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/providers/account.provider.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/providers/account.provider.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/impl/EsercizioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/impl/EsercizioRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/impl/FitWomanServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/impl/FitWomanServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/it/univaq/disim/mobile/unievent/business/impl/FitWomanServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/it/univaq/disim/mobile/unievent/business/impl/FitWomanServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoseDaFare" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Decisioni" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataModel.png" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -61,8 +23,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3177">
-              <caret line="156" column="22" lean-forward="true" selection-start-line="156" selection-start-column="22" selection-end-line="156" selection-end-column="39" />
+            <state relative-caret-position="3003">
+              <caret line="156" column="22" selection-start-line="156" selection-start-column="22" selection-end-line="156" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1103#1104#0" expanded="true" />
@@ -75,16 +37,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="36" lean-forward="true" selection-start-column="36" selection-end-column="36" />
+            <state relative-caret-position="336">
+              <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/FitWoman.iml">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/domain/Esercizio.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
+            <state relative-caret-position="231">
               <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -131,16 +98,26 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/impl/EsercizioRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="19" column="62" selection-start-line="19" selection-start-column="62" selection-end-line="19" selection-end-column="62" />
+            <state relative-caret-position="252">
+              <caret line="12" column="41" lean-forward="true" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#0#130#0" expanded="true" />
+                <element signature="e#0#136#0" expanded="true" />
+                <element signature="e#0#104#0" expanded="true" />
                 <element signature="e#0#67#1" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/domain/EserciziWrapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -187,10 +164,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="977" />
-    <option name="height" value="1088" />
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
+    <option name="width" value="978" />
+    <option name="height" value="1089" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -198,6 +175,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -208,6 +187,11 @@
             <path>
               <item name="uniEvent" type="b2602c69:ProjectViewProjectNode" />
               <item name="uniEvent" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="uniEvent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="uniEvent" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -230,15 +214,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="business" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="uniEvent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="uniEvent" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="business" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="uniEvent" type="b2602c69:ProjectViewProjectNode" />
@@ -254,23 +229,12 @@
               <item name="uniEvent" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="business" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="uniEvent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="uniEvent" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -334,11 +298,12 @@
       <workItem from="1563380989145" duration="1159000" />
       <workItem from="1563387439373" duration="1283000" />
       <workItem from="1563436696654" duration="14939000" />
+      <workItem from="1563486232220" duration="614000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66437000" />
+    <option name="totallyTimeSpent" value="67051000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -353,7 +318,7 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30536914" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31006712" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -363,7 +328,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.15147454" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.04021448" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -604,9 +569,7 @@
     <entry file="file://$PROJECT_DIR$/src/Immagini/Squat.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Immagini/SlancioAll'indietro.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Immagini/SlancioAll'indietro.jpg" />
     <entry file="file://$PROJECT_DIR$/src/Immagini/AffondoIncrociato.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -654,8 +617,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/Application.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3177">
-          <caret line="156" column="22" lean-forward="true" selection-start-line="156" selection-start-column="22" selection-end-line="156" selection-end-column="39" />
+        <state relative-caret-position="3003">
+          <caret line="156" column="22" selection-start-line="156" selection-start-column="22" selection-end-line="156" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1103#1104#0" expanded="true" />
@@ -664,16 +627,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="36" lean-forward="true" selection-start-column="36" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/domain/Esercizio.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
+        <state relative-caret-position="231">
           <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -719,17 +675,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/domain/EserciziWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/it/univaq/disim/mobile/unievent/business/impl/EsercizioRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="19" column="62" selection-start-line="19" selection-start-column="62" selection-end-line="19" selection-end-column="62" />
+        <state relative-caret-position="252">
+          <caret line="12" column="41" lean-forward="true" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#0#130#0" expanded="true" />
+            <element signature="e#0#136#0" expanded="true" />
+            <element signature="e#0#104#0" expanded="true" />
             <element signature="e#0#67#1" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Decisioni">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataModel.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FitWoman.iml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">
