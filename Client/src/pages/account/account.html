@@ -17,72 +17,51 @@
 
 <ion-content padding>
 
-    <ion-row class="row">
-        <ion-col>
-            <ion-avatar item-start>
-                <div class="button-foto" (click)="presentActionSheet()">
-                    <ion-icon name="md-camera" class="icon_profile"></ion-icon>
-
-                    <img class="avatar" src="../../assets/imgs/avatar.jpg">
-                </div>
-
-            </ion-avatar>
-        </ion-col>
-
-    </ion-row>
-
-
-
     <div>
-        <ion-list>
+        <h1 class="app-subtitle">IL MIO PROFILO</h1>
+        <ion-item>
+            <ion-label stacked>Nome</ion-label>
+            <ion-input type="text" placeholder="nome" (change)="cambia()" [(ngModel)]="utente.nome"></ion-input>
+        </ion-item>
 
-            <ion-item>
-                <ion-label stacked>Nome</ion-label>
-                <ion-input type="text" placeholder="nome" (change)="cambia()" [(ngModel)]="utente.nome"></ion-input>
-            </ion-item>
+        <ion-item>
+            <ion-label stacked>Cognome</ion-label>
+            <ion-input type="text" placeholder="cognome" (change)="cambia()" [(ngModel)]="utente.cognome"></ion-input>
+        </ion-item>
 
-            <ion-item>
-                <ion-label stacked>Cognome</ion-label>
-                <ion-input type="text" placeholder="cognome" (change)="cambia()" [(ngModel)]="utente.cognome"></ion-input>
-            </ion-item>
-
-            <ion-item>
-                <ion-label stacked>Email</ion-label>
-                <ion-input type="text" placeholder="email" (change)="cambia()" [(ngModel)]="utente.email"></ion-input>
-            </ion-item>
-
-
-            <ion-item>
-                <ion-label stacked>Username</ion-label>
-                <ion-input type="text" placeholder="username" (change)="cambia()" [(ngModel)]="utente.username"></ion-input>
-            </ion-item>
-
-            <ion-item>
-                <ion-label stacked>Altezza</ion-label>
-                <ion-input type="text" placeholder="cm" (change)="cambia()" [(ngModel)]="utente.altezza"></ion-input>
-            </ion-item>
-
-            <ion-item>
-                <ion-label stacked>Peso</ion-label>
-                <ion-input type="text" placeholder="kg" (change)="cambia()" [(ngModel)]="utente.peso"></ion-input>
-            </ion-item>
-
-            <ion-item>
-                <ion-label stacked>Età</ion-label>
-                <ion-input type="text" placeholder="anni" (change)="cambia()" [(ngModel)]="utente.eta"></ion-input>
-            </ion-item>
+        <ion-item>
+            <ion-label stacked>Email</ion-label>
+            <ion-input type="text" placeholder="email" (change)="cambia()" [(ngModel)]="utente.email"></ion-input>
+        </ion-item>
 
 
-            <div class="center">
+        <ion-item>
+            <ion-label stacked>Username</ion-label>
+            <ion-input type="text" placeholder="username" (change)="cambia()" [(ngModel)]="utente.username"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked>Altezza</ion-label>
+            <ion-input type="text" placeholder="cm" (change)="cambia()" [(ngModel)]="utente.altezza"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked>Peso</ion-label>
+            <ion-input type="text" placeholder="kg" (change)="cambia()" [(ngModel)]="utente.peso"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked>Età</ion-label>
+            <ion-input type="text" placeholder="anni" (change)="cambia()" [(ngModel)]="utente.eta"></ion-input>
+        </ion-item>
 
 
-                <button ion-button outline="true" class="bottone" (click)="logout()">LOGOUT</button>
-
-            </div>
+        <div class="center">
 
 
-        </ion-list>
+            <button ion-button round class="bottone" (click)="logout()">LOGOUT</button>
 
+        </div>
 
     </div>
 

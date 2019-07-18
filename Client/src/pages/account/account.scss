@@ -9,17 +9,29 @@ page-account {
         border-radius: 50px;
         margin-top: 10%;
     }
-    .row {
-        height: auto !important;
-    }
-    .radio {
-        margin-bottom: -10px;
-        border-top: 3px dotted #FF3E96;
-    }
     .prova {
         border-top: 0px solid black;
     }
     .center {
         text-align: center;
+    }
+    .app-subtitle {
+        font-size: 18px;
+        width: 100%;
+        padding: 10px 10px 20px 10px;
+    }
+    .submit-btn {
+        background: #F47171;
+        border-radius: 30px !important;
+        border: 1px solid #ffffff;
+        height: 50px;
+        margin-top: 10%;
+        left: 5%;
+        background-color: transparent !important;
+    }
+    .bottone {
+        width: 150px;
+        top: 50%;
+        margin-bottom: 10%;
     }
 }

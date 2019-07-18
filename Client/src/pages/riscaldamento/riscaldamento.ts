@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController, LoadingController } from 'ionic-angular';
 import { RoutineProvider } from "../../providers/routine.provider";
 import { Routine } from '../../models/routine.model';
+import { Location } from "@angular/common";
+import { RoutinePage } from '../routine/routine';
 
 @Component({
 selector: 'page-stretching',
@@ -15,7 +17,8 @@ export class RiscaldamentoPage {
     public navParams: NavParams, 
     public alertCtrl: AlertController, 
     public sRoutine: RoutineProvider, 
-    public loadingCtrl: LoadingController) {
+    public loadingCtrl: LoadingController,
+    public location: Location) {
 
         const loading = this.loadingCtrl.create({content: "Caricamento"});
         loading.present();
@@ -50,7 +53,7 @@ export class RiscaldamentoPage {
     }
 
     goBack() {
-      this.navCtrl.pop();
+        this.navCtrl.push(RoutinePage);
       console.log('Click on button Test Console Log');
    }
 }

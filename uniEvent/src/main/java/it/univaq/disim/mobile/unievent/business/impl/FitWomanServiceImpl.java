@@ -47,8 +47,10 @@ public class  FitWomanServiceImpl implements FitWomanService {
 
     @Override
     public void logout(String token) {
+        System.out.println("Logout2");
         Session session = sessionRepository.findByToken(token);
         if (session != null) {
+            System.out.println("Logout1");
             sessionRepository.delete(session);
         }
     }
@@ -202,19 +204,31 @@ public class  FitWomanServiceImpl implements FitWomanService {
         Session session = sessionRepository.findByToken(token);
         if (session != null) {
             System.out.println(id);
+            /*
             SchedaPersonale scheda = schedaPersonaleRepository.findOne(id);
+            /*
             if(scheda != null) {
                 for(Esercizio esercizio : scheda.getEsercizi()) {
                     esercizioRepository.delete(esercizio);
                 }
             }
-            //scheda.getEsercizi().removeAll(scheda.getEsercizi());
+            */
+            /*
+            scheda.getEsercizi().removeAll(scheda.getEsercizi());
             schedaPersonaleRepository.delete(scheda);
-
+            */
+            remove(id);
             return true;
         } else {
             return false;
         }
+    }
+
+    @Transactional
+    public void remove(Long id) {
+        SchedaPersonale scheda = schedaPersonaleRepository.findOne(id);
+        scheda.getEsercizi().removeAll(scheda.getEsercizi());
+        schedaPersonaleRepository.delete(scheda);
     }
 
     @Override

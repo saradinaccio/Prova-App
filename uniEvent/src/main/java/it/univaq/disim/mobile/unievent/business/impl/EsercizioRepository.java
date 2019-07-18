@@ -14,10 +14,10 @@ public interface EsercizioRepository extends JpaRepository <Esercizio, Long> {
 
     List<Esercizio> findEsercizioByLivello(Long livello);
 
-   @Query("SELECT nome, serie, ripetizioni, descrizione FROM Esercizio esercizio WHERE esercizio.livello = :livello AND esercizio.zona= :zona ")
+   @Query("SELECT nome, serie, ripetizioni, descrizione, foto FROM Esercizio esercizio WHERE esercizio.livello = :livello AND esercizio.zona= :zona ")
     List<Esercizio> findEserciziByLivelloAndZona (@Param("livello") long livello , @Param("zona") String zona);
 
-    @Query("SELECT nome, serie, ripetizioni, descrizione FROM Esercizio esercizio WHERE esercizio.zona = :zona ")
+    @Query("SELECT nome, serie, ripetizioni, descrizione, foto FROM Esercizio esercizio WHERE esercizio.zona = :zona ")
     List<Esercizio> findEserciziByZona (@Param("zona") String zona);
 
     @Query("SELECT e FROM Esercizio e JOIN e.schedepersonali s WHERE s.id = :id")
